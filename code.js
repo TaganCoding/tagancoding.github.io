@@ -551,7 +551,7 @@ FirmsList.prototype.fill = function ()
 
 		content += '<td class="middleSizeColumn">' + generateSequenceDelimetedByComma(firm.Directions) + '</td>';		
 		content += '<td class="bigSizeColumn">' + firm.Regions + '</td>';			
-		content += addImageLink("middleSizeIconColumn", "imageLink", firm.ODeskLink, "http://www.crowdconf2010.com/images/oDeskimg2.png");
+		content += addImageLink("middleSizeIconColumn", "imageLink", firm.ODeskLink, "https://im1-tub-ru.yandex.net/i?id=491df7a7acafd5a7f1ab44d3f332e2c0&n=33&h=190&w=190");
 		content += addImageLink("middleSizeIconColumn", "imageLink", firm.LinkedInLink, "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/200px-LinkedIn_Logo.svg.png");
 		content += addImageLink("middleSizeIconColumn", "imageLink", firm.MoiKrugLink, "http://magazeta.com/wp-content/uploads/2007/11/moikrug.jpg");
 		content += addImageLink("smallSizeIconColumn", "imageLink", firm.TwitterLink, "http://i1181.photobucket.com/albums/x427/kartnix/twitter-1.png");
