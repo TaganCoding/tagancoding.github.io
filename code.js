@@ -557,7 +557,7 @@ FirmsList.prototype.fill = function ()
 		content += addImageLink("smallSizeIconColumn", "imageLink", firm.TwitterLink, "http://i1181.photobucket.com/albums/x427/kartnix/twitter-1.png");
 		content += addImageLink("smallSizeIconColumn", "imageLink", firm.FacebookLink, "http://tb.ziareromania.ro/De-ce-nu-va-avea-Facebook-succes-in-China/7f66010028270c5649/240/0/1/70/De-ce-nu-va-avea-Facebook-succes-in-China.jpg");
 		content += addImageLink("smallSizeIconColumn", "imageLink", firm.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
-		content += addImageLink("smallSizeIconColumn", "imageLink", firm.HeadHunterLink, "http://i.hh.ru/css/ambient/blocks/head/logo.png");
+		content += addImageLink("smallSizeIconColumn", "imageLink", firm.HeadHunterLink, "http://old.54erfolg.ru/wp-content/uploads/2010/12/%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF-HH-2.jpg");
 		content += addImageLink("middleSizeColumn", "imageLink", firm.EducationCenterLink, "http://it.verych.ru/education.jpg");
 		content += addImageLink("middleSizeColumn", "imageLink", firm.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
 
