@@ -232,7 +232,6 @@ PlacesList.prototype.fill = function ()
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
-	content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Бонусы' + '</th>';
@@ -285,7 +284,6 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.PlaceType + '</td>';
-	    content += '<td class="middleSizeColumn">' + place.AverageBill + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
 	    content += '<td class="middleSizeColumn">' + getBonus(place) + '</td>';
