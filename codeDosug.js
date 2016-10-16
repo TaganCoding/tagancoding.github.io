@@ -78,6 +78,7 @@ function showDetails(placeIndex)
     var place = places[placeIndex];
     $('#dataDetailsContainer').show();
     document.getElementById('placename').innerHTML = place.Name;
+    document.getElementById('advantages').innerHTML = place.AdditionalInfo;
     
     
  //   var videosHTML = generateUnorderedArrayViewAsLinks(baza.Videos);
