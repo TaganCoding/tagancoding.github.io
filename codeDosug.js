@@ -227,7 +227,7 @@ PlacesList.prototype.fill = function ()
 	content += '<tr class="even">';
 	content += '<th class="smallSizeColumn firstColumn"></th>';
 	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-	content += '<th class="bigSizeIconColumn" colspan="9">Ссылки</th>';
+	content += '<th class="bigSizeIconColumn" colspan="11">Ссылки</th>';
 	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
 	content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
@@ -266,6 +266,8 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TagfindLink, "https://www.google.com/s2/favicons?domain=http://tagfind.ru");
