@@ -225,9 +225,9 @@ PlacesList.prototype.fill = function ()
 
 	content += '<thead>';
 	content += '<tr class="even">';
-	content += '<th class="smallSizeColumn firstColumn"></th>';
+	content += '<th class="" style="max-width:15px"></th>';
 	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-	content += '<th class="bigSizeIconColumn" colspan="11">Ссылки</th>';
+	content += '<th class="bigSizeIconColumn" colspan="13">Ссылки</th>';
 	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
 	content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
@@ -262,7 +262,7 @@ PlacesList.prototype.fill = function ()
 	    }
 
 	    content += '<tr class="datarow ' + colorStyle + '" onclick="showDetails(' + i + ')";>';
-	    content += '<td class="firstColumn smallSizeColumn">' + addr + '</td>';
+	    content += '<td class="" style="max-width:15px">' + addr + '</td>';
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
@@ -271,11 +271,12 @@ PlacesList.prototype.fill = function ()
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TagfindLink, "https://www.google.com/s2/favicons?domain=http://tagfind.ru");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.InfotaganrogLink, "https://www.google.com/s2/favicons?domain=http://www.infotaganrog.ru");
 		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
 		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.TCLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
 
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.Video, "http://www.russia-on.ru/wp-content/uploads/2012/11/YouTube.jpg");
-				content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");
 		
 		/*if (baza.Photos == '')
 		    content += '<td class="lastHeaderColumn"></td>'; 
@@ -283,6 +284,11 @@ PlacesList.prototype.fill = function ()
 			content += '<td class="lastHeaderColumn"> <img class="imageLinkWidth" src="http://iconizer.net/files/Mnml/orig/camera.png"></td>';
 			*/
 			
+		content += '<td>';
+		if (place.MenuLink)
+		    content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
+		content += '</td>';
+		
 		content += '<td class="lastHeaderColumn">' + place.Photos.length + " фото" +'</td>'; 		
 
 	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
