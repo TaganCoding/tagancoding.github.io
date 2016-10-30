@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Досуг\Рестораны\Кафе\Столовые\Спорт\Развлечения\Детские игровые клубы\Бани в Таганроге и окрестностях</title>
-    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <link type="text/css" rel="stylesheet" href="themes/sorter/blue/style.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script> 
@@ -43,7 +43,114 @@
         <div class="logo">
             <h1>Досуг\Рестораны\Кафе\Столовые\Спорт\Развлечения\Детские игровые клубы\Бани в Таганроге и окрестностях</h1>
         </div>
-        <div id="filterContainer" style="display:none;">
+        <div id="filterContainer">  
+            <div id="districtFilter" class="filter">
+                <label>Район</label>
+                <select id="district" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Центр">Центр</option>
+                    <option value="Набережная">Набережная</option>
+                    <option value="Русское поле">Русское поле</option>
+                    <option value="Западный">Западный</option>
+                    <option value="Котельщик">Котельщик</option>
+                    <option value="Новый вокзал">Новый вокзал</option>
+                    <option value="Северный">Северный</option>
+                    <option value="Дзержинка">Дзержинка</option>
+                    <option value="Свобода">Свобода</option>
+                    <option value="За городом">За городом</option>
+                </select>
+            </div>
+            <div id="typeFilter" class="filter">
+                <label>Тип</label>
+                <select id="typeDosug" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Кафе\Ресторан">Кафе\Ресторан</option>
+                    <option value="Кинотеатр">Кинотеатр</option>
+                    <option value="Доставка">Доставка</option>
+                    <option value="Столовая\Бизнесланч\ФастФуд">Столовая\Бизнесланч\ФастФуд</option>
+                    <option value="Для детей">Для детей</option>
+                    <option value="Банкетный зал">Банкетный зал</option>
+                    <option value="Кондитерская">Кондитерская</option>
+                    <option value="Кальян-бар">Кальян-бар</option>
+                    <option value="Бар\Паб">Бар\Паб</option>
+                    <option value="Спортбар">Спортбар</option>
+                    <option value="Спорт">Спорт</option>
+                    <option value="Бильярд">Бильярд</option>
+                    <option value="Боулинг">Боулинг</option>
+                    <option value="Пейнтбол\Лазертаг">Пейнтбол\Лазертаг</option>
+                    <option value="Картинг">Картинг</option>
+                    <option value="Бассейн">Бассейн</option>
+                    <option value="Баня">Баня</option>
+                    <option value="Антикафе">Антикафе</option>
+                    <option value="Клуб">Клуб</option>
+                    <option value="Остальное">Остальное</option>
+                    <option value="Теннис">Теннис</option>
+                    <option value="Настольный теннис">Настольный теннис</option>
+                    <option value="Футбол">Футбол</option>
+                    <option value="Кикер">Кикер</option>
+                </select>
+            </div>
+            <div id="foodFilter" class="filter" style="display: none">
+                <label>Кухня</label>
+                <select id="food" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любая</option>
+                    <option value="Европейская">Европейская</option>
+                    <option value="Итальянская">Итальянская</option>
+                    <option value="Пицца">Пицца</option>
+                    <option value="Японская">Японская</option>
+                    <option value="Русская">Русская</option>
+                    <option value="Французская">Французская</option>
+                    <option value="Кондитерская">Кондитерская</option>
+                    <option value="Авторская">Авторская</option>
+                    <option value="Домашняя">Домашняя</option>
+                    <option value="Экзотическая">Экзотическая</option>
+                    <option value="Вегетарианская">Вегетарианская</option>
+                    <option value="Кавказская">Кавказская</option>
+                    <option value="Восточная">Восточная</option>
+                    <option value="Американская">Американская</option>
+                    <option value="Китайская">Китайская</option>
+                    <option value="Грузинская">Грузинская</option>
+                    <option value="Азербайджанская">Азербайджанская</option>
+                    <option value="Узбекская">Узбекская</option>
+                    <option value="Фаст Фуд">Фаст Фуд</option>
+                    <option value="Армянская">Армянская</option>
+                    <option value="Немецкая">Немецкая</option>
+                    <option value="Украинская">Украинская</option>
+                </select>
+            </div>
+            <div id="kafeFilter" class="filter" style="display: none">
+                <label>Тип</label>
+                <select id="typeKafe" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Караоке">Караоке</option>
+                    <option value="Летняя веранда">Летняя веранда</option>
+                    <option value="Детская комната">Детская комната</option>
+                    <option value="VIP комната">VIP комната</option>
+                    <option value="Живая музыка">Живая музыка</option>
+                </select>
+            </div>
+            <div id="deliveryFilter" class="filter" style="display: none">
+                <div  class="filter">
+                    <label>Роллы</label>
+                    <input id="tableTennisInput" type="checkbox" onchange="showPlacesList();" />
+                </div>
+                <div  class="filter">
+                    <label>Пицца</label>
+                    <input id="pizzaInput" type="checkbox" onchange="showPlacesList();" />
+                </div>
+                <div  class="filter">
+                    <label>Шашлык</label>
+                    <input id="languageInput" type="checkbox" onchange="showPlacesList();" />
+                </div>
+                <div  class="filter">
+                    <label>Обед</label>
+                    <input id="gamesInput" type="checkbox" onchange="showPlacesList();" />
+                </div>
+                <div class="filter">
+                    <label>Ресторанная еда</label>
+                    <input id="sportInput" type="checkbox" onchange="showPlacesList();" />
+                </div>
+            </div>
         </div>
     <div style="clear: both"></div>
     <div style="text-align:center;">
@@ -54,6 +161,11 @@
         <div class="clear"></div>
         <div id="dataListContainer">
         </div>
+        <iframe id="kinocharly" style="display: none; width:100%; min-height:900px; max-width:1100px;">
+        </iframe>
+    <div class="clear"></div>
+        <iframe id="kinoneo" style="display: none; width:100%; min-height:1200px; max-width:1100px;">
+        </iframe>
     </div>
     <div class="clear"></div>
     <div id="bottomPanel">
@@ -78,7 +190,7 @@
     <br />
     Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
     <br />
-    Обновлено 22 октября 17:00.
+    Обновлено 1 ноября 01:00.
     <br />  
   </body>
 </html>
