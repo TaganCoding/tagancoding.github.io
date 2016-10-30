@@ -174,49 +174,66 @@ function generateUnorderedArrayView(items)
     return result;
 }
 
+IsCinemasLoaded = false;
 
 function doFilter(items)
 {
     var result = [];
-
-    /*
-    var kikerInput = document.getElementById('kikerInput').checked;
-    var tableTennisInput = document.getElementById('tableTennisInput').checked;
-    var tableGamesInput = document.getElementById('tableGamesInput').checked;
-    var languageInput = document.getElementById('languageInput').checked;
-    var gamesInput = document.getElementById('gamesInput').checked;          
-    var sportInput = document.getElementById('sportInput').checked;                
     
-    var minActialityDate = getMinActialityDate(vacancyActuality);
-*/
+    var typeDosug = document.getElementById('typeDosug').value;
+    var district = document.getElementById('district').value;
+
+    var isTypeDosugNotMeans = typeDosug == "all";
+    var isDistrictNotMeans = district == "all";
+  
+    if (typeDosug == "Кинотеатр")
+    {
+        if (!IsCinemasLoaded)
+        {
+            $('#kinocharly').attr('src', "http://www.kinocharly.ru/cinemas/60/");
+            $('#kinoneo').attr('src', "http://www.kinoneo.ru/schedule#all");
+            IsCinemasLoaded = true;
+        }
+        
+        $('#kinocharly').show();
+        $('#kinoneo').show();
+    }
+    else
+    {
+        $('#kinocharly').hide();
+        $('#kinoneo').hide();
+    }
+    
     for (var i = 0; i < items.length; i++)
     {    
         var place = items[i];
-        /*
-        var isBonusActual;
         
+        var isTypeDosugEquals = isTypeDosugNotMeans;
+        var isDistrictEquals = isDistrictNotMeans || district == place.District;
         
-        isBonusActual = (!tableTennisInput || tableTennisInput && baza.TableTennis) &&
-            (!kikerInput || kikerInput && baza.Kiker) &&
-            (!tableGamesInput || tableGamesInput && baza.TableGames) &&
-            (!languageInput || languageInput && baza.English) &&
-            (!gamesInput || gamesInput && baza.Games)&&
-            (!sportInput || sportInput && baza.Sport);
-    
-    
-        if (isBonusActual)
-        {*/
-            result.push(place);
-       /* }
-        else
+        if (!isTypeDosugEquals)
         {
-            result.push(null);
-        }*/
+            isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
+        }
+        
+        if (isTypeDosugEquals && isDistrictEquals)
+        
+        result.push(place);
     }
 
     return result;
 }
 
+function checkValues(value, values)
+{
+    for (var i = 0; i < values.length; i++)
+    {
+        if (values[i] == value.replace("\\",""))
+            return true;
+    }
+
+    return false;
+}
 
 PlacesList.prototype.fill = function ()
 {
