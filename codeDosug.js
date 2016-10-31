@@ -34,6 +34,53 @@ function addCustomSorters() {
 
 $(document).ready(function () {
   //addCustomSorters();
+  var hash = window.location.hash.substr(1);
+  
+  if (hash == "cinema")
+    $('#typeDosug').val('Кинотеатр');
+  if (hash == "canteen")
+    $('#typeDosug').val('Столовая');
+  if (hash == "child")
+    $('#typeDosug').val('Для детей');
+  if (hash == "cafe")
+    $('#typeDosug').val('Кафе');
+  if (hash == "delivery")
+    $('#typeDosug').val('Доставка');
+  if (hash == "banket")
+    $('#typeDosug').val('Банкетный зал');
+  if (hash == "confectionery")
+    $('#typeDosug').val('Кондитерская');
+  if (hash == "hookahlounge")
+    $('#typeDosug').val('Кальянбар');
+  if (hash == "pub")
+    $('#typeDosug').val('Бар');
+  if (hash == "sportsbar")
+    $('#typeDosug').val('Спортбар');
+  if (hash == "billiard")
+    $('#typeDosug').val('Бильярд');
+  if (hash == "bowling")
+    $('#typeDosug').val('Боулинг');
+  if (hash == "paintball")
+    $('#typeDosug').val('Пейнтбол');
+  if (hash == "kart")
+    $('#typeDosug').val('Картинг');
+  if (hash == "pool")
+    $('#typeDosug').val('Бассейн');
+  if (hash == "bath")
+    $('#typeDosug').val('Баня');
+  if (hash == "timeclub")
+    $('#typeDosug').val('Антикафе');
+  if (hash == "nightclub")
+    $('#typeDosug').val('Клуб');
+  if (hash == "tennis")
+    $('#typeDosug').val('Теннис');
+  if (hash == "tabletennis")
+    $('#typeDosug').val('Настольный теннис');
+  if (hash == "kiker")
+    $('#typeDosug').val('Кикер');
+  if (hash == "remain")
+    $('#typeDosug').val('Остальное');
+  
   showPlacesList();
   
   Galleria.loadTheme('galleria.simplecoding.js');
