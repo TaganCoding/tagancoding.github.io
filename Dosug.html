@@ -131,26 +131,15 @@
                 </select>
             </div>
             <div id="deliveryFilter" class="filter" style="display: none">
-                <div  class="filter">
-                    <label>Роллы</label>
-                    <input id="tableTennisInput" type="checkbox" onchange="showPlacesList();" />
-                </div>
-                <div  class="filter">
-                    <label>Пицца</label>
-                    <input id="pizzaInput" type="checkbox" onchange="showPlacesList();" />
-                </div>
-                <div  class="filter">
-                    <label>Шашлык</label>
-                    <input id="languageInput" type="checkbox" onchange="showPlacesList();" />
-                </div>
-                <div  class="filter">
-                    <label>Обед</label>
-                    <input id="gamesInput" type="checkbox" onchange="showPlacesList();" />
-                </div>
-                <div class="filter">
-                    <label>Ресторанная еда</label>
-                    <input id="sportInput" type="checkbox" onchange="showPlacesList();" />
-                </div>
+                <label>Тип</label>
+                <select id="typeDelivery" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Роллы">Роллы</option>
+                    <option value="Пицца">Пицца</option>
+                    <option value="Шашлык">Шашлык</option>
+                    <option value="Обед">Обед</option>
+                    <option value="Ресторанная еда">Ресторанная еда</option>
+                </select>
             </div>
         </div>
     <div style="clear: both"></div>
@@ -191,7 +180,7 @@
     <br />
     Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
     <br />
-    Обновлено 16 октября 01:00.
+    Обновлено 3 ноября 21:00.
     <br />  
   </body>
 </html>
