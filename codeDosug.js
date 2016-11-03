@@ -229,10 +229,16 @@ function doFilter(items)
     
     var typeDosug = document.getElementById('typeDosug').value;
     var district = document.getElementById('district').value;
+    var food = document.getElementById('food').value;
+    var typeKafe = document.getElementById('typeKafe').value;
+    var typeDelivery = document.getElementById('typeDelivery').value;
 
     var isTypeDosugNotMeans = typeDosug == "all";
     var isDistrictNotMeans = district == "all";
-  
+    var isFoodNotMeans = food == "all" || typeDosug != "Кафе";
+    var isTypeKafeNotMeans = typeKafe == "all" || typeDosug != "Кафе";
+    var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
+    
     if (typeDosug == "Кинотеатр")
     {
         if (!IsCinemasLoaded)
@@ -251,21 +257,55 @@ function doFilter(items)
         $('#kinoneo').hide();
     }
     
+    if (typeDosug == "Доставка")
+    {
+        $('#deliveryFilter').show();
+    }
+    else
+    {
+        $('#deliveryFilter').hide();
+    }
+    
+    if (typeDosug == "Кафе")
+    {
+        $('#kafeFilter').show();
+        $('#foodFilter').show();
+    }
+    else
+    {
+        $('#kafeFilter').hide();
+        $('#foodFilter').hide();
+    }
+    
     for (var i = 0; i < items.length; i++)
     {    
         var place = items[i];
         
         var isTypeDosugEquals = isTypeDosugNotMeans;
         var isDistrictEquals = isDistrictNotMeans || district == place.District;
+        var isFoodEquals = isFoodNotMeans;
+        var isTypeKafeEquals = isTypeKafeNotMeans;
+        var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
         
         if (!isTypeDosugEquals)
         {
             isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
         }
         
-        if (isTypeDosugEquals && isDistrictEquals)
+        if (typeDosug == "Кафе" && (!isFoodEquals || !isTypeKafeEquals))
+        {
+            if (!isFoodEquals)
+                isFoodEquals = checkValues(food, place.FoodType);
+            if (!isTypeKafeEquals)
+                isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);
+        }
+        if (typeDosug == "Доставка" && !isTypeDeliveryEquals)
+        {
+            isTypeDeliveryEquals = checkValues(typeDelivery, place.TypeDelivery);
+        }
         
-        result.push(place);
+        if (isTypeDosugEquals && isDistrictEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals)
+            result.push(place);
     }
 
     return result;
