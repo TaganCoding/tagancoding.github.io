@@ -23,14 +23,16 @@ this.Items = [
 		Address : 'ул. Шмидта, 16 А',
 		District : 'Центр',
 		Phones : '+7(8634) 31-18-08',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'https://img.localway.ru/fullsize/509736.jpg',
@@ -80,14 +82,16 @@ this.Items = [
 		Address : 'пер. Лермонтовский, 7 А',
 		District : 'Центр',
 		Phones : '+7(8634) 43-13-00',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : 'c 11-00  до 1-00',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская", "Японская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/130_yaez-cFW6a0_1454581307.jpg',
@@ -162,14 +166,16 @@ this.Items = [
 		Address : 'ул. Греческая, 76',
 		District : 'Центр',
 		Phones : '+7(8634) 31-90-01<br>+7(8634) 36-50-03',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '1500-2000р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -194,14 +200,16 @@ this.Items = [
 		Address : 'ул. М. Жукова, 1 А',
 		District : 'Северный',
 		Phones : '+7(8634) 67-19-04',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'VIP комната<br>Банкетный зал<br>Летняя веранда<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["VIP комната", "Банкетный зал", "Летняя веранда", "Живая музыка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/31_jpg',
@@ -236,14 +244,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 161',
 		District : 'Дзержинка',
 		Phones : '+7 (8634) 683 000',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://ttphotos.s3-website-eu-west-1.amazonaws.com/gallery/78/76878/1024x768/157689.jpg',
@@ -273,14 +283,16 @@ this.Items = [
 		Address : 'ул. Октябрьская, 16',
 		District : 'Центр',
 		Phones : '+7(8634) 31-40-98',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -305,14 +317,16 @@ this.Items = [
 		Address : 'пер. Тургеневский, 10',
 		District : 'Центр',
 		Phones : '+7(8634) 39-23-53',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Пицца"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Доставка"],
 		Photos : [
 		{
 			image: 'http://saporeitaliano.ru/sites/default/files/styles/large/public/page/images/110-2827.jpg?itok=IQUgo8Lt',
@@ -349,7 +363,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -374,14 +390,16 @@ this.Items = [
 		Address : 'Биржевой спуск, 8 К',
 		District : 'Набережная',
 		Phones : '+7(8634) 43-14-12',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>VIP комната',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Французская", "Кондитерская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната"],
 		Photos : [],
 
 	},	{
@@ -406,14 +424,16 @@ this.Items = [
 		Address : 'пл. Мира 7, ТЦ Мармелад, 2 ',
 		District : 'Центр',
 		Phones : '+7(8634) 38-28-38',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>VIP комната<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната", "Живая музыка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/104_jpg',
@@ -453,14 +473,16 @@ this.Items = [
 		Address : 'ул. Фрунзе, 2',
 		District : 'Центр',
 		Phones : '+7 988 555‑06-25<br>+7 928 619‑60-07',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : 'пн-чт 12:00–0:00;<br>пт,сб 12:00–4:00;<br>вс 12:00–0:00',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -485,14 +507,16 @@ this.Items = [
 		Address : 'пл. Мира 7, ТЦ Мармелад, 2 ',
 		District : 'Центр',
 		Phones : '+7(8634) 34-31-62',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>VIP комната<br>Караоке',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната", "Караоке"],
 		Photos : [],
 
 	},	{
@@ -517,14 +541,16 @@ this.Items = [
 		Address : 'Тургеневский 2',
 		District : 'Центр',
 		Phones : '+7(8634) 34-00-79',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : 'пн-чт c 9-00  до 23-00<br>пт-сб c 10-00  до 1-00<br>вс c 10-00  до 23-00',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -549,14 +575,16 @@ this.Items = [
 		Address : 'пл. Восстания, 4 к.1',
 		District : 'Центр',
 		Phones : '+7(8634) 31-90-05',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -581,14 +609,16 @@ this.Items = [
 		Address : 'ул. Толбухина, 7',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 37-55-24<br>+7(961) 415-79-56',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -613,14 +643,16 @@ this.Items = [
 		Address : 'ул.Заводская 20',
 		District : 'Дзержинка',
 		Phones : '+7 (989) 625-77-77<br>+7 (863) 432-57-77',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -652,7 +684,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Банкетный зал"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -684,7 +718,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Авторская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Банкетный зал", "Живая музыка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/234__DSC0151_1453457323.JPG',
@@ -766,7 +802,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Японская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/56_AjGmkly4Fto_1458820475.jpg',
@@ -848,7 +886,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Авторская", "Домашняя", "Экзотическая", "Вегетарианская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/89_420.jpg',
@@ -915,7 +955,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Банкетный зал", "Караоке"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/45_Bezymjannyi_1448012417.png',
@@ -997,7 +1039,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/194_chekhov-jpg',
@@ -1044,7 +1088,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Детская комната", "Летняя веранда", "Живая музыка", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1076,7 +1122,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1108,7 +1156,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1140,7 +1190,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1172,7 +1224,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Банкетный зал", "Караоке", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1204,7 +1258,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская", "Восточная"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -1236,7 +1292,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1268,7 +1326,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Караоке"],
 		Photos : [],
 
 	},	{
@@ -1300,7 +1360,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1325,14 +1387,16 @@ this.Items = [
 		Address : 'ул. Петровская, 98',
 		District : 'Центр',
 		Phones : '+7(8634) 38-34-98<br>+7(8634) 61-12-59',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская", "Американская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1357,14 +1421,16 @@ this.Items = [
 		Address : 'пл. Мира 7, ТЦ Мармелад, 2 ',
 		District : 'Центр',
 		Phones : '+7(8634) 35-13-33<br>+7(928) 957-49-89',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1389,14 +1455,16 @@ this.Items = [
 		Address : 'ул. Ленина, 123',
 		District : 'Центр',
 		Phones : ' +7(8634) 61-27-04<br>+7(8634) 61-38-71<br>+7(918) 595-51-55<br>+7(928) 761-15-15',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1428,7 +1496,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Китайская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -1453,14 +1523,16 @@ this.Items = [
 		Address : 'ул Петровская, 100',
 		District : 'Центр',
 		Phones : '+7(8634) 61-46-15',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р',
 		WorkTime : '11:00-02:00',
 		Services : 'Банкетный зал<br>Доставка<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -1492,7 +1564,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/87_398.jpg',
@@ -1552,14 +1626,16 @@ this.Items = [
 		Address : 'пер. Гоголевский, 6',
 		District : 'Центр',
 		Phones : '+7(8634) 31-21-12',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : 'ежедневно 11:00-05:00',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -1584,14 +1660,16 @@ this.Items = [
 		Address : 'ул. Петровская, 104а',
 		District : 'Центр',
 		Phones : '+7(8634) 62-15-13<br>+7(928) 172-22-61',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1616,14 +1694,16 @@ this.Items = [
 		Address : 'ул. Инструментальная, 31/2',
 		District : 'Свобода',
 		Phones : '+7(8634) 34-16-33',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1648,14 +1728,16 @@ this.Items = [
 		Address : 'пер. Тургеневский, 24',
 		District : 'Центр',
 		Phones : '+7(8634) 31-04-40',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1680,14 +1762,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 104',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 62-63-78',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -1719,7 +1803,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -1744,14 +1830,16 @@ this.Items = [
 		Address : 'ул. Свободы, 8',
 		District : 'Свобода',
 		Phones : '+7(8634) 64-82-29',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -1776,14 +1864,16 @@ this.Items = [
 		Address : 'ул. Седова, 4 Б',
 		District : 'Западный',
 		Phones : '+7(8634) 32-76-80<br>+7(909) 437-86-86',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1808,14 +1898,16 @@ this.Items = [
 		Address : 'ул. Биржевой Спуск, 8б',
 		District : 'Набережная',
 		Phones : '+7(8634) 36-57-76',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1840,14 +1932,16 @@ this.Items = [
 		Address : 'ул. Социалистическая, 1/5',
 		District : 'Центр',
 		Phones : '+7 (8634) 693 930',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://ttphotos.s3-website-eu-west-1.amazonaws.com/gallery/31/76831/1024x768/157573.jpg',
@@ -1877,14 +1971,16 @@ this.Items = [
 		Address : 'пер. 1-й Новый, 12 Б',
 		District : 'Северный',
 		Phones : '+7(8634) 31-50-51<br>+7(8634) 92-86-22',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1909,14 +2005,16 @@ this.Items = [
 		Address : 'ул. Социалистическая, 150',
 		District : 'Центр',
 		Phones : '+7(8634) 37-86-46',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -1941,14 +2039,16 @@ this.Items = [
 		Address : 'ул. Инструментальная, 15б',
 		District : 'Свобода',
 		Phones : '+7(8634) 36-64-55',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Грузинская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'https://img.localway.ru/fullsize/508166.jpg',
@@ -1998,14 +2098,16 @@ this.Items = [
 		Address : 'Комсомольский бульвар, 20',
 		District : 'Центр',
 		Phones : '+7(928) 112-56-26',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2037,7 +2139,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская", "Пицца"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -2062,14 +2166,16 @@ this.Items = [
 		Address : 'Комсомольский бульвар, 12',
 		District : 'Центр',
 		Phones : '+7(8634) 31-13-32',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -2094,14 +2200,16 @@ this.Items = [
 		Address : 'площадь Восстания, 3',
 		District : 'Центр',
 		Phones : '+7(8634) 62-60-60',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : ["Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -2126,14 +2234,16 @@ this.Items = [
 		Address : 'ул. Б. Хмельницкого, 2 А',
 		District : 'Западный',
 		Phones : '+7(8634) 38-78-73<br>+7(928) 607-28-28',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.<br>500-1000р.',
 		WorkTime : 'пн-вс c 10-00  до 0-00<br>',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/5_fPpuRIEIbxQ_1458820263.jpg',
@@ -2190,7 +2300,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Итальянская", "Русская", "Кавказская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/159_jpg',
@@ -2265,14 +2377,16 @@ this.Items = [
 		Address : 'пер. Тургеневский, 8',
 		District : 'Центр',
 		Phones : '',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Домашняя"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -2297,14 +2411,16 @@ this.Items = [
 		Address : 'пер. Тургеневский, 8',
 		District : 'Центр',
 		Phones : '',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -2329,14 +2445,16 @@ this.Items = [
 		Address : 'ул. Сызранова, 25/5',
 		District : 'Русское поле',
 		Phones : '+7(8634) 37-93-00',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Детская комната<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Азербайджанская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Детская комната", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2361,14 +2479,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 169 А',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 60-31-42<br>+7(908) 184-94-80',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кавказская", "Домашняя"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2400,7 +2520,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Восточная", "Домашняя"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -2425,14 +2547,16 @@ this.Items = [
 		Address : 'ул. Чехова 230а',
 		District : 'Русское поле',
 		Phones : '+7(8634) 36-70-72',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : ' 500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/117_jpg',
@@ -2477,14 +2601,16 @@ this.Items = [
 		Address : 'ул. Чехова, 375',
 		District : 'Русское поле',
 		Phones : '+7(8634) 34-00-98<br>8·918·593·74·73',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : 'с 9.00 до 0.00',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2509,14 +2635,16 @@ this.Items = [
 		Address : 'ул. Морозова, 6 А',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 37-86-10',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Летняя веранда<br>Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Летняя веранда", "Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -2541,14 +2669,16 @@ this.Items = [
 		Address : 'ул. Адмирала Крюйса, 2-6',
 		District : 'Набережная',
 		Phones : '+7(938) 120-60-00',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская", "Русская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : ["Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -2573,14 +2703,16 @@ this.Items = [
 		Address : 'ул. Щаденко, 62',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 32-42-24',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>VIP комната<br>Караоке',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната", "Караоке"],
 		Photos : [],
 
 	},	{
@@ -2612,7 +2744,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -2637,14 +2771,16 @@ this.Items = [
 		Address : ' ул. Свободы, 2а',
 		District : 'Свобода',
 		Phones : '+7(8634) 36-80-74',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.<br>500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -2669,14 +2805,16 @@ this.Items = [
 		Address : 'Поляковское шоссе, д. 18',
 		District : 'Русское поле',
 		Phones : '+7(8634) 38-99-98',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2701,14 +2839,16 @@ this.Items = [
 		Address : 'ул. Солодухина, 87',
 		District : 'Новый вокзал',
 		Phones : '+7(8634) 60-55-60<br>+7(908) 189-19-25',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : 'до 500р.<br>500-1000р.',
 		WorkTime : '<br>вс-пн c 12-00  до 0-00<br>пт-сб c 12-00  до 1-00',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -2733,14 +2873,16 @@ this.Items = [
 		Address : 'Греческие Роты, пер.Пограничный 17',
 		District : 'За городом',
 		Phones : '+7(908) 170-02-66',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -2772,7 +2914,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Узбекская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -2797,14 +2941,16 @@ this.Items = [
 		Address : 'ул. Маршала Жукова, 212',
 		District : 'Северный',
 		Phones : '+7(8634) 60-53-93<br>+7(908) 189-19-25',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '',
 		WorkTime : 'пн-вс c 12-00  до 0-00',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Восточная", "Домашняя"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -2829,14 +2975,16 @@ this.Items = [
 		Address : 'ул. Пушкинская набережная, 1',
 		District : 'Набережная',
 		Phones : '+7(8634) 31-75-96<br>+7(988) 592-01-01',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : 'до 500р.<br>500-1000р.',
 		WorkTime : 'пн-вс c 10-00  до 0-00',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -2861,14 +3009,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 165/8',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 60-31-31<br>+7(8634) 45-65-25<br>+7(908) 173-70-05',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>VIP комната<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "VIP комната", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -2893,14 +3043,16 @@ this.Items = [
 		Address : 'ул. Адмирала Крюйса 2/6',
 		District : 'Набережная',
 		Phones : '+7(8634) 60-31-31<br>+7(8634) 45-65-25<br>+7(908) 173-70-05',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>VIP комната<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "VIP комната", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -2925,14 +3077,16 @@ this.Items = [
 		Address : 'ул. Чехова, 351',
 		District : 'Русское поле',
 		Phones : '+7(908) 505-03-07',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -2957,14 +3111,16 @@ this.Items = [
 		Address : 'ул. Социалистическая, 1/5',
 		District : 'Центр',
 		Phones : '+7(8634) 45-18-45<br>+7(918) 556-32-68',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Летняя веранда<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Летняя веранда", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -2989,14 +3145,16 @@ this.Items = [
 		Address : 'Мариупольское шоссе, 31',
 		District : 'Русское поле',
 		Phones : '+7(8634) 43-11-44<br>+7(928) 185-24-14',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -3021,14 +3179,16 @@ this.Items = [
 		Address : 'ул. Дзержинского',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 37-81-17<br>+7(961) 270-12-93',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Азербайджанская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -3053,14 +3213,16 @@ this.Items = [
 		Address : 'ул. Дзержинского 144 к',
 		District : 'Дзержинка',
 		Phones : ' +7(8634) 63-36-41<br>+7(908) 502-67-36',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -3085,14 +3247,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 178',
 		District : 'Дзержинка',
 		Phones : '+7(952) 571-70-77',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Летняя веранда<br>Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Летняя веранда", "Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -3117,14 +3281,16 @@ this.Items = [
 		Address : 'ул. Петровская, 114',
 		District : 'Центр',
 		Phones : '+7(960) 461-50-38',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Украинская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3156,7 +3322,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3181,14 +3349,16 @@ this.Items = [
 		Address : 'ул. Трудовых резервов, 10',
 		District : 'Свобода',
 		Phones : '+7(8634) 31-84-18<br>+7(318) 416-64-46',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -3213,14 +3383,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 179',
 		District : 'Новый вокзал',
 		Phones : '+7 (8634) 670-452',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : 'Ежедневно 08:00 - 18:00',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3245,14 +3417,16 @@ this.Items = [
 		Address : 'Сергея Шило ул, 241',
 		District : 'Русское поле',
 		Phones : '+7 (8634) 387-050',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3277,14 +3451,16 @@ this.Items = [
 		Address : 'ул. Ленина, 226 Б',
 		District : 'Котельщик',
 		Phones : '+7(8634) 45-64-63',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/102_DSC_3897_1444377043.jpg',
@@ -3319,14 +3495,16 @@ this.Items = [
 		Address : 'пер. Тургеневский, 8',
 		District : 'Центр',
 		Phones : '+7(988) 949-51-09',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Пицца", "Фаст Фуд"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -3358,7 +3536,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Восточная"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -3383,14 +3563,16 @@ this.Items = [
 		Address : 'ул. Адмирала Крюйса 2/6',
 		District : 'Набережная',
 		Phones : '+7(8634) 45-65-25<br>+7(908) 173-70-05',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>VIP комната<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "VIP комната", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -3415,14 +3597,16 @@ this.Items = [
 		Address : 'ул. Чехова, 98',
 		District : 'Центр',
 		Phones : '+7(8634) 32-70-14<br>+7(918) 530-00-90',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>VIP комната<br>Караоке',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "VIP комната", "Караоке"],
 		Photos : [],
 
 	},	{
@@ -3447,14 +3631,16 @@ this.Items = [
 		Address : 'Комсомольский спуск 1',
 		District : 'Центр',
 		Phones : '+7(909) 437-86-86',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>VIP комната<br>Караоке',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната", "Караоке"],
 		Photos : [],
 
 	},	{
@@ -3479,14 +3665,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 165',
 		District : 'Дзержинка',
 		Phones : '+7 (8634) 603 131',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3511,14 +3699,16 @@ this.Items = [
 		Address : 'ул. Гарибальди, 21',
 		District : 'Центр',
 		Phones : '+7 (8634) 343-837',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3543,14 +3733,16 @@ this.Items = [
 		Address : 'ул. Москатова 5',
 		District : 'Новый вокзал',
 		Phones : '8 (8634) 600-505<br>378-430',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : 'с 10:00 до 24:00',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3575,14 +3767,16 @@ this.Items = [
 		Address : 'Москатова ул, 14',
 		District : 'Дзержинка',
 		Phones : '+7 (8634) 678-544',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3607,14 +3801,16 @@ this.Items = [
 		Address : 'ул. им. С.И. Шило, 202',
 		District : 'Русское поле',
 		Phones : '',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3639,14 +3835,16 @@ this.Items = [
 		Address : 'ул. Седова, 4 Б',
 		District : 'Западный',
 		Phones : '8(8634) 32-76-80<br>8(909) 437-86-86',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : '',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3678,7 +3876,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3703,14 +3903,16 @@ this.Items = [
 		Address : 'ул. Ломоносова, 55/2',
 		District : 'Западный',
 		Phones : '+7(8634) 47-70-55<br>+7(928) 753-00-30',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '1000-1500р.',
 		WorkTime : 'пн-вс c 12-00  до 1-00<br>',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/103_401.jpg',
@@ -3787,7 +3989,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -3812,14 +4016,16 @@ this.Items = [
 		Address : 'ул. Фрунзе, 23',
 		District : 'Центр',
 		Phones : '+7(8634) 61-32-31',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Авторская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -3851,7 +4057,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3876,14 +4084,16 @@ this.Items = [
 		Address : ' ул. Чехова, 355 В',
 		District : 'Русское поле',
 		Phones : '+7(8634) 32-36-21<br>+7(928) 601-38-58',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.<br>1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Армянская", "Грузинская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/2_jpg',
@@ -3918,14 +4128,16 @@ this.Items = [
 		Address : 'ул. Петровская 86',
 		District : 'Центр',
 		Phones : '+7(8634) 31-21-31',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'VIP комната<br>Летняя веранда',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : ["VIP комната", "Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -3950,14 +4162,16 @@ this.Items = [
 		Address : 'ул. Петровская, 104а',
 		District : 'Центр',
 		Phones : '+7 (928) 172-22-61<br>+7 (863) 462-15-13',
-		PlaceType : 'Кафе\Ресторан',
+		PlaceType : 'Кафе',
 		AverageBill : '',
 		WorkTime : 'ежедневно, 10:00–1:00',
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан"],
+		TypeDelivery : [],
+		DosugType : ["Кафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -3982,14 +4196,50 @@ this.Items = [
 		Address : 'ул. Нестерова, 7',
 		District : 'Русское поле',
 		Phones : '+7(951) 499-14-01',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : 'ежедневно, 11:00–23:00',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская", "Пицца"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
+		Photos : [],
+
+	},	{
+		Name : 'Кафе "Шоколад"',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : 'http://kafe-taganrog.ru/kafe-shokolad.html',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : 'http://tagfind.ru/taganrog/189',
+		InfotaganrogLink : '',
+		FoursquareLink : 'https://ru.foursquare.com/v/%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4/51052391e4b0fc9c2fe3f21b',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/?z=16&ll=38.91482,47.21693100001315&l=map&pt=38.91482,47.216931&origin=jsapi_2_0&from=api-maps',
+		Address : 'ул. Петровская, 12',
+		District : 'Центр',
+		Phones : '+7(918) 561-48-77',
+		PlaceType : 'Кафе<br>Банкетный зал',
+		AverageBill : '500-1000р.',
+		WorkTime : '',
+		Services : 'Банкетный зал<br>Летняя веранда<br>Живая музыка',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : ["Европейская", "Итальянская", "Русская"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -4021,7 +4271,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -4046,14 +4298,16 @@ this.Items = [
 		Address : 'ул. Петровская, 37а',
 		District : 'Центр',
 		Phones : '+7(8634) 32-74-00',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская", "Домашняя"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -4085,39 +4339,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
-		Photos : [],
-
-	},	{
-		Name : 'Кафе "Шоколад"',
-		OfSiteLink : '',
-		MenuLink : '',
-		KafeTaganrogLink : 'http://kafe-taganrog.ru/kafe-shokolad.html',
-		VkontakteLink : '',
-		VirtualTaganrogLink : '',
-		TagfindLink : 'http://tagfind.ru/taganrog/189',
-		InfotaganrogLink : '',
-		FoursquareLink : 'https://ru.foursquare.com/v/%D1%88%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4/51052391e4b0fc9c2fe3f21b',
-		TraveltipzLink : '',
-		TCLink : '',
-		TCIconLink : '',
-		SpravkerLink : '',
-		UniquePhotoLink : '',
-		Latitude : '',
-		Longitude : '',
-		Video : '',
-		AddressLink : 'https://yandex.ru/maps/?z=16&ll=38.91482,47.21693100001315&l=map&pt=38.91482,47.216931&origin=jsapi_2_0&from=api-maps',
-		Address : 'ул. Петровская, 12',
-		District : 'Центр',
-		Phones : '+7(918) 561-48-77',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
-		AverageBill : '500-1000р.',
-		WorkTime : '',
-		Services : 'Банкетный зал<br>Летняя веранда<br>Живая музыка',
-		AdditionalInfo : '',
-		Cost : '',
-		FoodType : ["Европейская", "Итальянская", "Русская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4149,7 +4373,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4181,7 +4407,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4213,7 +4441,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4245,7 +4475,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4277,7 +4509,43 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
+		Photos : [],
+
+	},	{
+		Name : 'Красный мак',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'пл. Мира, 7',
+		District : 'Центр',
+		Phones : '',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4302,14 +4570,16 @@ this.Items = [
 		Address : 'ул. Петровская, 55',
 		District : 'Центр',
 		Phones : '+7(8634) 39-36-88',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Домашняя"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -4341,7 +4611,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Кондитерская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4373,7 +4645,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4398,14 +4672,16 @@ this.Items = [
 		Address : '17-новый, д. 1',
 		District : 'Северный',
 		Phones : '+7(918) 510-17-60',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : 'пн-вс c 13-00  до 0-00',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/147_jpg',
@@ -4455,14 +4731,16 @@ this.Items = [
 		Address : 'Транспортная ул., 46/2',
 		District : 'Западный',
 		Phones : '+7(929) 133-33-26',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -4487,14 +4765,16 @@ this.Items = [
 		Address : 'ул. Дзержинского, 144 Л',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 63-35-55<br>+7(8634) 95-08-59<br>+7(950) 859-64-32',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Кавказская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -4519,14 +4799,16 @@ this.Items = [
 		Address : ' ул. Лизы Чайкиной 67',
 		District : 'Северный',
 		Phones : '+7(952) 577-78-99',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка<br>Живая музыка<br>Караоке',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Армянская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Живая музыка", "Караоке"],
 		Photos : [],
 
 	},	{
@@ -4558,7 +4840,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Японская", "Кавказская", "Восточная", "Пицца", "Фаст Фуд"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4590,7 +4874,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Американская", "Пицца", "Фаст Фуд"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Летняя веранда", "Детская комната"],
 		Photos : [],
 
 	},	{
@@ -4622,7 +4908,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4654,7 +4942,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4686,7 +4976,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4718,7 +5010,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4750,7 +5044,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4775,14 +5071,50 @@ this.Items = [
 		Address : 'ул. Петровская, 56',
 		District : 'Центр',
 		Phones : '+7(8634) 39-22-80',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Грузинская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
+		Photos : [],
+
+	},	{
+		Name : 'Хинкальная',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : 'http://kafe-taganrog.ru/khinkalnaya.html',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/?z=16&ll=38.93137599999999,47.213687000013145&l=map&pt=38.931376,47.213687&origin=jsapi_2_0&from=api-maps',
+		Address : 'ул. Петровская, 63',
+		District : 'Центр',
+		Phones : '+7(903) 436-80-03',
+		PlaceType : 'Кафе<br>Банкетный зал',
+		AverageBill : 'до 500р.',
+		WorkTime : '',
+		Services : 'Банкетный зал',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : ["Грузинская"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -4807,14 +5139,16 @@ this.Items = [
 		Address : '1-я Котельная, 73 А',
 		District : 'Дзержинка',
 		Phones : '+7(8634) 31-52-22<br>+7(8634) 88-63-43',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : 'ежедневно, круглосуточно',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Пицца"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/36_jpg',
@@ -4844,14 +5178,16 @@ this.Items = [
 		Address : 'Октябрьская площадь 3 ',
 		District : 'Центр',
 		Phones : '+7(8634) 36-25-56',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : '1000-1500р.',
 		WorkTime : '',
 		Services : 'Детская комната<br>Летняя веранда<br>Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Итальянская", "Грузинская", "Узбекская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Детская комната", "Летняя веранда", "Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -4883,7 +5219,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4908,14 +5246,50 @@ this.Items = [
 		Address : 'ул. Петровская, 57',
 		District : 'Центр',
 		Phones : '8 (800) 333-00-60<br>+7 (918) 899-44-32',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : 'ежедневно, 9:00–0:00',
 		Services : 'Банкетный зал<br>Доставка<br>Детская комната<br>Кикер',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Итальянская", "Американская", "Пицца"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "Детская комната", "Кикер"],
+		Photos : [],
+
+	},	{
+		Name : 'Пиццерия "Братик-Бутик"',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : 'http://tagfind.ru/taganrog/1025',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'Чехова ул, 74 б',
+		District : 'Центр',
+		Phones : '+7 (928) 177-45-46',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '10:00 - 22:00',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4940,14 +5314,84 @@ this.Items = [
 		Address : 'ул. Дзержинского, 165/8',
 		District : 'Дзержинка',
 		Phones : '+7 (928) 191-99-76<br>+7 (928) 606-78-78',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : 'ежедневно, 11:00–0:00',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Восточная", "Пицца"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Доставка"],
+		Photos : [],
+
+	},	{
+		Name : 'Пицца "Премио"',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'ул. Бакинская,65',
+		District : 'Северный',
+		Phones : '',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
+		Photos : [],
+
+	},	{
+		Name : 'Пиццерия Kin dZa',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'улица Чехова, 341',
+		District : 'Русское поле',
+		Phones : '',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -4979,7 +5423,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5011,7 +5457,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5043,7 +5491,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5075,7 +5525,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Японская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5100,14 +5552,50 @@ this.Items = [
 		Address : 'ул. Лесная Биржа д. 18',
 		District : 'Набережная',
 		Phones : '+7(909) 432-00-00',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : '500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Итальянская", "Японская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
+		Photos : [],
+
+	},	{
+		Name : 'Токио',
+		OfSiteLink : '',
+		MenuLink : 'https://vk.com/market-86111308',
+		KafeTaganrogLink : '',
+		VkontakteLink : 'https://vk.com/tokio_dostavka_v_taganroge',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'пер.Украинский, 16',
+		District : 'Центр',
+		Phones : '8-952-585-01-19',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '11.00-23.00',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5139,7 +5627,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5171,7 +5661,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5203,7 +5695,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5235,7 +5729,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5267,7 +5763,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5299,7 +5797,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5331,7 +5831,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5363,7 +5865,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5395,7 +5899,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5427,7 +5933,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5459,7 +5967,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5491,7 +6001,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5523,7 +6035,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5555,7 +6069,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5587,7 +6103,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5619,7 +6137,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5651,7 +6171,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5683,7 +6205,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5715,7 +6239,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5747,7 +6273,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
+		TypeDelivery : [],
 		DosugType : ["Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -5779,7 +6307,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5811,7 +6341,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5843,7 +6375,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5875,7 +6409,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5907,7 +6443,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5939,7 +6477,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -5971,7 +6511,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6003,7 +6545,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская", "Авторская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6035,39 +6579,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
-		Photos : [],
-
-	},	{
-		Name : 'Хинкальная',
-		OfSiteLink : '',
-		MenuLink : '',
-		KafeTaganrogLink : 'http://kafe-taganrog.ru/khinkalnaya.html',
-		VkontakteLink : '',
-		VirtualTaganrogLink : '',
-		TagfindLink : '',
-		InfotaganrogLink : '',
-		FoursquareLink : '',
-		TraveltipzLink : '',
-		TCLink : '',
-		TCIconLink : '',
-		SpravkerLink : '',
-		UniquePhotoLink : '',
-		Latitude : '',
-		Longitude : '',
-		Video : '',
-		AddressLink : 'https://yandex.ru/maps/?z=16&ll=38.93137599999999,47.213687000013145&l=map&pt=38.931376,47.213687&origin=jsapi_2_0&from=api-maps',
-		Address : 'ул. Петровская, 63',
-		District : 'Центр',
-		Phones : '+7(903) 436-80-03',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
-		AverageBill : 'до 500р.',
-		WorkTime : '',
-		Services : 'Банкетный зал',
-		AdditionalInfo : '',
-		Cost : '',
-		FoodType : ["Грузинская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6099,7 +6613,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -6124,14 +6640,16 @@ this.Items = [
 		Address : 'ул. Ломоносова, 309',
 		District : 'Западный',
 		Phones : '+7(988) 255-45-05',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал<br>Доставка',
+		PlaceType : 'Кафе<br>Банкетный зал<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : '',
 		Services : 'Банкетный зал<br>Летняя веранда<br>Доставка',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Летняя веранда", "Доставка"],
 		Photos : [],
 
 	},	{
@@ -6163,7 +6681,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'https://img.localway.ru/fullsize/541176.jpg',
@@ -6205,7 +6725,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6237,7 +6759,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'https://img.localway.ru/fullsize/612189.jpg',
@@ -6274,7 +6798,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'https://img.localway.ru/fullsize/512489.jpg',
@@ -6316,7 +6842,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6348,7 +6876,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6380,7 +6910,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Летняя веранда"],
 		Photos : [],
 
 	},	{
@@ -6412,7 +6944,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["VIP комната"],
 		Photos : [],
 
 	},	{
@@ -6444,7 +6978,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6476,7 +7012,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/108_741.jpg',
@@ -6528,7 +7066,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6560,7 +7100,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6568,7 +7110,7 @@ this.Items = [
 		OfSiteLink : '',
 		MenuLink : '',
 		KafeTaganrogLink : '',
-		VkontakteLink : '',
+		VkontakteLink : 'https://vk.com/2boars',
 		VirtualTaganrogLink : '',
 		TagfindLink : '',
 		InfotaganrogLink : '',
@@ -6592,7 +7134,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6624,7 +7168,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6656,7 +7202,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
 		Photos : [],
 
 	},	{
@@ -6688,7 +7236,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6720,7 +7270,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : ["Караоке", "Живая музыка", "Кикер"],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/142_image%201.jpeg',
@@ -6802,7 +7354,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка", "Живая музыка"],
 		Photos : [],
 
 	},	{
@@ -6834,7 +7388,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Японская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6866,7 +7422,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Пицца", "Фаст Фуд"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6891,14 +7449,16 @@ this.Items = [
 		Address : 'ул. Петровская, 101 а',
 		District : 'Центр',
 		Phones : '+7(918) 563-55-52',
-		PlaceType : 'Кафе\Ресторан<br>Банкетный зал',
+		PlaceType : 'Кафе<br>Банкетный зал',
 		AverageBill : ' до 500р. <br>500-1000р.',
 		WorkTime : '',
 		Services : 'Банкетный зал',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская"],
-		DosugType : ["Кафе\Ресторан", "Банкетный зал"],
+		TypeDelivery : [],
+		DosugType : ["Кафе", "Банкетный зал"],
+		TypeKafe : ["Банкетный зал"],
 		Photos : [],
 
 	},	{
@@ -6930,7 +7490,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская", "Немецкая"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6962,7 +7524,43 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Японская"],
+		TypeDelivery : [],
 		DosugType : ["Доставка"],
+		TypeKafe : ["Доставка"],
+		Photos : [],
+
+	},	{
+		Name : 'Спорт-бар "Пив Бум"',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/971/taganrog/?source=wizbiz_new_map_single&mode=search&text=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2078&sll=38.925456%2C47.212525&sspn=0.008079%',
+		Address : 'Александровская улица, 78',
+		District : 'Центр',
+		Phones : '',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : '',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -6994,7 +7592,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7026,7 +7626,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/202_moskatova_1436260408.jpg',
@@ -7073,7 +7675,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Европейская", "Русская"],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/203_Petroskaja_1436260521.png',
@@ -7093,7 +7697,7 @@ this.Items = [
 
 	},	{
 		Name : 'Универ, бильярд паб',
-		OfSiteLink : 'бильярд-таганрог.рф',
+		OfSiteLink : 'http://бильярд-таганрог.рф',
 		MenuLink : '',
 		KafeTaganrogLink : '',
 		VkontakteLink : '',
@@ -7120,7 +7724,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7152,7 +7758,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7184,7 +7792,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7216,7 +7826,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7248,7 +7860,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7280,7 +7894,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://ttphotos.s3-website-eu-west-1.amazonaws.com/gallery/92/76892/1024x768/157729.jpg',
@@ -7317,7 +7933,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7349,7 +7967,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7381,7 +8001,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд", "Настольный теннис", "Кикер"],
+		TypeKafe : ["Настольный теннис", "Бильярд", "Кикер"],
 		Photos : [],
 
 	},	{
@@ -7413,7 +8035,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : 'Стоимость аренды одной дорожки (до 6 человек) в час для игры в боулинг от 150 до 500 руб.<br>День/цена до 18.00/цена после 18.00: ср/150/300; чт/200/350; пт/200/500; сб/350/500; вс/350/350; праздники/500.',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд", "Боулинг"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7445,7 +8069,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Бильярд", "Боулинг"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7477,7 +8103,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7509,7 +8137,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Кинотеатр"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7541,7 +8171,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Кинотеатр"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7573,7 +8205,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Кинотеатр"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7605,7 +8239,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Кинотеатр"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7637,7 +8273,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Кинотеатр"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7669,12 +8307,14 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Клуб"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
 		Name : 'Ночной клуб Valiano',
-		OfSiteLink : 'valiano.com',
+		OfSiteLink : 'http://valiano.com',
 		MenuLink : '',
 		KafeTaganrogLink : '',
 		VkontakteLink : '',
@@ -7701,7 +8341,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Клуб"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7733,7 +8375,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Клуб"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/134_jpg',
@@ -7810,7 +8454,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Клуб"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7842,7 +8488,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Клуб"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://kafe-taganrog.ru/images/obj_images/132_jpg',
@@ -7884,7 +8532,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Антикафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7916,7 +8566,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Антикафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7948,7 +8600,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Антикафе"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -7980,7 +8634,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Картинг"],
+		TypeKafe : ["Картинг"],
 		Photos : [],
 
 	},	{
@@ -8012,7 +8668,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8044,7 +8702,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8076,7 +8736,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8108,7 +8770,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : ["Бассейн", "2 финские сауны", "фитнес-клуб", "Общественная баня", "Парикмахерская", "Услуги массажиста", "русская баня на дровах"],
 		Photos : [],
 
 	},	{
@@ -8140,7 +8804,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8172,7 +8838,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8204,7 +8872,9 @@ this.Items = [
 		AdditionalInfo : 'сеансы каждые 1,5 часа',
 		Cost : 'разовое посещение 100 руб',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Банкетный зал"],
+		TypeKafe : ["Банкетный зал", "VIP комната"],
 		Photos : [],
 
 	},	{
@@ -8236,7 +8906,9 @@ this.Items = [
 		AdditionalInfo : 'Закрытый бассейн в длину составляет 25 метров. Он хорошо подходит для обучения детей плаванию, ребенок может почувствовать дно и как результат преодолеть свой страх. В закрытом бассейне занимаются маленькие спортсмены под руководством тренеров спортивных ',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8268,7 +8940,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : 'Разовое посещение — 125 руб. (дети), 150 руб. (взрослые)',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8300,7 +8974,9 @@ this.Items = [
 		AdditionalInfo : '- Дворец спорта общей площадью 2200 кв.м, в котором находятся комплексный игровой зал,<br><br> зал спортивных единоборств,  зал фитнеса и тренажерный зал.<br><br>- Теннисный корт с искусственным покрытием австрийской фирмы  "Суперграсс",<br><br> состоящий из двух открытых ',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8332,7 +9008,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : 'разовое посещение 150 руб',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8364,7 +9042,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8396,7 +9076,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8428,7 +9110,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8460,7 +9144,43 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
+		Photos : [],
+
+	},	{
+		Name : 'Семейный спортивно-оздоровительный клуб «Family Club»',
+		OfSiteLink : 'http://lelkin16.wixsite.com/familyclub',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : 'https://vk.com/familyclub_tgn',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/971/taganrog/?z=17&ll=38.919411%2C47.279501&l=map&pt=38.844976%2C47.224801&origin=jsapi_2_0&from=api-maps&mode=search&text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%',
+		Address : 'Ул. Кленовая 23',
+		District : 'Северный',
+		Phones : '8(8634) 341-000<br>8(951) 827-05-33',
+		PlaceType : '',
+		AverageBill : '',
+		WorkTime : 'с 10 до 23',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : [],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8492,7 +9212,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8524,7 +9246,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8556,7 +9280,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8588,7 +9314,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://ttphotos.s3-website-eu-west-1.amazonaws.com/gallery/24/77024/1024x768/158126.jpg',
@@ -8635,7 +9363,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8667,7 +9397,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Баня"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8699,7 +9431,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8731,7 +9465,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8763,7 +9499,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8795,7 +9533,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8827,7 +9567,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8859,7 +9601,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8891,7 +9635,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8923,7 +9669,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8955,7 +9703,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Теннис"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -8987,7 +9737,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Остальное"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -9019,7 +9771,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Пейнтбол"],
+		TypeKafe : ["Пейнтбол"],
 		Photos : [],
 
 	},	{
@@ -9051,7 +9805,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Пейнтбол"],
+		TypeKafe : ["Пейнтбол"],
 		Photos : [],
 
 	},	{
@@ -9083,12 +9839,14 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Пейнтбол"],
+		TypeKafe : ["Пейнтбол"],
 		Photos : [],
 
 	},	{
 		Name : 'Пейнтбольный клуб Красная Армия',
-		OfSiteLink : 'ka-club.su',
+		OfSiteLink : 'http://ka-club.su',
 		MenuLink : '',
 		KafeTaganrogLink : '',
 		VkontakteLink : '',
@@ -9115,12 +9873,14 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Пейнтбол"],
+		TypeKafe : ["Пейнтбол"],
 		Photos : [],
 
 	},	{
 		Name : 'Lazermax',
-		OfSiteLink : 'lazer-max.mya5.ru',
+		OfSiteLink : 'http://lazer-max.mya5.ru',
 		MenuLink : '',
 		KafeTaganrogLink : '',
 		VkontakteLink : '',
@@ -9147,12 +9907,14 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Лазертаг"],
+		TypeKafe : ["Лазертаг"],
 		Photos : [],
 
 	},	{
 		Name : 'АДРЕНАЛИН',
-		OfSiteLink : 'adrenalintag.ru',
+		OfSiteLink : 'http://adrenalintag.ru',
 		MenuLink : '',
 		KafeTaganrogLink : '',
 		VkontakteLink : 'http://vk.com/adrenalintag',
@@ -9179,7 +9941,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Лазертаг"],
+		TypeKafe : ["Лазертаг"],
 		Photos : [],
 
 	},	{
@@ -9211,7 +9975,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Лазертаг"],
+		TypeKafe : ["Лазертаг"],
 		Photos : [],
 
 	},	{
@@ -9243,7 +10009,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -9275,7 +10043,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : [],
 		Photos : [
 		{
 			image: 'http://cs626426.vk.me/v626426578/4b70/CY2Cg39p7CI.jpg',
@@ -9312,7 +10082,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -9344,7 +10116,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Детский игровой клуб"],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : ["X-BOX", "Няня"],
 		Photos : [],
 
 	},	{
@@ -9376,7 +10150,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : ["Детский игровой клуб"],
 		Photos : [],
 
 	},	{
@@ -9401,14 +10177,16 @@ this.Items = [
 		Address : 'пер. Гоголевский 24',
 		District : 'Центр',
 		Phones : '+7(8634) 31-11-84',
-		PlaceType : 'Банкетный зал<br>Для детей<br>Кафе\Ресторан<br>Доставка',
+		PlaceType : 'Банкетный зал<br>Для детей<br>Кафе<br>Доставка',
 		AverageBill : 'до 500р.',
 		WorkTime : 'ежедневно, 10:00–20:00',
 		Services : 'Банкетный зал<br>Доставка<br>VIP комната<br>Караоке<br>Детский игровой клуб',
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : ["Русская"],
-		DosugType : ["Банкетный зал", "Для детей", "Кафе\Ресторан", "Доставка"],
+		TypeDelivery : [],
+		DosugType : ["Банкетный зал", "Для детей", "Кафе", "Доставка"],
+		TypeKafe : ["Банкетный зал", "Доставка", "VIP комната", "Караоке", "Детский игровой клуб"],
 		Photos : [],
 
 	},	{
@@ -9440,7 +10218,9 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : [],
 		Photos : [],
 
 	},	{
@@ -9472,7 +10252,43 @@ this.Items = [
 		AdditionalInfo : '',
 		Cost : '',
 		FoodType : [],
+		TypeDelivery : [],
 		DosugType : ["Для детей"],
+		TypeKafe : ["Детский игровой клуб"],
+		Photos : [],
+
+	},	{
+		Name : 'Батутный центр «В облака»',
+		OfSiteLink : '',
+		MenuLink : '',
+		KafeTaganrogLink : '',
+		VkontakteLink : 'https://vk.com/v_oblaka_tgn',
+		VirtualTaganrogLink : '',
+		TagfindLink : '',
+		InfotaganrogLink : '',
+		FoursquareLink : '',
+		TraveltipzLink : '',
+		TCLink : '',
+		TCIconLink : '',
+		SpravkerLink : '',
+		UniquePhotoLink : '',
+		Latitude : '',
+		Longitude : '',
+		Video : '',
+		AddressLink : '',
+		Address : 'ул. Большая Бульварная, 13',
+		District : 'Западный',
+		Phones : '8 (928) 769-94-23, <br>8 (928) 770-48-64. ',
+		PlaceType : 'Для детей',
+		AverageBill : '',
+		WorkTime : '',
+		Services : '',
+		AdditionalInfo : '',
+		Cost : '',
+		FoodType : [],
+		TypeDelivery : [],
+		DosugType : ["Для детей"],
+		TypeKafe : [],
 		Photos : [],
 
 	},];
