@@ -329,6 +329,7 @@ PlacesList.prototype.fill = function ()
 
     var isKafe = document.getElementById('typeDosug').value == "Кафе";
     var isDelivery = document.getElementById('typeDosug').value == "Доставка";
+    var isDetailed = document.getElementById('typeDosug').value != "all" && !isKafe && !isDelivery;
     
 	content += '<thead>';
 	content += '<tr class="even">';
@@ -350,6 +351,10 @@ PlacesList.prototype.fill = function ()
 	if (isDelivery)
 	{
 	    content += '<th class="lastHeaderColumn">' + 'Доставка' + '</th>';
+	}
+	if (isDetailed)
+	{
+	    content += '<th class="lastHeaderColumn">' + '' + '</th>';
 	}
 	content += '</tr>'; 
 	content += '</thead>';
@@ -410,6 +415,7 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
 
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
+
 	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
 	    if(isKafe)
 	    {
@@ -420,7 +426,10 @@ PlacesList.prototype.fill = function ()
 	    {
 	        content += '<td class="middleSizeColumn">' + getValues(place.TypeDelivery) + '</td>';
 	    }
-
+	    if (isDetailed)
+	    {
+	        content += '<td class="lastHeaderColumn">' + place.AdditionalInfo + '</td>';
+	    }
 		content += '</tr>'; 
 	}
 
