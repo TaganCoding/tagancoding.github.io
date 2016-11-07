@@ -327,6 +327,9 @@ PlacesList.prototype.fill = function ()
     places = doFilter(this.Items);
     var content = '<table class="tablesorter" id="places" cellspacing="0" cellpadding="0">';
 
+    var isKafe = document.getElementById('typeDosug').value == "Кафе";
+    var isDelivery = document.getElementById('typeDosug').value == "Доставка";
+    
 	content += '<thead>';
 	content += '<tr class="even">';
 	content += '<th class="" style="max-width:15px"></th>';
@@ -337,10 +340,17 @@ PlacesList.prototype.fill = function ()
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
-	content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
-	content += '<th class="lastHeaderColumn">' + 'Бонусы' + '</th>';
+	if(isKafe)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
+	    content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
+	}
+	if (isDelivery)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Доставка' + '</th>';
+	}
 	content += '</tr>'; 
 	content += '</thead>';
 	
@@ -397,11 +407,19 @@ PlacesList.prototype.fill = function ()
 
 	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
-	    content += '<td class="middleSizeColumn">' + place.PlaceType + '</td>';
-	    content += '<td class="middleSizeColumn">' + place.AverageBill + '</td>';
+	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
+
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
 	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
-	    content += '<td class="middleSizeColumn">' + getBonus(place) + '</td>';
+	    if(isKafe)
+	    {
+	        content += '<td class="middleSizeColumn">' + getValues(place.FoodType) + '</td>';
+	        content += '<td class="middleSizeColumn">' + place.AverageBill + '</td>';
+	    }
+	    if (isDelivery)
+	    {
+	        content += '<td class="middleSizeColumn">' + getValues(place.TypeDelivery) + '</td>';
+	    }
 
 		content += '</tr>'; 
 	}
@@ -412,9 +430,16 @@ PlacesList.prototype.fill = function ()
 	dataListContainer.innerHTML = content;
 }
 
-function getBonus(baza)
+function getValues(values)
 {
     var result = '';
+    for(var i = 0; i < values.length; i++)
+    {
+        if (i != 0)
+            result += '<br/>';
+            
+        result += values[i];
+    }
     /*
     result += getBonusText(baza.TableTennis, "Настольный теннис");
     result += getBonusText(baza.Tennis, "Теннис");
