@@ -377,7 +377,7 @@ PlacesList.prototype.fill = function ()
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TagfindLink, "https://www.google.com/s2/favicons?domain=http://tagfind.ru");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.InfotaganrogLink, "https://www.google.com/s2/favicons?domain=http://www.infotaganrog.ru");
 		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
-		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.TCLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.LocalwayLink, "https://www.google.com/s2/favicons?domain=http://localway.ru");
 
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.Video, "http://www.russia-on.ru/wp-content/uploads/2012/11/YouTube.jpg");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");
