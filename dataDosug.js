@@ -5436,9 +5436,9 @@ this.Items = [
 	},	{
 		Name : 'Япона Мама',
 		OfSiteLink : '',
-		MenuLink : 'https://vk.com/japona_mama_taganrog',
-		KafeTaganrogLink : 'https://vk.com/albums-68858066',
-		VkontakteLink : '',
+		MenuLink : 'https://vk.com/albums-68858066',
+		KafeTaganrogLink : '',
+		VkontakteLink : 'https://vk.com/japona_mama_taganrog',
 		VirtualTaganrogLink : '',
 		TagfindLink : '',
 		InfotaganrogLink : '',
