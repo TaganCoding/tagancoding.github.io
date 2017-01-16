@@ -1,230 +1,516 @@
-<html>
-  <head>
-    <title>Досуг\Рестораны\Кафе\Столовые\Спорт\Развлечения\Детские игровые клубы\Бани в Таганроге и окрестностях</title>
-    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link type="text/css" rel="stylesheet" href="themes/sorter/blue/style.css"/>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script> 
-    <script type="text/javascript" src="dataDosug.js"></script>
-    <script type="text/javascript" src="codeDosug.js"></script>
-    <script type="text/javascript" src="galleria-1.2.2.js"></script>
-    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-42850927-1']);
-      _gaq.push(['_trackPageview']);
+function addCustomSorters() {
+    //helper for sorter
+    $.tablesorter.addParser({
+        // set a unique id 
+        id: 'html',
+        is: function (s) {
+            // return false so this parser is not auto detected 
+            return false;
+        },
+        format: function (s) {
+            // format your data for normalization 
+            return $(s).attr('alt');
+        },
+        // set type, either numeric or text 
+        type: 'text'
+    });
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-	<link rel="stylesheet" href="reveal.css" />	
-	<script type="text/javascript" src="jquery.reveal.js"></script>
-  </head>
-  <body>
-    <div class="adder">
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_vk"></a>
-            <a class="addthis_button_odnoklassniki_ru"></a>
-            <a class="addthis_button_google_plusone_share"></a>
-            <a class="addthis_button_facebook"></a>
-            <a class="addthis_button_twitter"></a>
-            <a class="addthis_button_livejournal"></a>
-            <a class="addthis_button_digg"></a>
-            <a class="addthis_button_mymailru"></a>
-        </div>
-    </div>
-    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51f8f00354e29ca4"></script>
-<br/>
-<br/>
-        <div class="logo">
-            <h1>Досуг\Рестораны\Кафе\Столовые\Спорт\Развлечения\Детские игровые клубы\Бани в Таганроге и окрестностях</h1>
-        </div>
-        <div id="filterContainer">  
-            <div id="districtFilter" class="filter">
-                <label>Открытие</label>
-                <select id="opening" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любое</option>
-                    <option value="3">3 месяца назад</option>
-                    <option value="12">год назад</option>
-                </select>
-            </div>
-            <div id="districtFilter" class="filter">
-                <label>Район</label>
-                <select id="district" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любой</option>
-                    <option value="Центр">Центр</option>
-                    <option value="Набережная">Набережная</option>
-                    <option value="Мармелад">Мармелад</option>
-                    <option value="Русское поле">Русское поле</option>
-                    <option value="Западный">Западный</option>
-                    <option value="Котельщик">Котельщик</option>
-                    <option value="Новый вокзал">Новый вокзал</option>
-                    <option value="Северный">Северный</option>
-                    <option value="Дзержинка">Дзержинка</option>
-                    <option value="Свобода">Свобода</option>
-                    <option value="За городом">За городом</option>
-                </select>
-            </div>
-            <div id="typeFilter" class="filter">
-                <label>Тип</label>
-                <select id="typeDosug" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любой</option>
-                    <option value="Кафе">Кафе\Ресторан</option>
-                    <option value="Кинотеатр">Кинотеатр</option>
-                    <option value="Доставка">Доставка</option>
-                    <option value="Столовая">Столовая\Бизнесланч\ФастФуд</option>
-                    <option value="Для детей">Для детей</option>
-                    <option value="Банкетный зал">Банкетный зал</option>
-                    <option value="Кондитерская">Кондитерская</option>
-                    <option value="Кофейня">Кофейня</option>
-                    <option value="Кальянбар">Кальян-бар</option>
-                    <option value="Бар">Бар\Паб</option>
-                    <option value="Спортбар">Спортбар</option>
-                    <option value="Спорт">Спорт</option>
-                    <option value="Бильярд">Бильярд</option>
-                    <option value="Боулинг">Боулинг</option>
-                    <option value="Пейнтбол">Пейнтбол</option>
-                    <option value="Лазертаг">Лазертаг</option>
-                    <option value="Картинг">Картинг</option>
-                    <option value="Бассейн">Бассейн</option>
-                    <option value="Баня">Баня</option>
-                    <option value="Антикафе">Антикафе</option>
-                    <option value="Клуб">Клуб</option>
-                    <option value="Теннис">Теннис</option>
-                    <option value="Настольный теннис">Настольный теннис</option>
-                    <option value="Футбол">Футбол</option>
-                    <option value="Кикер">Кикер</option>
-                    <option value="Остальное">Остальное</option>
-                </select>
-            </div>
-            <div id="foodFilter" class="filter" style="display: none">
-                <label>Кухня</label>
-                <select id="food" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любая</option>
-                    <option value="Европейская">Европейская</option>
-                    <option value="Итальянская">Итальянская</option>
-                    <option value="Пицца">Пицца</option>
-                    <option value="Роллы">Роллы</option>
-                    <option value="Японская">Японская</option>
-                    <option value="Русская">Русская</option>
-                    <option value="Французская">Французская</option>
-                    <option value="Кондитерская">Кондитерская</option>
-                    <option value="Авторская">Авторская</option>
-                    <option value="Домашняя">Домашняя</option>
-                    <option value="Экзотическая">Экзотическая</option>
-                    <option value="Вегетарианская">Вегетарианская</option>
-                    <option value="Кавказская">Кавказская</option>
-                    <option value="Восточная">Восточная</option>
-                    <option value="Американская">Американская</option>
-                    <option value="Китайская">Китайская</option>
-                    <option value="Грузинская">Грузинская</option>
-                    <option value="Азербайджанская">Азербайджанская</option>
-                    <option value="Узбекская">Узбекская</option>
-                    <option value="Фаст Фуд">Фаст Фуд</option>
-                    <option value="Армянская">Армянская</option>
-                    <option value="Немецкая">Немецкая</option>
-                    <option value="Украинская">Украинская</option>
-                </select>
-            </div>
-            <div id="kafeFilter" class="filter" style="display: none">
-                <label>Тип</label>
-                <select id="typeKafe" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любой</option>
-                    <option value="Караоке">Караоке</option>
-                    <option value="Летняя веранда">Летняя веранда</option>
-                    <option value="Детская комната">Детская комната</option>
-                    <option value="VIP комната">VIP комната</option>
-                    <option value="Живая музыка">Живая музыка</option>
-                </select>
-            </div>
-            <div id="deliveryFilter" class="filter" style="display: none">
-                <label>Тип</label>
-                <select id="typeDelivery" onchange="showPlacesList();">
-                    <option value="all" selected="selected">любой</option>
-                    <option value="Роллы">Роллы</option>
-                    <option value="Пицца">Пицца</option>
-                    <option value="Шашлык">Шашлык</option>
-                    <option value="Обед">Обед</option>
-                    <option value="Ресторанная еда">Ресторанная еда</option>
-                </select>
-            </div>
-        </div>
-    <div style="clear: both"></div>
-    <div style="text-align:center;">
-        <a href="http://twitter.com/#!/TaganCoding" target=_blank>Следите за обновлениями в твиттере</a>
-    </div>
-    <br /> 
-    <div id="deliveryPanel" style="display:none">
-        <div id="deliveryRollsPanel" style="display:">
-            <div id="rollFilterPanel" style="float:left">
-                <div>
-                    <input id="rollCheckAllInput" onchange="rollCheckAllInput();" type="checkbox"/>
-                    <label>Выбрать все</label>
-                </div>
-                <div>
-                    <input id="simpleRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
-                    <label>Классические</label>
-                </div>
-                <div>
-                    <input id="standartRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
-                    <label>Стандартные</label>
-                </div>
-                <div>
-                    <input id="crispyRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
-                    <label>Жареные</label>
-                </div>
-                <div>
-                    <input id="bakedRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
-                    <label>Запеченные</label>
-                </div>
-            </div>
-            <div id="rollIngredientPanel" style="float:left">
-            
-            </div>
-            <div id="rollIngredientDenyPanel" style="float:left">
-            
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div id="topPanel">
-        <div class="clear"></div>
-        <div id="dataListContainer">
-        </div>
-        <iframe id="kinocharly" style="display: none; width:100%; min-height:900px; max-width:1100px;">
-        </iframe>
-    <div class="clear"></div>
-        <iframe id="kinoneo" style="display: none; width:100%; min-height:1200px; max-width:1100px;">
-        </iframe>
-    </div>
-    <div class="clear"></div>
-    <div id="bottomPanel">
-        <div id="dataDetailsContainer" class="reveal-modal">
-            <div id="bottomLeft">
-                <h1 id="placename"></h1>
-            </div>
-            <div id="bottomMiddle">
-                <div id="advantages"></div>
-                <div id="cost"></div>
-                <div id="videos"></div>
-            </div>
-            <div id="bottomRight">
-            </div>
-            <div id="gallery"></div>
-        </div>
-        <div class="clear"></div>
-        <br />
+    $.tablesorter.addParser({
+        // set a unique id 
+        id: 'salary',
+        is: function (s) {
+            // return false so this parser is not auto detected 
+            return false;
+        },
+        format: function (s) {
+            // format your data for normalization 
+            return $(s).attr('absMax');
+        },
+        // set type, either numeric or text 
+        type: 'numeric'
+    });
+}
+
+
+$(document).ready(function () {
+//alert(Ingredients);
+  //addCustomSorters();
+  var hash = window.location.hash.substr(1);
+  
+  if (hash == "cinema")
+    $('#typeDosug').val('Кинотеатр');
+  if (hash == "canteen")
+    $('#typeDosug').val('Столовая');
+  if (hash == "child")
+    $('#typeDosug').val('Для детей');
+  if (hash == "cafe")
+    $('#typeDosug').val('Кафе');
+  if (hash == "delivery")
+    $('#typeDosug').val('Доставка');
+  if (hash == "banket")
+    $('#typeDosug').val('Банкетный зал');
+  if (hash == "confectionery")
+    $('#typeDosug').val('Кондитерская');
+  if (hash == "hookahlounge")
+    $('#typeDosug').val('Кальянбар');
+  if (hash == "pub")
+    $('#typeDosug').val('Бар');
+  if (hash == "sportsbar")
+    $('#typeDosug').val('Спортбар');
+  if (hash == "billiard")
+    $('#typeDosug').val('Бильярд');
+  if (hash == "bowling")
+    $('#typeDosug').val('Боулинг');
+  if (hash == "paintball")
+    $('#typeDosug').val('Пейнтбол');
+  if (hash == "kart")
+    $('#typeDosug').val('Картинг');
+  if (hash == "pool")
+    $('#typeDosug').val('Бассейн');
+  if (hash == "bath")
+    $('#typeDosug').val('Баня');
+  if (hash == "timeclub")
+    $('#typeDosug').val('Антикафе');
+  if (hash == "nightclub")
+    $('#typeDosug').val('Клуб');
+  if (hash == "tennis")
+    $('#typeDosug').val('Теннис');
+  if (hash == "tabletennis")
+    $('#typeDosug').val('Настольный теннис');
+  if (hash == "kiker")
+    $('#typeDosug').val('Кикер');
+  if (hash == "remain")
+    $('#typeDosug').val('Остальное');
+  
+  showPlacesList();
+  
+  Galleria.loadTheme('galleria.simplecoding.js');
+  showDetailsByName(document.location.hash);
+  
+  var gallery = $("#gallery");
+  
+  var rollsIngredientsFilter = "";
+  var rollsIngredientsDenyFilter = "";
+  for (var i = 0; i < RollsIngredients.length; i++) {
+    rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
+  }
+  document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;
+});
+
+var bazas;
+
+function showPlacesList()
+{
+    oPlacesList =  new PlacesList();
+    oPlacesList.fill();
+}
+
+
+function showDetailsByName(name)
+{
+    var index = -1;
+
+    for (var i = 0; i < places.length; i++) {
+        if ("#" + places[i].Name == name) {
+            index = i;
+        }
+    }
+
+    if (index >= 0) {
+        showDetails(index);
+    }
+    else {
+        document.location.href = document.location.pathname + "#home";
+    }
+}
+
+function showDetails(placeIndex)
+{
+    if (places.length < placeIndex)
+        return;
+    
+    var place = places[placeIndex];
+    $('#dataDetailsContainer').show();
+    document.getElementById('placename').innerHTML = place.Name;
+    document.getElementById('advantages').innerHTML = place.AdditionalInfo;
+    
+    
+ //   var videosHTML = generateUnorderedArrayViewAsLinks(baza.Videos);
+  //  if (baza.Videos.length > 0)
+ //       videosHTML = '<h2>Видео</h2>' + videosHTML;
         
-    </div>
-    <div class="clear"></div>
-    <br />
-    Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
-    <br />
-    Обновлено 16 января 22:00.
-    <br />  
-  </body>
-</html>
+//    document.getElementById('videos').innerHTML = videosHTML;
+   
+ //   if (baza.Videos.length > 0)
+ //   {
+ //       $('#videos').show();
+ //   }
+ //   else
+ //   {
+ //       $('#videos').hide();    
+ //   }
+    
+    if (place.Photos.length > 0)
+    {
+        initGallery(place);
+        $('#gallery').show();
+    }
+    else
+    {
+        $('#gallery').hide();    
+    }
+    //debugger;
+    document.location.href = document.location.pathname + "#" + place.Name;
+    
+    $('#dataDetailsContainer').reveal();
+}
+
+function initGallery(baza){
+    $("#gallery").galleria({
+        data_source: baza.Photos,
+        width: 530,
+        height: 500,
+        clicknext: true
+    });
+}
+
+function generatePhotosView(items)
+{
+    var result = '';
+    
+    for (var i = 0; i < 1 /*items.length*/; i++)
+    {
+        result += '<img class="officeImg" src="'+ items[i] + '"><br>';
+    }
+
+    return result;
+}
+
+function generateSequenceDelimetedByComma(items)
+{
+    var result = '';
+    
+    if (items.length > 0)
+    {
+        result += items[0];
+        for (var i = 1; i < items.length; i++)
+        {
+            result += ', ' + items[i];
+        }
+    }
+    
+    return result;
+}
+
+function generateUnorderedArrayViewAsLinks(items)
+{
+    var result = '<UL>';
+    
+    for (var i = 0; i < items.length; i++)
+    {
+        result += '<LI><a href="' + items[i] + '">' + items[i] + '</a></LI>';
+    }
+    result += '</UL>';
+    
+    return result;
+}
+
+function generateUnorderedArrayView(items)
+{
+    var result = '<UL>';
+    
+    for (var i = 0; i < items.length; i++)
+    {
+        result += '<LI>' + items[i] + '</LI>';
+    }
+    result += '</UL>';
+    
+    return result;
+}
+
+IsCinemasLoaded = false;
+
+function doFilter(items)
+{
+    var result = [];
+    
+    var typeDosug = document.getElementById('typeDosug').value;
+    var district = document.getElementById('district').value;
+    var opening = document.getElementById('opening').value;
+    var food = document.getElementById('food').value;
+    var typeKafe = document.getElementById('typeKafe').value;
+    var typeDelivery = document.getElementById('typeDelivery').value;
+
+    var isTypeDosugNotMeans = typeDosug == "all";
+    var isOpeningNotMeans = opening == "all";
+    var isDistrictNotMeans = district == "all";
+    var isFoodNotMeans = food == "all" || typeDosug != "Кафе";
+    var isTypeKafeNotMeans = typeKafe == "all" || typeDosug != "Кафе";
+    var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
+    
+    if (typeDosug == "Кинотеатр")
+    {
+        if (!IsCinemasLoaded)
+        {
+            $('#kinocharly').attr('src', "http://www.kinocharly.ru/cinemas/60/");
+            $('#kinoneo').attr('src', "http://www.kinoneo.ru/schedule#all");
+            IsCinemasLoaded = true;
+        }
+        
+        $('#kinocharly').show();
+        $('#kinoneo').show();
+    }
+    else
+    {
+        $('#kinocharly').hide();
+        $('#kinoneo').hide();
+    }
+    
+    if (typeDosug == "Доставка")
+    {
+        $('#deliveryFilter').show();
+    }
+    else
+    {
+        $('#deliveryFilter').hide();
+    }
+    
+    if (typeDosug == "Кафе")
+    {
+        $('#kafeFilter').show();
+        $('#foodFilter').show();
+    }
+    else
+    {
+        $('#kafeFilter').hide();
+        $('#foodFilter').hide();
+    }
+    
+    for (var i = 0; i < items.length; i++)
+    {    
+        var place = items[i];
+        
+        var isTypeDosugEquals = isTypeDosugNotMeans;
+        var isDistrictEquals = isDistrictNotMeans || district == place.District;
+        var isOpeningEquals = isOpeningNotMeans;
+        var isFoodEquals = isFoodNotMeans;
+        var isTypeKafeEquals = isTypeKafeNotMeans;
+        var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
+        
+        if (!isTypeDosugEquals)
+        {
+            isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
+        }
+        
+        if (typeDosug == "Кафе" && (!isFoodEquals || !isTypeKafeEquals))
+        {
+            if (!isFoodEquals)
+                isFoodEquals = checkValues(food, place.FoodType);
+            if (!isTypeKafeEquals)
+                isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);
+        }
+        if (typeDosug == "Доставка" && !isTypeDeliveryEquals)
+        {
+            isTypeDeliveryEquals = checkValues(typeDelivery, place.TypeDelivery);
+        }
+        
+        if (opening != "all")
+        {
+            if (place.OpeningDate === undefined)
+                continue;
+                
+            var filterDate = new Date();
+            if (opening == "3")
+                filterDate.setMonth(filterDate.getMonth() - 3);
+            if (opening == "12")
+                filterDate.setMonth(filterDate.getMonth() - 12);
+            if (place.OpeningDate > filterDate)
+                 isOpeningEquals = true;            
+        }
+        
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals)
+            result.push(place);
+    }
+
+    return result;
+}
+
+function checkValues(value, values)
+{
+    for (var i = 0; i < values.length; i++)
+    {
+        if (values[i] == value.replace("\\",""))
+            return true;
+    }
+
+    return false;
+}
+
+PlacesList.prototype.fill = function ()
+{
+    places = doFilter(this.Items);
+    var content = '<table class="tablesorter" id="places" cellspacing="0" cellpadding="0">';
+
+    var isKafe = document.getElementById('typeDosug').value == "Кафе";
+    var isDelivery = document.getElementById('typeDosug').value == "Доставка";
+    var isDetailed = document.getElementById('typeDosug').value != "all" && !isKafe && !isDelivery;
+    
+	content += '<thead>';
+	content += '<tr class="even">';
+	content += '<th class="" style="max-width:15px"></th>';
+	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
+	content += '<th class="bigSizeIconColumn" colspan="13">Ссылки</th>';
+	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
+	content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
+	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
+	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
+	content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
+	content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
+	content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
+	if(isKafe)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
+	    content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
+	}
+	if (isDelivery)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Доставка' + '</th>';
+	}
+	if (isDetailed)
+	{
+	    content += '<th class="lastHeaderColumn">' + '' + '</th>';
+	}
+	content += '</tr>'; 
+	content += '</thead>';
+	
+	var rowIndex = 0;
+	for(var i = 0; i < places.length; i++)
+	{
+	    var place = places[i];
+	    if (place == null)
+	        continue;
+	        
+	    var colorStyle = rowIndex % 2 ? 'even' : 'odd';
+	    rowIndex++;
+	    var addr = '';
+	    if (place.AddressLink != '')
+	    {
+	        addr = '<a target="blank" href="' + place.AddressLink + '"><img alt="' + place.Name + '" class="smallSizeColumn" src="http://www.clker.com/cliparts/N/3/C/c/M/f/pin-point-location-marker-purple-md.png"></a>';
+	    }
+	    var name = place.Name;
+
+	    if (place.OfSiteLink.length > 0)
+	    {
+	        name = '<a target="blank" href="' + place.OfSiteLink + '">' + place.Name + '</a>';
+	    }
+
+	    content += '<tr class="datarow ' + colorStyle + '" onclick="showDetails(' + i + ')";>';
+	    content += '<td class="" style="max-width:15px">' + addr + '</td>';
+	    content += '<td class="middleSizeColumn">' + name + '</td>';
+
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TagfindLink, "https://www.google.com/s2/favicons?domain=http://tagfind.ru");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.InfotaganrogLink, "https://www.google.com/s2/favicons?domain=http://www.infotaganrog.ru");
+		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.LocalwayLink, "https://www.google.com/s2/favicons?domain=http://localway.ru");
+
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.Video, "http://www.russia-on.ru/wp-content/uploads/2012/11/YouTube.jpg");
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");
+		
+		/*if (baza.Photos == '')
+		    content += '<td class="lastHeaderColumn"></td>'; 
+		else
+			content += '<td class="lastHeaderColumn"> <img class="imageLinkWidth" src="http://iconizer.net/files/Mnml/orig/camera.png"></td>';
+			*/
+			
+		content += '<td>';
+		if (place.MenuLink)
+		    content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
+		content += '</td>';
+		
+		content += '<td class="lastHeaderColumn">' + place.Photos.length + " фото" +'</td>'; 		
+
+	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
+	    content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
+	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
+
+	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
+
+	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
+	    if(isKafe)
+	    {
+	        content += '<td class="middleSizeColumn">' + getValues(place.FoodType) + '</td>';
+	        content += '<td class="middleSizeColumn">' + place.AverageBill + '</td>';
+	    }
+	    if (isDelivery)
+	    {
+	        content += '<td class="middleSizeColumn">' + getValues(place.TypeDelivery) + '</td>';
+	    }
+	    if (isDetailed)
+	    {
+	        content += '<td class="lastHeaderColumn">' + place.AdditionalInfo + '</td>';
+	    }
+		content += '</tr>'; 
+	}
+
+	content += '</table>'; 
+
+	var dataListContainer = document.getElementById('dataListContainer');
+	dataListContainer.innerHTML = content;
+}
+
+function getValues(values)
+{
+    var result = '';
+    for(var i = 0; i < values.length; i++)
+    {
+        if (i != 0)
+            result += '<br/>';
+            
+        result += values[i];
+    }
+    /*
+    result += getBonusText(baza.TableTennis, "Настольный теннис");
+    result += getBonusText(baza.Tennis, "Теннис");
+    result += getBonusText(baza.Football, "Футбол");
+    result += getBonusText(baza.Basketball, "Баскетбол");
+    result += getBonusText(baza.Volleyball, "Волейбол");
+    result += getBonusText(baza.Billiard, "Бильярд");
+    result += getBonusText(baza.Besedki, "Беседки");
+    result += getBonusText(baza.Fishing, "Рыбалка");
+    result += getBonusText(baza.Pool, "Бассейн");
+    result += getBonusText(baza.Bath, "Баня");
+    result += getBonusText(baza.Banket, "Зал");
+    result += getBonusText(baza.Disco, "Дискотека");
+    result += getBonusText(baza.Playground, "Детская площадка");
+    
+    if (result.length > 0)
+        result = baza.Bonuses + '<br/>' + result;
+    else
+        result = baza.Bonuses;
+    */
+    return result;
+}
+
+function getBonusText(placeBonus, bonusText)
+{
+    var result = '';
+    if (placeBonus)
+        result = bonusText  + "<br>";
+    return result;
+}
+
+
+function addImageLink(tdClass, imageClass, link, imageLink)
+{
+    var result;
+	if (link != '')
+	    result = '<td class="' + tdClass + '"><a target="blank" href="' + link + '"/><img class="' + imageClass + '" src="' +imageLink + '"></img></a></td>';
+	else
+	    result = '<td class="' + tdClass + '"></td>';
+    return result;
+}
