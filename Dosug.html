@@ -45,6 +45,14 @@
         </div>
         <div id="filterContainer">  
             <div id="districtFilter" class="filter">
+                <label>Открытие</label>
+                <select id="opening" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любое</option>
+                    <option value="3">3 месяца назад</option>
+                    <option value="12">год назад</option>
+                </select>
+            </div>
+            <div id="districtFilter" class="filter">
                 <label>Район</label>
                 <select id="district" onchange="showPlacesList();">
                     <option value="all" selected="selected">любой</option>
@@ -72,6 +80,7 @@
                     <option value="Для детей">Для детей</option>
                     <option value="Банкетный зал">Банкетный зал</option>
                     <option value="Кондитерская">Кондитерская</option>
+                    <option value="Кофейня">Кофейня</option>
                     <option value="Кальянбар">Кальян-бар</option>
                     <option value="Бар">Бар\Паб</option>
                     <option value="Спортбар">Спортбар</option>
@@ -149,6 +158,39 @@
         <a href="http://twitter.com/#!/TaganCoding" target=_blank>Следите за обновлениями в твиттере</a>
     </div>
     <br /> 
+    <div id="deliveryPanel" style="display:none">
+        <div id="deliveryRollsPanel" style="display:">
+            <div id="rollFilterPanel" style="float:left">
+                <div>
+                    <input id="rollCheckAllInput" onchange="rollCheckAllInput();" type="checkbox"/>
+                    <label>Выбрать все</label>
+                </div>
+                <div>
+                    <input id="simpleRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Классические</label>
+                </div>
+                <div>
+                    <input id="standartRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Стандартные</label>
+                </div>
+                <div>
+                    <input id="crispyRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Жареные</label>
+                </div>
+                <div>
+                    <input id="bakedRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Запеченные</label>
+                </div>
+            </div>
+            <div id="rollIngredientPanel" style="float:left">
+            
+            </div>
+            <div id="rollIngredientDenyPanel" style="float:left">
+            
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
     <div id="topPanel">
         <div class="clear"></div>
         <div id="dataListContainer">
@@ -182,7 +224,7 @@
     <br />
     Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
     <br />
-    Обновлено 2 декабря 20:00.
+    Обновлено 16 января 22:00.
     <br />  
   </body>
 </html>
