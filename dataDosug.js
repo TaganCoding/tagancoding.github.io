@@ -6734,7 +6734,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'GRILL BAR| PINK'S FAMILY',
+		Name : 'GRILL BAR| PINKS FAMILY',
 		OfSiteLink : '',
 		MenuLink : '',
 		KafeTaganrogLink : '',
