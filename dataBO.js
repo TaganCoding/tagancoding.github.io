@@ -1246,7 +1246,7 @@ this.Items = [
 
 	},	{
 		Name : 'Дмитриадовский',
-		OfSiteLink : '',
+		OfSiteLink : 'http://www.дмитриадовский.рф/',
 		NotOfSiteLink : '',
 		VkontakteLink : '',
 		VirtualTaganrogLink : '',
@@ -1488,7 +1488,7 @@ this.Items = [
 
 	},	{
 		Name : 'Ромашка',
-		OfSiteLink : 'http://dokromashka.ru',
+		OfSiteLink : 'http://dokromashka.ru/',
 		NotOfSiteLink : 'http://rest61.ru/bases/68/',
 		VkontakteLink : '',
 		VirtualTaganrogLink : '',
