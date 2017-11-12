@@ -7379,7 +7379,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Heart's Pub',
+		Name : 'Hearts Pub',
 		OfSiteLink : '',
 		MenuLink : '',
 		KafeTaganrogLink : 'http://kafe-taganrog.ru/harat-s-pub.html',
