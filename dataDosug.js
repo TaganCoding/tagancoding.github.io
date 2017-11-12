@@ -10389,7 +10389,7 @@ this.Items = [
 		Cost : '',
 		FoodType : [],
 		TypeDelivery : [],
-		DosugType : ["Для детей", "Лазертаг"],
+		DosugType : ["Для детей", "Лазертаг", "Кикер"],
 		TypeKafe : ["Лазертаг"],
 		Photos : [],
 
