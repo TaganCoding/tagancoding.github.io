@@ -83,7 +83,7 @@ $(document).ready(function () {
     $('#typeDosug').val('Кикер');
   if (hash == "remain")
     $('#typeDosug').val('Остальное');
-  if (hash == "3months")
+  if (hash == "recent")
     $('#opening').val('3');
   if (hash == "year")
     $('#opening').val('12');
