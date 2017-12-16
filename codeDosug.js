@@ -81,6 +81,8 @@ $(document).ready(function () {
     $('#typeDosug').val('Настольный теннис');
   if (hash == "kiker")
     $('#typeDosug').val('Кикер');
+  if (hash == "quiz")
+    $('#typeDosug').val('Барная викторина');
   if (hash == "remain")
     $('#typeDosug').val('Остальное');
   if (hash == "recent")
