@@ -89,6 +89,12 @@ $(document).ready(function () {
   
   var gallery = $("#gallery");
   
+  var rollsIngredientsFilter = "";
+  var rollsIngredientsDenyFilter = "";
+  for (var i = 0; i < RollsIngredients.length; i++) {
+    rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
+  }
+  document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;
 });
 
 var bazas;
@@ -318,7 +324,7 @@ function doFilter(items)
                 filterDate.setMonth(filterDate.getMonth() - 3);
             if (opening == "12")
                 filterDate.setMonth(filterDate.getMonth() - 12);
-            if (place.OpeningDate > filterDate)
+            if (place.OpeningDate >= filterDate || opening == "0" && )
                  isOpeningEquals = true;            
         }
         
@@ -348,6 +354,9 @@ PlacesList.prototype.fill = function ()
     var isKafe = document.getElementById('typeDosug').value == "Кафе";
     var isDelivery = document.getElementById('typeDosug').value == "Доставка";
     var isDetailed = document.getElementById('typeDosug').value != "all" && !isKafe && !isDelivery;
+    var isBilliard = document.getElementById('typeDosug').value == "Бильярд";
+    var isBath = document.getElementById('typeDosug').value == "Баня";
+    var isBanket = document.getElementById('typeDosug').value == "Банкетный зал";
     
 	content += '<thead>';
 	content += '<tr class="even">';
@@ -373,6 +382,18 @@ PlacesList.prototype.fill = function ()
 	if (isDetailed)
 	{
 	    content += '<th class="lastHeaderColumn">' + '' + '</th>';
+	}
+	if (isBilliard)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Бильярд' + '</th>';
+	}
+	if (isBath)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Баня' + '</th>';
+	}
+	if (isBanket)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Зал' + '</th>';
 	}
 	content += '</tr>'; 
 	content += '</thead>';
@@ -403,6 +424,8 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "http://images.vectorhq.com/images/istock/thumbs/1029/102901085-moscow-russia-september-05-2016-new-instagram-logo.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
@@ -433,6 +456,10 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
 
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
+	    if (isBanket)
+	    {
+	        content += '<td class="lastHeaderColumn">' + getValues(place.Capacity) + '</td>';
+	    }
 
 	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
 	    if(isKafe)
@@ -448,6 +475,15 @@ PlacesList.prototype.fill = function ()
 	    {
 	        content += '<td class="lastHeaderColumn">' + place.AdditionalInfo + '</td>';
 	    }
+	    if (isBilliard)
+	    {
+	        content += '<td class="lastHeaderColumn">' + getValues(place.BilliardType) + '</td>';
+	    }
+	    if (isBath)
+	    {
+	        content += '<td class="lastHeaderColumn">' + getValues(place.BathType) + '</td>';
+	    }
+	    
 		content += '</tr>'; 
 	}
 
