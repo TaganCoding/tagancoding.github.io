@@ -320,11 +320,12 @@ function doFilter(items)
                 continue;
                 
             var filterDate = new Date();
+            isOpeningEquals = opening == "0" && place.OpeningDate > filterDate;
             if (opening == "3")
                 filterDate.setMonth(filterDate.getMonth() - 3);
             if (opening == "12")
                 filterDate.setMonth(filterDate.getMonth() - 12);
-            if (place.OpeningDate >= filterDate || opening == "0" && )
+            if (place.OpeningDate >= filterDate)
                  isOpeningEquals = true;            
         }
         
