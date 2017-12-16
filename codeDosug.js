@@ -363,7 +363,7 @@ PlacesList.prototype.fill = function ()
 	content += '<tr class="even">';
 	content += '<th class="" style="max-width:15px"></th>';
 	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-	content += '<th class="bigSizeIconColumn" colspan="13">Ссылки</th>';
+	content += '<th class="bigSizeIconColumn" colspan="15">Ссылки</th>';
 	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
 	content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
