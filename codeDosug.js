@@ -333,7 +333,7 @@ function doFilter(items)
                 filterDate.setMonth(filterDate.getMonth() - 3);
             if (opening == "12")
                 filterDate.setMonth(filterDate.getMonth() - 12);
-            if (place.OpeningDate >= filterDate)
+            if (place.OpeningDate >= filterDate && new Date() > place.OpeningDate)
                  isOpeningEquals = true;            
         }
         
