@@ -63,6 +63,8 @@ $(document).ready(function () {
     $('#typeDosug').val('Боулинг');
   if (hash == "paintball")
     $('#typeDosug').val('Пейнтбол');
+  if (hash == "lasertag")
+    $('#typeDosug').val('Лазертаг');
   if (hash == "kart")
     $('#typeDosug').val('Картинг');
   if (hash == "pool")
@@ -81,6 +83,12 @@ $(document).ready(function () {
     $('#typeDosug').val('Кикер');
   if (hash == "remain")
     $('#typeDosug').val('Остальное');
+  if (hash == "3months")
+    $('#opening').val('3');
+  if (hash == "year")
+    $('#opening').val('12');
+  if (hash == "opening")
+    $('#opening').val('0');
   
   showPlacesList();
   
