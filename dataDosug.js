@@ -13055,6 +13055,7 @@ this.Items = [
 		BathType : [],
 		Capacity : [],
 		BilliardType : [],
+		OpeningDate : new Date(2017,6,1),
 		Photos : [],
 
 	},	{
@@ -13094,6 +13095,7 @@ this.Items = [
 		BathType : [],
 		Capacity : [],
 		BilliardType : [],
+		OpeningDate : new Date(2017,11,1),
 		Photos : [],
 
 	},	{
@@ -13133,6 +13135,7 @@ this.Items = [
 		BathType : [],
 		Capacity : [],
 		BilliardType : [],
+		OpeningDate : new Date(2017,10,1),
 		Photos : [],
 
 	},];
