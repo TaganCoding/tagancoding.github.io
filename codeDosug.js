@@ -101,10 +101,10 @@ $(document).ready(function () {
   
   var rollsIngredientsFilter = "";
   var rollsIngredientsDenyFilter = "";
-  for (var i = 0; i < RollsIngredients.length; i++) {
-    rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
-  }
-  document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;
+  //for (var i = 0; i < RollsIngredients.length; i++) {
+ //   rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
+  //}
+  //document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;
 });
 
 var bazas;
