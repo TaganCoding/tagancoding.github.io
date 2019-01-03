@@ -91,6 +91,8 @@ $(document).ready(function () {
     $('#opening').val('12');
   if (hash == "opening")
     $('#opening').val('0');
+  if (hash == "withalcohol")
+    $('#withAlcoholInput').attr("checked","checked");;
   
   showPlacesList();
   
@@ -101,10 +103,10 @@ $(document).ready(function () {
   
   var rollsIngredientsFilter = "";
   var rollsIngredientsDenyFilter = "";
-  //for (var i = 0; i < RollsIngredients.length; i++) {
- //   rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
-  //}
-  //document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;
+  /*for (var i = 0; i < RollsIngredients.length; i++) {
+    rollsIngredientsFilter += '<div class=""><input id="rollsIngredientsFilter' + i + '" onchange="refreshRollDelivery();" type="checkbox"><label>' + RollsIngredients[i] + '</label></div>';
+  }
+  document.getElementById('rollIngredientPanel').innerHTML = rollsIngredientsFilter;*/
 });
 
 var bazas;
@@ -250,6 +252,8 @@ function doFilter(items)
     var food = document.getElementById('food').value;
     var typeKafe = document.getElementById('typeKafe').value;
     var typeDelivery = document.getElementById('typeDelivery').value;
+    
+    var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
 
     var isTypeDosugNotMeans = typeDosug == "all";
     var isOpeningNotMeans = opening == "all";
@@ -257,6 +261,7 @@ function doFilter(items)
     var isFoodNotMeans = food == "all" || typeDosug != "Кафе";
     var isTypeKafeNotMeans = typeKafe == "all" || typeDosug != "Кафе";
     var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
+    var isWithAlcoholNotMeans = !isWithAlcohol;
     
     if (typeDosug == "Кинотеатр")
     {
@@ -306,6 +311,7 @@ function doFilter(items)
         var isFoodEquals = isFoodNotMeans;
         var isTypeKafeEquals = isTypeKafeNotMeans;
         var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
+        var isWithAlcoholEquals = isWithAlcoholNotMeans;
         
         if (!isTypeDosugEquals)
         {
@@ -339,7 +345,12 @@ function doFilter(items)
                  isOpeningEquals = true;            
         }
         
-        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals)
+        if (!isWithAlcoholEquals)
+        {
+            isWithAlcoholEquals = place.WithAlcohol != '';
+        }
+        
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals)
             result.push(place);
     }
 
@@ -368,6 +379,7 @@ PlacesList.prototype.fill = function ()
     var isBilliard = document.getElementById('typeDosug').value == "Бильярд";
     var isBath = document.getElementById('typeDosug').value == "Баня";
     var isBanket = document.getElementById('typeDosug').value == "Банкетный зал";
+    var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
     
 	content += '<thead>';
 	content += '<tr class="even">';
@@ -405,6 +417,10 @@ PlacesList.prototype.fill = function ()
 	if (isBanket)
 	{
 	    content += '<th class="lastHeaderColumn">' + 'Зал' + '</th>';
+	}
+	if (isWithAlcohol)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Со своим' + '</th>';
 	}
 	content += '</tr>'; 
 	content += '</thead>';
@@ -493,6 +509,10 @@ PlacesList.prototype.fill = function ()
 	    if (isBath)
 	    {
 	        content += '<td class="lastHeaderColumn">' + getValues(place.BathType) + '</td>';
+	    }
+	    if (isWithAlcohol)
+	    {
+	        content += '<th class="lastHeaderColumn">' + place.WithAlcohol + '</th>';
 	    }
 	    
 		content += '</tr>'; 
