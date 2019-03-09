@@ -258,6 +258,44 @@ this.Items = [
 		}],
 
 	},	{
+		Name : 'База отдыха «Венеция»',
+		OfSiteLink : 'http://venicekamensk.ru/services.html',
+		NotOfSiteLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		DonFisherLink : '',
+		BarschLink : '',
+		TravelRostovLink : '',
+		PanoramioLink : '',
+		WikiMapiaLink : '',
+		UniquePhotoLink : '',
+		Latitude : '48.338090',
+		Longitude : '40.265599',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/11043/kamensk-shakhtinsky/?ll=40.265599%2C48.338090&mode=search&oid=107074014734&ol=biz&sll=40.265599%2C48.338090&source=serp_navig&text=%D0%B1%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%B2%D0%B5%D0%BD%D0%B5%D1%86%D0%B8%D1%8F&z=16',
+		Address : '',
+		Phones : '',
+		Category : 'Далеко от Таганрога',
+		TableTennis : false,
+		Tennis : false,
+		Football : false,
+		Basketball : false,
+		Volleyball : false,
+		Billiard : false,
+		Besedki : false,
+		Fishing : false,
+		Pool : false,
+		Bath : false,
+		Banket : false,
+		Disco : false,
+		Playground : false,
+		Distance : 0,
+		Transport : '',
+		Bonuses : '',
+		Cost : '',
+		Photos : [],
+
+	},	{
 		Name : 'Мини-отель Антик',
 		OfSiteLink : 'https://antikhotel.ru/',
 		NotOfSiteLink : '',
@@ -1006,6 +1044,44 @@ this.Items = [
 		Photos : [],
 
 	},	{
+		Name : 'Кемпинг «Рожок»',
+		OfSiteLink : '',
+		NotOfSiteLink : '',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		DonFisherLink : '',
+		BarschLink : '',
+		TravelRostovLink : '',
+		PanoramioLink : '',
+		WikiMapiaLink : '',
+		UniquePhotoLink : '',
+		Latitude : '47.146379',
+		Longitude : '38.425037',
+		Video : '',
+		AddressLink : 'http://wikimapia.org/#lang=ru&lat=47.146379&lon=38.425037&z=17&m=w&show=/37082881/ru/%D0%9A%D0%B5%D0%BC%D0%BF%D0%B8%D0%BD%D0%B3-%C2%AB%D0%A0%D0%BE%D0%B6%D0%BE%D0%BA%C2%BB',
+		Address : '',
+		Phones : '',
+		Category : 'Рожок',
+		TableTennis : false,
+		Tennis : false,
+		Football : false,
+		Basketball : false,
+		Volleyball : false,
+		Billiard : false,
+		Besedki : false,
+		Fishing : false,
+		Pool : false,
+		Bath : false,
+		Banket : false,
+		Disco : false,
+		Playground : false,
+		Distance : 0,
+		Transport : '',
+		Bonuses : '',
+		Cost : '',
+		Photos : [],
+
+	},	{
 		Name : 'Металлург',
 		OfSiteLink : '',
 		NotOfSiteLink : '',
@@ -1709,6 +1785,44 @@ this.Items = [
 		Address : 'с. Красный Десант, ул. Октябрьская, 1',
 		Phones : '8 (86347) 3-20-07 ',
 		Category : 'Красный десант',
+		TableTennis : true,
+		Tennis : false,
+		Football : false,
+		Basketball : false,
+		Volleyball : false,
+		Billiard : false,
+		Besedki : false,
+		Fishing : false,
+		Pool : true,
+		Bath : false,
+		Banket : false,
+		Disco : false,
+		Playground : false,
+		Distance : 0,
+		Transport : '',
+		Bonuses : '',
+		Cost : '',
+		Photos : [],
+
+	},	{
+		Name : 'Пятница',
+		OfSiteLink : '',
+		NotOfSiteLink : 'https://www.instagram.com/thefriday.motel/',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		DonFisherLink : '',
+		BarschLink : '',
+		TravelRostovLink : '',
+		PanoramioLink : '',
+		WikiMapiaLink : '',
+		UniquePhotoLink : '',
+		Latitude : '47.144319',
+		Longitude : '38.596102',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/org/baza_otdykha_pyatnitsa/1772103098/?ll=38.599525%2C47.143604&z=15',
+		Address : 'ул. Новаторов, 3, поселок Золотая Коса',
+		Phones : '+7 (909) 401-44-50',
+		Category : 'Красный десант',
 		TableTennis : false,
 		Tennis : false,
 		Football : false,
@@ -2360,7 +2474,7 @@ this.Items = [
 		Longitude : '38.820502',
 		Video : '',
 		AddressLink : 'http://wikimapia.org/#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/26778256/ru/%D0%94%D0%9E%D0%9B-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B0%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163146#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163148#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163149#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163151#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163152#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82/photo/4163153#lang=ru&lat=47.261677&lon=38.820502&z=17&m=b&show=/28400883/ru/%D0%97%D0%B0%D0%B1%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%9F%D0%B0%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D1%82',
-		Address : '',
+		Address : 'село Лакедемоновка, Заречная улица, 76А',
 		Phones : '',
 		Category : 'Лиман',
 		TableTennis : false,
@@ -2410,6 +2524,140 @@ this.Items = [
 			image: 'http://photos.wikimapia.org/p/00/04/16/31/53_1280.jpg',
 			thumb:'http://photos.wikimapia.org/p/00/04/16/31/53_1280.jpg',
 			link:'http://photos.wikimapia.org/p/00/04/16/31/53_1280.jpg'
+		}],
+
+	},	{
+		Name : 'Коттедж 300 м² на участке 85 сот.',
+		OfSiteLink : 'https://www.instagram.com/kottedz_viktoria/',
+		NotOfSiteLink : 'https://www.avito.ru/taganrog/doma_dachi_kottedzhi/kottedzh_300_m_na_uchastke_85_sot._582688154',
+		VkontakteLink : '',
+		VirtualTaganrogLink : '',
+		DonFisherLink : '',
+		BarschLink : '',
+		TravelRostovLink : '',
+		PanoramioLink : '',
+		WikiMapiaLink : '',
+		UniquePhotoLink : '',
+		Latitude : '47.203766',
+		Longitude : '38.569404',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/?ll=38.569404%2C47.203766&mode=search&sll=38.557399%2C47.203188&source=serp_navig&text=%D1%81%D0%B5%D0%BB%D0%BE%20%D0%9B%D0%B0%D0%BA%D0%B5%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%2C%20%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2076%D0%90&z=15',
+		Address : '',
+		Phones : '',
+		Category : 'Лиман',
+		TableTennis : false,
+		Tennis : false,
+		Football : false,
+		Basketball : false,
+		Volleyball : false,
+		Billiard : false,
+		Besedki : false,
+		Fishing : false,
+		Pool : false,
+		Bath : false,
+		Banket : false,
+		Disco : false,
+		Playground : false,
+		Distance : 0,
+		Transport : '',
+		Bonuses : '',
+		Cost : 'ТЁПЛЫЙ БАССЕЙН +30 круглый год<br><br>БАНЯ С ВЕНИКАМИ и Припарками<br><br>В Инстаграмм kottedz_viktoria<br><br>Предлагаем организацию СВАДЕБ, БАНКЕТОВ, ЮБИЛЕЕВ, КОРПОРАТИВОВ на большой УЕДИНЁННОЙ ТЕРРИТОРИИ!<br><br>БАНКЕТНЫЙ ЗАЛ (летний 160 кв.м. со световым и звуковым оборудова',
+		Photos : [
+		{
+			image: 'ТЁПЛЫЙ',
+			thumb:'ТЁПЛЫЙ',
+			link:'ТЁПЛЫЙ'
+		},
+		{
+			image: 'БАССЕЙН',
+			thumb:'БАССЕЙН',
+			link:'БАССЕЙН'
+		},
+		{
+			image: '+30',
+			thumb:'+30',
+			link:'+30'
+		},
+		{
+			image: 'круглый',
+			thumb:'круглый',
+			link:'круглый'
+		},
+		{
+			image: 'год
+БАНЯ',
+			thumb:'год
+БАНЯ',
+			link:'год
+БАНЯ'
+		},
+		{
+			image: 'С',
+			thumb:'С',
+			link:'С'
+		},
+		{
+			image: 'ВЕНИКАМИ',
+			thumb:'ВЕНИКАМИ',
+			link:'ВЕНИКАМИ'
+		},
+		{
+			image: 'и',
+			thumb:'и',
+			link:'и'
+		},
+		{
+			image: 'Припарками
+БАНКЕТНЫЙ',
+			thumb:'Припарками
+БАНКЕТНЫЙ',
+			link:'Припарками
+БАНКЕТНЫЙ'
+		},
+		{
+			image: 'ЗАЛ',
+			thumb:'ЗАЛ',
+			link:'ЗАЛ'
+		},
+		{
+			image: '(летний',
+			thumb:'(летний',
+			link:'(летний'
+		},
+		{
+			image: '160',
+			thumb:'160',
+			link:'160'
+		},
+		{
+			image: 'кв.м.',
+			thumb:'кв.м.',
+			link:'кв.м.'
+		},
+		{
+			image: 'со',
+			thumb:'со',
+			link:'со'
+		},
+		{
+			image: 'световым',
+			thumb:'световым',
+			link:'световым'
+		},
+		{
+			image: 'и',
+			thumb:'и',
+			link:'и'
+		},
+		{
+			image: 'звуковым',
+			thumb:'звуковым',
+			link:'звуковым'
+		},
+		{
+			image: 'оборудованием,',
+			thumb:'оборудованием,',
+			link:'оборудованием,'
 		}],
 
 	},	{
@@ -3201,6 +3449,44 @@ this.Items = [
 		Longitude : '39.09302963',
 		Video : '',
 		AddressLink : 'https://yandex.ru/maps/?text=%D0%9F%D0%B0%D1%80%D0%BA%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%22%D0%9D%D0%B5%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%22&source=wizbiz_new_map_single&z=14&ll=39.093114%2C47.356476&sctx=CQAAAAEALbXeb7R3Q0Cm8naE05pHQCjxuRPsv8Y%2FvLILBtfcuT8DAAAAAAECAQAAAAAAAAABXyioJBG9nS7LAwAAAQAAgD8AAAAAAAAAAAIAAABydQ%3D%3D&oid=64453084868&ol=biz&mode=search&sll=39.093114%2C47.356476',
+		Address : '',
+		Phones : '',
+		Category : 'Пруды к востоку от Таганрога',
+		TableTennis : false,
+		Tennis : false,
+		Football : false,
+		Basketball : false,
+		Volleyball : false,
+		Billiard : false,
+		Besedki : false,
+		Fishing : false,
+		Pool : false,
+		Bath : false,
+		Banket : false,
+		Disco : false,
+		Playground : false,
+		Distance : 0,
+		Transport : '',
+		Bonuses : '',
+		Cost : '',
+		Photos : [],
+
+	},	{
+		Name : 'Liva Villa',
+		OfSiteLink : '',
+		NotOfSiteLink : '',
+		VkontakteLink : 'https://vk.com/club145889650',
+		VirtualTaganrogLink : '',
+		DonFisherLink : '',
+		BarschLink : '',
+		TravelRostovLink : '',
+		PanoramioLink : '',
+		WikiMapiaLink : '',
+		UniquePhotoLink : '',
+		Latitude : '47.359487',
+		Longitude : '39.108035',
+		Video : '',
+		AddressLink : 'https://yandex.ru/maps/?ll=39.108035%2C47.359487&mode=search&oid=244310434540&ol=biz&sctx=ZAAAAAgBEAAaKAoSCT%2BrzJTWi0NAEZEsYAK3rkdAEhIJibAVAGAmwD8RACBDzWFCqT8iBAABAgQoCjAAOJrx8pGh%2FvvaLEDpiAZIAVXNzMw%2BWABqAnJ1cACdAc3MzD2gAQCoAQA%3D&sll=39.108035%2C47.359487&source=wizbiz_new_map_single&sspn=0.063086%2C0.024670&text=%D0%BA%D1%83%D1%80%D0%BB%D0%B0%D1%86%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D1%83%D0%B4%20Liva%20Villa&z=15',
 		Address : '',
 		Phones : '',
 		Category : 'Пруды к востоку от Таганрога',
