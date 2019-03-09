@@ -263,7 +263,7 @@ BazasList.prototype.fill = function ()
 	    content += '<td class="firstColumn smallSizeColumn">' + addr + '</td>';
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
-		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", baza.VkontakteLink, "http://cs10305.vkontakte.ru/g31480263/e_0c89034a.jpg");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", baza.VkontakteLink, "https://bobr.by/data/internet95.gif");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", baza.NotOfSiteLink, "http://i.ytimg.com/vi/eP-MZAwut2o/hqdefault.jpg");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", baza.DonFisherLink, "http://www.krona.biz/everything/images/donfisher-nakley250.jpg");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", baza.BarschLink, "http://i.ytimg.com/vi/eP-MZAwut2o/hqdefault.jpg");
