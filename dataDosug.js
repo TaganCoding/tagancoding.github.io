@@ -9088,7 +9088,7 @@ this.Items = [
 		Cost : '',
 		FoodType : [],
 		TypeDelivery : [],
-		DosugType : [],
+		DosugType : ["Остальное"],
 		TypeKafe : [],
 		BathType : [],
 		Capacity : [],
