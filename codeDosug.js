@@ -93,6 +93,8 @@ $(document).ready(function () {
     $('#opening').val('0');
   if (hash == "withalcohol")
     $('#withAlcoholInput').attr("checked","checked");;
+  if (hash == "night")
+    $('#nightInput').attr("checked","checked");;
   
   showPlacesList();
   
@@ -254,6 +256,7 @@ function doFilter(items)
     var typeDelivery = document.getElementById('typeDelivery').value;
     
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
+    var isNight = document.getElementById('nightInput').checked;
 
     var isTypeDosugNotMeans = typeDosug == "all";
     var isOpeningNotMeans = opening == "all";
@@ -262,6 +265,7 @@ function doFilter(items)
     var isTypeKafeNotMeans = typeKafe == "all" || typeDosug != "Кафе";
     var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
     var isWithAlcoholNotMeans = !isWithAlcohol;
+    var isNightNotMeans = !isNight;
     
     if (typeDosug == "Кинотеатр")
     {
@@ -312,6 +316,8 @@ function doFilter(items)
         var isTypeKafeEquals = isTypeKafeNotMeans;
         var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
         var isWithAlcoholEquals = isWithAlcoholNotMeans;
+        var isNightEquals = isNightNotMeans;
+        
         
         if (!isTypeDosugEquals)
         {
@@ -349,8 +355,12 @@ function doFilter(items)
         {
             isWithAlcoholEquals = place.WithAlcohol != '';
         }
+        if (!isNightEquals)
+        {
+            isNightEquals = place.IsNight;
+        }
         
-        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals)
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals)
             result.push(place);
     }
 
@@ -457,7 +467,6 @@ PlacesList.prototype.fill = function ()
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
-		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TagfindLink, "https://www.google.com/s2/favicons?domain=http://tagfind.ru");
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.InfotaganrogLink, "https://www.google.com/s2/favicons?domain=http://www.infotaganrog.ru");
 		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.LocalwayLink, "https://www.google.com/s2/favicons?domain=http://localway.ru");
@@ -474,6 +483,8 @@ PlacesList.prototype.fill = function ()
 		content += '<td>';
 		if (place.MenuLink)
 		    content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
+		    
+		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
 		content += '</td>';
 		
 		content += '<td class="lastHeaderColumn">' + place.Photos.length + " фото" +'</td>'; 		
