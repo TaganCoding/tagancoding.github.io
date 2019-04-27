@@ -6002,7 +6002,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Ресторан ''PORTLAND''',
+		Name : 'Ресторан "PORTLAND"',
 		OfSiteLink : 'http://www.portlandshow.ru',
 		MenuLink : 'http://www.portlandshow.ru/menu/osnovnoe-menyu/',
 		LunchLink : '',
