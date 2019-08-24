@@ -1,40 +1,4 @@
-function addCustomSorters() {
-    //helper for sorter
-    $.tablesorter.addParser({
-        // set a unique id 
-        id: 'html',
-        is: function (s) {
-            // return false so this parser is not auto detected 
-            return false;
-        },
-        format: function (s) {
-            // format your data for normalization 
-            return $(s).attr('alt');
-        },
-        // set type, either numeric or text 
-        type: 'text'
-    });
-
-    $.tablesorter.addParser({
-        // set a unique id 
-        id: 'salary',
-        is: function (s) {
-            // return false so this parser is not auto detected 
-            return false;
-        },
-        format: function (s) {
-            // format your data for normalization 
-            return $(s).attr('absMax');
-        },
-        // set type, either numeric or text 
-        type: 'numeric'
-    });
-}
-
-
 $(document).ready(function () {
-//alert(Ingredients);
-  //addCustomSorters();
   var hash = window.location.hash.substr(1);
   
   if (hash == "cinema")
@@ -99,7 +63,7 @@ $(document).ready(function () {
   showPlacesList();
   
   Galleria.loadTheme('galleria.simplecoding.js');
-  showDetailsByName(document.location.hash);
+  //showDetailsByName(document.location.hash);
   
   var gallery = $("#gallery");
   
@@ -395,9 +359,8 @@ PlacesList.prototype.fill = function ()
 	content += '<tr class="even">';
 	content += '<th class="" style="max-width:15px"></th>';
 	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-	content += '<th class="bigSizeIconColumn" colspan="15">Ссылки</th>';
+	content += '<th class="bigSizeIconColumn" colspan="13">Ссылки</th>';
 	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
-	content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
@@ -456,18 +419,16 @@ PlacesList.prototype.fill = function ()
 	        name = '<a target="blank" href="' + place.OfSiteLink + '">' + place.Name + '</a>';
 	    }
 
-	    content += '<tr class="datarow ' + colorStyle + '" onclick="showDetails(' + i + ')";>';
+	    content += '<tr class="datarow ' + colorStyle + '";>';
 	    content += '<td class="" style="max-width:15px">' + addr + '</td>';
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
-		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
-		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
-		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/"); 
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
-		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.InfotaganrogLink, "https://www.google.com/s2/favicons?domain=http://www.infotaganrog.ru");
 		content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTaganrogLink, "http://profile.ak.fbcdn.net/hprofile-ak-snc6/c0.0.160.160/p160x160/277137_209952092395461_4585352_n.jpg");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.LocalwayLink, "https://www.google.com/s2/favicons?domain=http://localway.ru");
 
@@ -487,10 +448,13 @@ PlacesList.prototype.fill = function ()
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
 		content += '</td>';
 		
-		content += '<td class="lastHeaderColumn">' + place.Photos.length + " фото" +'</td>'; 		
+		if (place.Photos.length > 0)
+		    content += '<td class="lastHeaderColumn" onclick="showDetails(' + i + ')">' + place.Photos.length+ " фото" +'</td>'; 
+		else
+		    content += '<td class="lastHeaderColumn"></td>'; 
+				
 
 	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
-	    content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
 	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
 
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
