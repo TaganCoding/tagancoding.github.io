@@ -10,42 +10,15 @@
     <script type="text/javascript" src="rollsDataDosug.js"></script>
     <script type="text/javascript" src="galleria-1.2.2.js"></script>
     <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-42850927-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
 	<link rel="stylesheet" href="reveal.css" />	
 	<script type="text/javascript" src="jquery.reveal.js"></script>
   </head>
   <body>
-    <div class="adder">
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_vk"></a>
-            <a class="addthis_button_odnoklassniki_ru"></a>
-            <a class="addthis_button_google_plusone_share"></a>
-            <a class="addthis_button_facebook"></a>
-            <a class="addthis_button_twitter"></a>
-            <a class="addthis_button_livejournal"></a>
-            <a class="addthis_button_digg"></a>
-            <a class="addthis_button_mymailru"></a>
-        </div>
-    </div>
-    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51f8f00354e29ca4"></script>
-<br/>
-<br/>
         <div class="logo">
             <h1>Досуг\Рестораны\Кафе\Столовые\Спорт\Развлечения\Детские игровые клубы\Бани в Таганроге и окрестностях</h1>
         </div>
         <div id="filterContainer">  
-            <div id="districtFilter" class="filter">
+            <div id="openingFilter" class="filter">
                 <label>Открытие</label>
                 <select id="opening" onchange="showPlacesList();">
                     <option value="all" selected="selected">любое</option>
@@ -144,6 +117,10 @@
                     <option value="Живая музыка">Живая музыка</option>
                 </select>
             </div>
+            <div id="letnikFilter" class="filter" style="display: none">
+                <label>Летняя площадка</label>
+                <input id="letnikInput" type="checkbox" onchange="showPlacesList();" />
+            </div>
             <div id="deliveryFilter" class="filter" style="display: none">
                 <label>Тип</label>
                 <select id="typeDelivery" onchange="showPlacesList();">
@@ -240,7 +217,7 @@
     <br />
     Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
     <br />
-    Обновлено 25 июля 23:00.
+    Обновлено 2 апреля 23:00.
     <br />  
   </body>
 </html>
