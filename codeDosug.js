@@ -221,6 +221,7 @@ function doFilter(items)
     
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
     var isNight = document.getElementById('nightInput').checked;
+    var letnik = document.getElementById('letnikInput').checked;
 
     var isTypeDosugNotMeans = typeDosug == "all";
     var isOpeningNotMeans = opening == "all";
@@ -230,6 +231,7 @@ function doFilter(items)
     var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
     var isWithAlcoholNotMeans = !isWithAlcohol;
     var isNightNotMeans = !isNight;
+    var letnikNotMeans = !letnik;
     
     if (typeDosug == "Кинотеатр")
     {
@@ -262,11 +264,13 @@ function doFilter(items)
     {
         $('#kafeFilter').show();
         $('#foodFilter').show();
+        $('#letnikFilter').show();
     }
     else
     {
         $('#kafeFilter').hide();
         $('#foodFilter').hide();
+        $('#letnikFilter').hide();
     }
     
     for (var i = 0; i < items.length; i++)
@@ -281,7 +285,7 @@ function doFilter(items)
         var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
         var isWithAlcoholEquals = isWithAlcoholNotMeans;
         var isNightEquals = isNightNotMeans;
-        
+        var letnikEquals = letnikNotMeans;
         
         if (!isTypeDosugEquals)
         {
@@ -323,8 +327,12 @@ function doFilter(items)
         {
             isNightEquals = place.IsNight;
         }
+        if (!letnikEquals)
+        {
+            letnikEquals = place.Letnik;
+        }
         
-        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals)
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals && letnikEquals)
             result.push(place);
     }
 
@@ -410,7 +418,7 @@ PlacesList.prototype.fill = function ()
 	    var addr = '';
 	    if (place.AddressLink != '')
 	    {
-	        addr = '<a target="blank" href="' + place.AddressLink + '"><img alt="' + place.Name + '" class="smallSizeColumn" src="http://www.clker.com/cliparts/N/3/C/c/M/f/pin-point-location-marker-purple-md.png"></a>';
+	        addr = '<a target="blank" href="' + place.AddressLink + '"><img alt="' + place.Name.replace("\"", "").replace("<br>", "") + '" class="smallSizeColumn" src="http://www.clker.com/cliparts/N/3/C/c/M/f/pin-point-location-marker-purple-md.png"></a>';
 	    }
 	    var name = place.Name;
 
