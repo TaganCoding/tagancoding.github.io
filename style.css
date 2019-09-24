@@ -30,8 +30,13 @@
 
 #filterContainer 
 {
-	height: 50px;
+	height: 40px;
 }
+#discountContainer 
+{
+	height: 40px;
+}
+
 
 .filter
 {
