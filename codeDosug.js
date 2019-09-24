@@ -367,7 +367,7 @@ PlacesList.prototype.fill = function ()
 	content += '<tr class="even">';
 	content += '<th class="" style="max-width:15px"></th>';
 	content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-	content += '<th class="bigSizeIconColumn" colspan="13">Ссылки</th>';
+	content += '<th class="bigSizeIconColumn" colspan="14">Ссылки</th>';
 	content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
 	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
@@ -452,14 +452,20 @@ PlacesList.prototype.fill = function ()
 		content += '<td>';
 		if (place.MenuLink)
 		    content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
+		content += '</td>';
+		content += '<td>';
+		if (place.SteaksLink)
+		    content += '<a target="blank" href="' + place.SteaksLink + '"/><img style="max-width:25px" class="middleSizeColumn" src="https://png.pngtree.com/png_detail/20181017/steak-png-clipart_889623.png"></img></a>';
 		    
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
 		content += '</td>';
+		content += addImageLinks("middleSizeIconColumn", "imageLinkWidth", place.Geometry, "https://geometria.ru/favicon.ico");
 		
-		if (place.Photos.length > 0)
+		
+		/*if (place.Photos.length > 0)
 		    content += '<td class="lastHeaderColumn" onclick="showDetails(' + i + ')">' + place.Photos.length+ " фото" +'</td>'; 
 		else
-		    content += '<td class="lastHeaderColumn"></td>'; 
+		    content += '<td class="lastHeaderColumn"></td>'; */
 				
 
 	    content += '<td class="middleSizeColumn">' + place.Address + '</td>';
@@ -517,26 +523,7 @@ function getValues(values)
             
         result += values[i];
     }
-    /*
-    result += getBonusText(baza.TableTennis, "Настольный теннис");
-    result += getBonusText(baza.Tennis, "Теннис");
-    result += getBonusText(baza.Football, "Футбол");
-    result += getBonusText(baza.Basketball, "Баскетбол");
-    result += getBonusText(baza.Volleyball, "Волейбол");
-    result += getBonusText(baza.Billiard, "Бильярд");
-    result += getBonusText(baza.Besedki, "Беседки");
-    result += getBonusText(baza.Fishing, "Рыбалка");
-    result += getBonusText(baza.Pool, "Бассейн");
-    result += getBonusText(baza.Bath, "Баня");
-    result += getBonusText(baza.Banket, "Зал");
-    result += getBonusText(baza.Disco, "Дискотека");
-    result += getBonusText(baza.Playground, "Детская площадка");
     
-    if (result.length > 0)
-        result = baza.Bonuses + '<br/>' + result;
-    else
-        result = baza.Bonuses;
-    */
     return result;
 }
 
@@ -554,6 +541,20 @@ function addImageLink(tdClass, imageClass, link, imageLink)
     var result;
 	if (link != '')
 	    result = '<td class="' + tdClass + '"><a target="blank" href="' + link + '"/><img class="' + imageClass + '" src="' +imageLink + '"></img></a></td>';
+	else
+	    result = '<td class="' + tdClass + '"></td>';
+    return result;
+}
+
+function addImageLinks(tdClass, imageClass, links, imageLink)
+{
+    var result;
+	if (links.length > 0){
+	    result ='<td class="' + tdClass + '">';
+	    for(var i = 0; i < links.length; i++)
+	        result +='<a target="blank" href="' + links[i] + '"/><img style="margin-left:4px" class="' + imageClass + '" src="' +imageLink + '"></img></a>';
+	    result += '</td>';
+	}
 	else
 	    result = '<td class="' + tdClass + '"></td>';
     return result;
