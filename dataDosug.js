@@ -9507,7 +9507,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'ИГРОВОЙ КАЛЬЯН-БАР Blackwood',
+		Name : 'ИГРОВОЙ КАЛЬЯН-БАР<br>Blackwood',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -9603,7 +9603,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Кальян-бар «SKY SEVEN LOUNGE» (@7skyloungetgn)...',
+		Name : 'Кальян-бар «SKY SEVEN LOUNGE»',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -10749,7 +10749,7 @@ this.Items = [
 		}],
 
 	},	{
-		Name : 'Выездной Арбалетно-лучный тир " Русич"',
+		Name : 'Выездной Арбалетно-лучный<br>тир " Русич"',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -12312,7 +12312,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Спортивно-оздоровительный комплекс «Атлант»',
+		Name : 'Спортивно-оздоровительный<br>комплекс «Атлант»',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -12453,7 +12453,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Семейный спортивно-оздоровительный клуб «Family Club»',
+		Name : 'Семейный спортивно-<br>оздоровительный клуб<br> «Family Club»',
 		OfSiteLink : 'http://lelkin16.wixsite.com/familyclub',
 		MenuLink : '',
 		SteaksLink : '',
@@ -13409,7 +13409,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Конно-спортивный клуб "Golden Horse"',
+		Name : 'Конно-спортивный клуб<br> "Golden Horse"',
 		OfSiteLink : 'https://kskgoldenhorse.ru/',
 		MenuLink : '',
 		SteaksLink : '',
@@ -13597,7 +13597,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Пейнтбольный клуб Красная Армия',
+		Name : 'Пейнтбольный клуб<br>Красная Армия',
 		OfSiteLink : 'http://ka-club.su',
 		MenuLink : '',
 		SteaksLink : '',
@@ -13785,7 +13785,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой центр "Киндерград"',
+		Name : 'Детский игровой центр<br> "Киндерград"',
 		OfSiteLink : 'http://kindergrad.net/',
 		MenuLink : 'http://kindergrad.net/page/1069881',
 		SteaksLink : '',
@@ -13832,7 +13832,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский Развлекательный Центр «Тортуга»',
+		Name : 'Детский Развлекательный Центр<br> «Тортуга»',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -13931,7 +13931,7 @@ this.Items = [
 		}],
 
 	},	{
-		Name : 'Детский игровой клуб «Непоседа»',
+		Name : 'Детский игровой клуб «Непоседа»<br>',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -13978,7 +13978,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб «Непоседа» Мармелад',
+		Name : 'Детский игровой клуб «Непоседа»<br>Мармелад',
 		OfSiteLink : 'http://www.marmeladmall.ru/neposeda_club/',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14025,7 +14025,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб «Непоседа» Калинка',
+		Name : 'Детский игровой клуб<br>«Непоседа» Калинка',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14072,7 +14072,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб Чунга-Чанга',
+		Name : 'Детский игровой клуб<br>Чунга-Чанга',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14119,7 +14119,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб "Маленькая страна"',
+		Name : 'Детский игровой клуб<br> "Маленькая страна"',
 		OfSiteLink : 'http://ms161.ru',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14166,7 +14166,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб "Мадагаскар"',
+		Name : 'Детский игровой клуб<br> "Мадагаскар"',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14213,7 +14213,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский игровой клуб "Мадагаскар"',
+		Name : 'Детский игровой клуб<br>"Мадагаскар"',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14261,7 +14261,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский развлекательный клуб «Супер Детки»',
+		Name : 'Детский развлекательный клуб<br>«Супер Детки»',
 		OfSiteLink : 'https://superdetki-tgn.ru/',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14450,7 +14450,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Детский развлекательный центр ЧУДО-ОСТРОВ',
+		Name : 'Детский развлекательный центр<br>ЧУДО-ОСТРОВ',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14780,7 +14780,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Умный кубик. Детский клуб, выставка моделей Лего',
+		Name : 'Умный кубик<br>Детский клуб, выставка моделей Лего',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14827,7 +14827,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Geek School - Робототехника для детей',
+		Name : 'Geek School<br>Робототехника для детей',
 		OfSiteLink : 'http://geek-school.ru/',
 		MenuLink : '',
 		SteaksLink : '',
@@ -14874,7 +14874,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'SmartLab Курсы Робототехники для детей',
+		Name : 'SmartLab Курсы<br>Робототехники для детей',
 		OfSiteLink : 'http://smartlab61.ru/',
 		MenuLink : '',
 		SteaksLink : '',
@@ -15015,7 +15015,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'АЛЬПИНИЗМ В ТАГАНРОГЕ Mountschool ',
+		Name : 'АЛЬПИНИЗМ В ТАГАНРОГЕ<br>Mountschool ',
 		OfSiteLink : '',
 		MenuLink : '',
 		SteaksLink : '',
