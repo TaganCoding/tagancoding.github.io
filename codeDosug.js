@@ -222,6 +222,8 @@ function doFilter(items)
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
     var isNight = document.getElementById('nightInput').checked;
     var letnik = document.getElementById('letnikInput').checked;
+    var danceFloor = document.getElementById('danceFloorInput').checked;
+    var discounts = document.getElementById('discountsInput').checked;
 
     var isTypeDosugNotMeans = typeDosug == "all";
     var isOpeningNotMeans = opening == "all";
@@ -232,6 +234,8 @@ function doFilter(items)
     var isWithAlcoholNotMeans = !isWithAlcohol;
     var isNightNotMeans = !isNight;
     var letnikNotMeans = !letnik;
+    var danceFloorNotMeans = !danceFloor;
+    var discountsNotMeans = !discounts;
     
     if (typeDosug == "Кинотеатр")
     {
@@ -265,12 +269,14 @@ function doFilter(items)
         $('#kafeFilter').show();
         $('#foodFilter').show();
         $('#letnikFilter').show();
+        $('#danceFloorFilter').show();
     }
     else
     {
         $('#kafeFilter').hide();
         $('#foodFilter').hide();
         $('#letnikFilter').hide();
+        $('#danceFloorFilter').hide();
     }
     
     for (var i = 0; i < items.length; i++)
@@ -286,6 +292,8 @@ function doFilter(items)
         var isWithAlcoholEquals = isWithAlcoholNotMeans;
         var isNightEquals = isNightNotMeans;
         var letnikEquals = letnikNotMeans;
+        var danceFloorEquals = danceFloorNotMeans;
+        var discountsEquals = discountsNotMeans;
         
         if (!isTypeDosugEquals)
         {
@@ -331,8 +339,16 @@ function doFilter(items)
         {
             letnikEquals = place.Letnik;
         }
+        if (!danceFloorEquals)
+        {
+            danceFloorEquals = place.DanceFloor;
+        }
+        if (!discountsEquals)
+        {
+            discountsEquals = place.Discounts;
+        }
         
-        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals && letnikEquals)
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals && letnikEquals && danceFloorEquals && discountsEquals)
             result.push(place);
     }
 
@@ -362,6 +378,7 @@ PlacesList.prototype.fill = function ()
     var isBath = document.getElementById('typeDosug').value == "Баня";
     var isBanket = document.getElementById('typeDosug').value == "Банкетный зал";
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
+    var discounts = document.getElementById('discountsInput').checked;
     
 	content += '<thead>';
 	content += '<tr class="even">';
@@ -402,6 +419,10 @@ PlacesList.prototype.fill = function ()
 	if (isWithAlcohol)
 	{
 	    content += '<th class="lastHeaderColumn">' + 'Со своим' + '</th>';
+	}
+	if (discounts)
+	{
+	    content += '<th class="lastHeaderColumn">' + 'Скидки' + '</th>';
 	}
 	content += '</tr>'; 
 	content += '</thead>';
@@ -472,10 +493,6 @@ PlacesList.prototype.fill = function ()
 	    content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
 
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
-	    if (isBanket)
-	    {
-	        content += '<td class="lastHeaderColumn">' + getValues(place.Capacity) + '</td>';
-	    }
 
 	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
 	    if(isKafe)
@@ -491,6 +508,10 @@ PlacesList.prototype.fill = function ()
 	    {
 	        content += '<td class="lastHeaderColumn">' + place.AdditionalInfo + '</td>';
 	    }
+	    if (isBanket)
+	    {
+	        content += '<td class="middleSizeColumn">' + getValues(place.Capacity) + '</td>';
+	    }
 	    if (isBilliard)
 	    {
 	        content += '<td class="lastHeaderColumn">' + getValues(place.BilliardType) + '</td>';
@@ -502,6 +523,10 @@ PlacesList.prototype.fill = function ()
 	    if (isWithAlcohol)
 	    {
 	        content += '<th class="lastHeaderColumn">' + place.WithAlcohol + '</th>';
+	    }
+	    if (discounts)
+	    {
+	        content += '<th class="lastHeaderColumn">' + place.Discounts + '</th>';
 	    }
 	    
 		content += '</tr>'; 
