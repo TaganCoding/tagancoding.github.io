@@ -14185,7 +14185,7 @@ this.Items = [
 		DosugType : ["Бассейн", "Банкетный зал", "Баня"],
 		TypeKafe : [],
 		BathType : [],
-		Capacity : [],
+		Capacity : ["80"],
 		BilliardType : [],
 		Photos : [],
 
@@ -14381,7 +14381,7 @@ this.Items = [
 		DosugType : ["Кафе", "Банкетный зал", "Доставка"],
 		TypeKafe : ["Банкетный зал", "Доставка"],
 		BathType : [],
-		Capacity : [],
+		Capacity : ["30", "45", "150"],
 		BilliardType : [],
 		Photos : [],
 
@@ -14970,7 +14970,7 @@ this.Items = [
 		DosugType : ["Кафе", "Банкетный зал", "Кофейня"],
 		TypeKafe : ["Банкетный зал", "Летняя веранда", "Живая музыка"],
 		BathType : [],
-		Capacity : [],
+		Capacity : ["25", "40"],
 		BilliardType : [],
 		Photos : [],
 
@@ -15825,7 +15825,7 @@ this.Items = [
 		DosugType : ["Банкетный зал"],
 		TypeKafe : ["Банкетный зал", "Живая музыка"],
 		BathType : [],
-		Capacity : [],
+		Capacity : ["100", "300"],
 		BilliardType : [],
 		Photos : [
 		{
