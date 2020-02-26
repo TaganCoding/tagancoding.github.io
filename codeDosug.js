@@ -47,6 +47,8 @@ $(document).ready(function () {
     $('#typeDosug').val('Настольный теннис');
   if (hash == "kiker")
     $('#typeDosug').val('Кикер');
+  if (hash == "consoles")
+    $('#typeDosug').val('Игровые приставки');
   if (hash == "quiz")
     $('#typeDosug').val('Барная викторина');
   if (hash == "remain")
