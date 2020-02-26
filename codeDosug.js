@@ -219,6 +219,7 @@ function doFilter(items)
     var opening = document.getElementById('opening').value;
     var food = document.getElementById('food').value;
     var typeKafe = document.getElementById('typeKafe').value;
+    var banketValue = document.getElementById('banketzal').value;
     var typeDelivery = document.getElementById('typeDelivery').value;
     
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
@@ -231,6 +232,7 @@ function doFilter(items)
     var isOpeningNotMeans = opening == "all";
     var isDistrictNotMeans = district == "all";
     var isFoodNotMeans = food == "all" || typeDosug != "Кафе";
+    var isBanketNotMeans = banketValue == "all" || typeDosug != "Банкетный зал";
     var isTypeKafeNotMeans = typeKafe == "all" || typeDosug != "Кафе";
     var isTypeDeliveryNotMeans = typeDelivery == "all" || typeDosug != "Доставка";
     var isWithAlcoholNotMeans = !isWithAlcohol;
@@ -281,6 +283,15 @@ function doFilter(items)
         $('#danceFloorFilter').hide();
     }
     
+    if (typeDosug == "Банкетный зал")
+    {
+        $('#banketFilter').show();
+    }
+    else
+    {
+        $('#banketFilter').hide();
+    }
+    
     for (var i = 0; i < items.length; i++)
     {    
         var place = items[i];
@@ -289,6 +300,7 @@ function doFilter(items)
         var isDistrictEquals = isDistrictNotMeans || district == place.District;
         var isOpeningEquals = isOpeningNotMeans;
         var isFoodEquals = isFoodNotMeans;
+        var isBanketEquals = isBanketNotMeans;
         var isTypeKafeEquals = isTypeKafeNotMeans;
         var isTypeDeliveryEquals = isTypeDeliveryNotMeans;
         var isWithAlcoholEquals = isWithAlcoholNotMeans;
@@ -312,6 +324,10 @@ function doFilter(items)
         if (typeDosug == "Доставка" && !isTypeDeliveryEquals)
         {
             isTypeDeliveryEquals = checkValues(typeDelivery, place.TypeDelivery);
+        }
+        if (typeDosug == "Банкетный зал" && !isBanketEquals)
+        {
+            isBanketEquals = place.Capacity.length > 0 && checkCapacity(banketValue, place.Capacity);
         }
         
         if (opening != "all")
@@ -350,11 +366,44 @@ function doFilter(items)
             discountsEquals = place.Discounts;
         }
         
-        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isTypeKafeEquals && isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals && letnikEquals && danceFloorEquals && discountsEquals)
+        if (isTypeDosugEquals && isDistrictEquals && isOpeningEquals && isFoodEquals && isBanketEquals && isTypeKafeEquals && 
+            isTypeDeliveryEquals && isWithAlcoholEquals && isNightEquals && letnikEquals && danceFloorEquals && discountsEquals)
             result.push(place);
     }
 
     return result;
+}
+
+function checkCapacity(banketValue, capacity)
+{
+    if (banketValue == "all")
+        return true;
+    if (banketValue == "30")
+    {
+        for(var i = 0; i < capacity.length; i++)
+            if (0 + capacity[i]  <= 30)
+                return true;
+    }
+    if (banketValue == "60")
+    {
+        for(var i = 0; i < capacity.length; i++)
+            if (0 + capacity[i] >= 30 && 0 + capacity[i] <= 60)
+                return true;
+    }
+    if (banketValue == "90")
+    {
+        for(var i = 0; i < capacity.length; i++)
+            if (0 + capacity[i]  >= 60 && 0 + capacity[i] <= 90)
+                return true;
+    }
+    if (banketValue == "100")
+    {
+        for(var i = 0; i < capacity.length; i++)
+            if (0 + capacity[i]  >= 90)
+                return true;
+    }
+    
+    return false;
 }
 
 function checkValues(value, values)
