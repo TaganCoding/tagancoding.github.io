@@ -118,6 +118,16 @@
                     <option value="Живая музыка">Живая музыка</option>
                 </select>
             </div>
+            <div id="banketFilter" class="filter" style="display: none">
+                <label>Зал</label>
+                <select id="banketzal" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="30">до 30</option>
+                    <option value="60">30-60</option>
+                    <option value="90">60-90</option>
+                    <option value="100">от 90</option>
+                </select>
+            </div>
             <div id="letnikFilter" class="filter" style="display: none">
                 <label>Летняя площадка</label>
                 <input id="letnikInput" type="checkbox" onchange="showPlacesList();" />
@@ -231,7 +241,7 @@
     <br />
     Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
     <br />
-    Обновлено 24 февраля 23:00.
+    Обновлено 26 февраля 23:00.
     <br />  
   </body>
 </html>
