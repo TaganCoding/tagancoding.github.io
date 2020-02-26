@@ -13,6 +13,8 @@ $(document).ready(function () {
     $('#typeDosug').val('Доставка');
   if (hash == "banket")
     $('#typeDosug').val('Банкетный зал');
+  if (hash == "karaoke")
+    $('#typeDosug').val('Караоке');
   if (hash == "confectionery")
     $('#typeDosug').val('Кондитерская');
   if (hash == "hookahlounge")
