@@ -5908,7 +5908,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'Кафе Setter`s',
+		Name : 'Кафе Setters',
 		OfSiteLink : 'https://setterscafe.com/',
 		MenuLink : '',
 		LunchLink : '',
