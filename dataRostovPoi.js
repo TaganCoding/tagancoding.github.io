@@ -1395,7 +1395,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'St. Patrick's Pub',
+		Name : 'St. Patricks Pub',
 		OfSiteLink : '',
 		MenuLink : 'https://www.instagram.com/stories/highlights/17912356408360309/',
 		LunchLink : '',
