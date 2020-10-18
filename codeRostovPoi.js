@@ -456,7 +456,7 @@ PlacesList.prototype.fill = function ()
 	        name = '<a target="blank" href="' + place.OfSiteLink + '">' + place.Name + '</a>';
 	    }
 
-	    content += '<tr class="datarow ' + colorStyle + '" onclick="showDetails(' + i + ')";>';
+	    content += '<tr class="datarow ' + colorStyle + '"";>';
 	    content += '<td class="" style="max-width:15px">' + addr + '</td>';
 	    content += '<td class="middleSizeColumn">' + name + '</td>';
 
