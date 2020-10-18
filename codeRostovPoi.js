@@ -99,7 +99,7 @@ $(document).ready(function () {
   showPlacesList();
   
   Galleria.loadTheme('galleria.simplecoding.js');
-  showDetailsByName(document.location.hash);
+  //showDetailsByName(document.location.hash);
   
   var gallery = $("#gallery");
   
