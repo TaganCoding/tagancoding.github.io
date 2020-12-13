@@ -507,7 +507,7 @@ PlacesList.prototype.fill = function ()
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
-		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://scontent-hel3-1.cdninstagram.com/v/t51.2885-15/e35/28158473_344236336091484_6314998764448776192_n.jpg?_nc_ht=scontent-hel3-1.cdninstagram.com&_nc_cat=100&_nc_ohc=DJC8Djne42kAX9jU0fO&_nc_tp=18&oh=9667914597aa4acb7979293853a3ea43&oe=5F8F7AB8");
+		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://img2.freepng.ru/20180713/lxp/kisspng-logo-computer-icons-social-media-advertising-instagram-neon-5b4907bde7b0e6.349129711531512765949.jpg");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/"); 
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
