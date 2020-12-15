@@ -7,8 +7,14 @@ $(document).ready(function () {
     $('#typeDosug').val('Столовая');
   if (hash == "child")
     $('#typeDosug').val('Для детей');
+  if (hash == "restoran")
+    $('#typeDosug').val('Ресторан');
   if (hash == "cafe")
     $('#typeDosug').val('Кафе');
+  if (hash == "fastfood")
+    $('#typeDosug').val('Фастфуд');
+  if (hash == "lunch")
+    $('#typeDosug').val('Бизнесланч');
   if (hash == "delivery")
     $('#typeDosug').val('Доставка');
   if (hash == "banket")
@@ -19,8 +25,16 @@ $(document).ready(function () {
     $('#typeDosug').val('Кондитерская');
   if (hash == "hookahlounge")
     $('#typeDosug').val('Кальянбар');
-  if (hash == "pub")
+  if (hash == "bar")
     $('#typeDosug').val('Бар');
+  if (hash == "pub")
+    $('#typeDosug').val('Паб');
+  if (hash == "beerbar")
+    $('#typeDosug').val('Пивбар');
+  if (hash == "beer")
+    $('#typeDosug').val('Пивная');
+  if (hash == "craftbar")
+    $('#typeDosug').val('Крафт');
   if (hash == "sportsbar")
     $('#typeDosug').val('Спортбар');
   if (hash == "billiard")
