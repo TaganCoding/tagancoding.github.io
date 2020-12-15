@@ -457,7 +457,6 @@ PlacesList.prototype.fill = function ()
 	//content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
 	content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
-	content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
 	if(isKafe)
 	{
 	    content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
@@ -561,7 +560,6 @@ PlacesList.prototype.fill = function ()
 
 	    content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
 
-	    content += '<td class="middleSizeColumn">' + place.Services + '</td>';
 	    if(isKafe)
 	    {
 	        content += '<td class="middleSizeColumn">' + getValues(place.FoodType) + '</td>';
