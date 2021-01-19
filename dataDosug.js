@@ -7285,8 +7285,7 @@ this.Items = [
 		CocktailsLink : '',
 		CoffeeLink : '',
 		TeeLink : '',
-		WithAlcohol : 'Можно
-https://www.instagram.com/p/CIDkqE6HX3C/',
+		WithAlcohol : 'Можно  https://www.instagram.com/p/CIDkqE6HX3C/',
 		Discounts : '',
 		Letnik : false,
 		DanceFloor : false,
