@@ -4,7 +4,7 @@ this.Items = [
 	{
 		Name : 'Суши Бар ZODIAC',
 		OfSiteLink : '',
-		MenuLink : 'https://vk.com/albums-128298577',
+		MenuLink : 'https://vk.com/albums-128298577',h
 		SteaksLink : '',
 		LunchLink : '',
 		CocktailsLink : '',
@@ -5284,7 +5284,7 @@ this.Items = [
 		Geometry : [],
 		FoodType : [],
 		TypeDelivery : [],
-		DosugType : ["Паб", "Бар", "Кикер"],
+		DosugType : ["Бар"],
 		TypeKafe : ["Караоке", "Живая музыка", "Кикер"],
 		BathType : [],
 		Capacity : ["60"],
