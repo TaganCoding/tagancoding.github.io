@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>IIS Detailed Error - 500.30 - Internal Server Error</title> 
+<style type="text/css"> 
+
+html, body, #map {
+    width: 100%; height: 100%; padding: 0; margin: 0;
+}
+</style> 
+<script type="text/javascript">
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.751574, 37.573856],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/myIcon.gif',
+            // Размеры метки.
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
+
+        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/ball.png',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+});
+</script>
+</head> 
+<body> 
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e7b968de-3570-4821-982c-14a5cb27d8bb"></script>
+    <div id="map"></div>
+</body> 
+</html> 
