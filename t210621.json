@@ -1,0 +1,94 @@
+{
+  "Id": "a2083b5c-ca4d-4f26-8928-4c535f294e5a",
+  "Day": "2021-06-21T17:32:24",
+  "StartDay": "210621",
+  "Items": [
+    {
+      "Days": 2,
+      "Cost": 1500,
+      "Start": 18,
+      "Road": 6,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [
+        {
+          "Days": 2,
+          "Cost": 2200,
+          "Start": 12,
+          "Road": 3,
+          "Link": null,
+          "Info": "",
+          "TravelDays": null,
+          "NextParts": [
+            {
+              "Days": 2,
+              "Cost": 4000,
+              "Start": 12,
+              "Road": 3,
+              "Link": null,
+              "Info": "",
+              "TravelDays": null,
+              "NextParts": [],
+              "Previous": "2*Кристалл.2*Отель пляж.",
+              "LocationName": "Лермонтово",
+              "HotelName": "Golden hills",
+              "RoomName": "Вид на горы с балконом"
+            }
+          ],
+          "Previous": "2*Кристалл.",
+          "LocationName": "Лоо",
+          "HotelName": "Отель пляж",
+          "RoomName": "Семейный"
+        }
+      ],
+      "Previous": null,
+      "LocationName": "Лермонтово",
+      "HotelName": "Кристалл",
+      "RoomName": "Роскошный"
+    },
+    {
+      "Days": 2,
+      "Cost": 2200,
+      "Start": 12,
+      "Road": 3,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [
+        {
+          "Days": 2,
+          "Cost": 4000,
+          "Start": 12,
+          "Road": 3,
+          "Link": null,
+          "Info": "",
+          "TravelDays": null,
+          "NextParts": [],
+          "Previous": "2*Кристалл.2*Отель пляж.",
+          "LocationName": "Лермонтово",
+          "HotelName": "Golden hills",
+          "RoomName": "Вид на горы с балконом"
+        }
+      ],
+      "Previous": "2*Кристалл.",
+      "LocationName": "Лоо",
+      "HotelName": "Отель пляж",
+      "RoomName": "Семейный"
+    },
+    {
+      "Days": 2,
+      "Cost": 4000,
+      "Start": 12,
+      "Road": 3,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [],
+      "Previous": "2*Кристалл.2*Отель пляж.",
+      "LocationName": "Лермонтово",
+      "HotelName": "Golden hills",
+      "RoomName": "Вид на горы с балконом"
+    }
+  ]
+}
