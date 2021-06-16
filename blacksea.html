@@ -179,11 +179,9 @@
                     iconContentLayout: MyIconContentLayout
                 });
 
-            var gh = createHotel('Golden Hills', 38.754200, 44.267045, 'krab.png', 'Снорклинг');
             myMap.geoObjects
                 .add(myPlacemark)
-                .add(myPlacemarkWithContent)
-                .add(gh);
+                .add(myPlacemarkWithContent);
         });
 
         function createHotel(name, lat, lon, image, desc) {
