@@ -1,73 +1,220 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<title>Черное море</title> 
-<style type="text/css"> 
+<head>
+    <title>Путешествия</title>
+    <style type="text/css">
 
-html, body, #map {
-    width: 100%; height: 100%; padding: 0; margin: 0;
-}
-</style> 
-    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7fa5013b-6084-420d-b154-10aca2a4bcd7"></script>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
     
-<script type="text/javascript">
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+    <script type="text/javascript">
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+        function showTravel(days, firstDay) {
+            var pixelInHour = 5;
+            var travel = "<div style='width: max-content;height:20px;'>";
+            var maxDays = 0;
+            var totalCost = 0;
+            for (var i = 0; i < days.length;) {
+                var day = days[i];
+                if (i == 0 && day.road !== undefined) {
+                    travel += "<div style='width:" + pixelInHour * day.start + "px;height:20px;float:left;'></div>";
+                }
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/myIcon.gif',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        }),
+                if (day.road !== undefined) {
+                    travel += "<div style='width:" + pixelInHour * day.road + "px;height:20px;float:left;background:lightgrey;'></div>";
+                }
 
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/ball.png',
-            // Размеры метки.
-            iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
+                var hoursInLocation = 0;
+                var locationName = day.location;
+                if (day.start + day.road < 24)
+                    hoursInLocation = 24 - day.road - day.start;
+                i++;
+                var finish = "";
+                while (i < days.length) {
+                    if (i == days.length - 1)
+                        finish = "<div style='width:" + pixelInHour * (24 - /*days[i].start*/ 6) + "px;height:20px;float:left;'></div>";
+
+                    if (days[i].road === undefined)
+                        hoursInLocation += 24;
+                    else {
+                        hoursInLocation += days[i].start;
+                        break;
+                    }
+
+                    i++;
+                }
+               /* if (i < days.length && days[i].road !== undefined) {
+                    hoursInLocation += days[i].start;
+                }*/
+
+                travel += "<div style='width:" + pixelInHour * hoursInLocation + "px;height:20px;float:left;color:lightgrey;text-align:center'>" + locationName + "</div>";
+                travel += finish;
+
+                /*var day = days[i];
+                travel += "<div style='width:120px;height:20px;float:left;'>";
+                if (day.road === undefined)
+                    travel += day.location;
+                    */
+                //if ()
+                if (maxDays < i)
+                    maxDays = i;
+            }
+
+            travel += "<div style='float:left;width:100px'>" + totalCost + "</div ></div > ";
+            travel += "</div> ";
+
+            var daysHead = "<div style='height:20px;width: max-content;'>";
+            var timeHead = "<div style='height:20px;width: max-content;'>";
+            for (var i = 0; i < maxDays; i++) {
+                daysHead += "<div style='width:" + pixelInHour * 24 + "px;height:20px;float:left;font-size:14px;'>" + firstDay.add(1, 'days').format('DD MMMM dddd') + "</div>";
+                timeHead += "<div style='width:" + pixelInHour * 6 + "px;height:20px;float:left;font-size:14px;'>0</div>";
+                timeHead += "<div style='width:" + pixelInHour * 6 + "px;height:20px;float:left;font-size:14px;'>6</div>";
+                timeHead += "<div style='width:" + pixelInHour * 6 + "px;height:20px;float:left;font-size:14px;'>12</div>";
+                timeHead += "<div style='width:" + pixelInHour * 6 + "px;height:20px;float:left;font-size:14px;'>18</div>";
+            }
+            timeHead += "</div>";
+            daysHead += "<div style='float:left;width:100px'>Бюджет</div></div>";
+
+            $("#plan").html(daysHead + timeHead + travel);
+        }
+
+        function transformToDays(data) {
+            var days = [];
+            for (var i = 0; i < data.Items.length; i++) {
+                var travelPart = data.Items[i];
+                var day = {};
+                day.start = travelPart.Start;
+                day.road = travelPart.Road;
+                day.location = travelPart.LocationName;
+                day.hotel = travelPart.HotelName;
+                day.room = travelPart.RoomName;
+                days.push(day);
+
+                for (var j = 1; j < travelPart.Days; j++) {
+                    var nextDay = {};
+                    nextDay.location = travelPart.LocationName;
+                    nextDay.hotel = travelPart.HotelName;
+                    nextDay.room = travelPart.RoomName;
+                    days.push(nextDay);
+                }
+            }
+
+            return days;
+        }
+        $(document).ready(function () {
+            $.getJSON("http://tagancoding.github.io/t210621.json", function (data) {
+
+                //alert(data);
+                var days = transformToDays(data);
+                var date1 = data.StartDay;
+                var date = moment([2000 + date1[0] * 10 + (1 * date1[1]), (date1[2] * 10 + (1 * date1[3])) - 1, date1[4] * 10 + (1 * date1[5])]);
+                date.locale('ru');
+                showTravel(days, date);
+                /* var items = [];
+                 $.each(data, function (key, val) {
+                     items.push("<li id='" + key + "'>" + val + "</li>");
+                 });
+    
+                 $("<ul/>", {
+                     "class": "my-new-list",
+                     html: items.join("")
+                 }).appendTo("body");*/
+            });
         });
 
-    myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent);
-});
-</script>
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                center: [44.197084, 39.476464],
+                zoom: 7
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+                // Создаём макет содержимого.
+                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '1111111<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                ),
+
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'Собственный значок метки',
+                    balloonContent: 'Это красивая метка'
+                }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/myIcon.gif',
+                    // Размеры метки.
+                    iconImageSize: [30, 42],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+                    hintContent: 'Собственный значок метки с контентом',
+                    balloonContent: 'А эта — новогодняя',
+                    iconContent: '12'
+                }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#imageWithContent',
+                    // Своё изображение иконки метки.
+                    iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/ball.png',
+                    // Размеры метки.
+                    iconImageSize: [48, 48],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-24, -24],
+                    // Смещение слоя с содержимым относительно слоя с картинкой.
+                    iconContentOffset: [15, 15],
+                    // Макет содержимого.
+                    iconContentLayout: MyIconContentLayout
+                });
+
+            var gh = createHotel('Golden Hills', 38.754200, 44.267045, 'krab.png', 'Снорклинг');
+            myMap.geoObjects
+                .add(myPlacemark)
+                .add(myPlacemarkWithContent)
+                .add(gh);
+        });
+
+        function createHotel(name, lat, lon, image, desc) {
+            var result = myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+                hintContent: name,
+                balloonContent:des,
+                iconContent: '12'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                    iconImageHref: 'http://tagancoding.github.io/img/' + image,
+                // Размеры метки.
+                iconImageSize: [48, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            });
+
+            return result;
+        }
+    </script>
 </head> 
-<body> 
+<body>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e7b968de-3570-4821-982c-14a5cb27d8bb"></script>
+    <div id="plan"></div>
     <div id="map"></div>
 </body> 
 </html> 
