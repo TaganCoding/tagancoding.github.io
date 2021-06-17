@@ -13,7 +13,8 @@
     </style>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="https://momentjs.com/downloads/moment.min.js"></script>
-    
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7fa5013b-6084-420d-b154-10aca2a4bcd7"></script>
+
     <script type="text/javascript">
 
         function showTravel(days, firstDay) {
@@ -50,9 +51,9 @@
 
                     i++;
                 }
-               /* if (i < days.length && days[i].road !== undefined) {
-                    hoursInLocation += days[i].start;
-                }*/
+                /* if (i < days.length && days[i].road !== undefined) {
+                     hoursInLocation += days[i].start;
+                 }*/
 
                 travel += "<div style='width:" + pixelInHour * hoursInLocation + "px;height:20px;float:left;color:lightgrey;text-align:center'>" + locationName + "</div>";
                 travel += finish;
@@ -121,7 +122,7 @@
                  $.each(data, function (key, val) {
                      items.push("<li id='" + key + "'>" + val + "</li>");
                  });
-    
+
                  $("<ul/>", {
                      "class": "my-new-list",
                      html: items.join("")
@@ -132,7 +133,7 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {
                 center: [44.197084, 39.476464],
-                zoom: 8
+                zoom: 7
             }, {
                 searchControlProvider: 'yandex#search'
             }),
@@ -196,14 +197,14 @@
 
             var result = myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
                 hintContent: name,
-                balloonContent:des,
+                balloonContent: des,
                 iconContent: '12'
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
                 iconLayout: 'default#imageWithContent',
                 // Своё изображение иконки метки.
-                    iconImageHref: 'http://tagancoding.github.io/img/' + image,
+                iconImageHref: 'http://tagancoding.github.io/img/' + image,
                 // Размеры метки.
                 iconImageSize: [48, 48],
                 // Смещение левого верхнего угла иконки относительно
@@ -220,7 +221,6 @@
     </script>
 </head> 
 <body>
-    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7fa5013b-6084-420d-b154-10aca2a4bcd7"></script>
     <div id="plan"></div>
     <div id="map"></div>
 </body> 
