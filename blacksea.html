@@ -11,8 +11,6 @@
             margin: 0;
         }
     </style>
-    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7fa5013b-6084-420d-b154-10aca2a4bcd7"></script>
-
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="https://momentjs.com/downloads/moment.min.js"></script>
     
@@ -134,7 +132,7 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {
                 center: [44.197084, 39.476464],
-                zoom: 8
+                zoom: 7
             }, {
                 searchControlProvider: 'yandex#search'
             }),
@@ -189,9 +187,16 @@
         });
 
         function createHotel(name, lat, lon, image, desc) {
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '1111111<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            );
+
+
             var result = myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
                 hintContent: name,
-                balloonContent:desc,
+                balloonContent:des,
                 iconContent: '12'
             }, {
                 // Опции.
@@ -215,6 +220,7 @@
     </script>
 </head> 
 <body>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e7b968de-3570-4821-982c-14a5cb27d8bb"></script>
     <div id="plan"></div>
     <div id="map"></div>
 </body> 
