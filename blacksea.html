@@ -36,6 +36,8 @@
                 var locationName = day.location;
                 if (day.start + day.road < 24)
                     hoursInLocation = 24 - day.road - day.start;
+
+                totalCost += days[i].cost;
                 i++;
                 var finish = "";
                 while (i < days.length) {
@@ -49,6 +51,7 @@
                         break;
                     }
 
+                    totalCost += days[i].cost;
                     i++;
                 }
                 /* if (i < days.length && days[i].road !== undefined) {
@@ -56,7 +59,7 @@
                  }*/
 
                 travel += "<div style='width:" + pixelInHour * hoursInLocation + "px;height:20px;float:left;color:lightgrey;text-align:center'>" + locationName + "</div>";
-                travel += finish;
+                //travel += finish;
 
                 /*var day = days[i];
                 travel += "<div style='width:120px;height:20px;float:left;'>";
@@ -96,6 +99,7 @@
                 day.location = travelPart.LocationName;
                 day.hotel = travelPart.HotelName;
                 day.room = travelPart.RoomName;
+                day.cost = travelPart.Cost;
                 days.push(day);
 
                 for (var j = 1; j < travelPart.Days; j++) {
@@ -103,6 +107,7 @@
                     nextDay.location = travelPart.LocationName;
                     nextDay.hotel = travelPart.HotelName;
                     nextDay.room = travelPart.RoomName;
+                    nextDay.cost = travelPart.Cost;
                     days.push(nextDay);
                 }
             }
@@ -133,7 +138,7 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {
                 center: [44.197084, 39.476464],
-                zoom: 7
+                zoom: 9
             }, {
                 searchControlProvider: 'yandex#search'
             }),
