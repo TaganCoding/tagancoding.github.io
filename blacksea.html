@@ -180,7 +180,7 @@
                     iconContentLayout: MyIconContentLayout
                 });
 
-            var gh = createHotel('Golden Hills', 38.754200, 44.267045, 'krab.png', 'Снорклинг');
+            var gh = createHotel('Golden Hills', 38.789931,44.282330, 'krab.png', 'Снорклинг');
             myMap.geoObjects
            //     .add(myPlacemark)
            //     .add(myPlacemarkWithContent)
@@ -191,14 +191,14 @@
 
             // Создаём макет содержимого.
             MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                '1111111<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             );
 
 
             var result = myPlacemarkWithContent = new ymaps.Placemark([lon, lat], {
                 hintContent: name,
                 balloonContent: desc,
-                iconContent: '12'
+                iconContent: ''
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
