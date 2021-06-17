@@ -133,7 +133,7 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {
                 center: [44.197084, 39.476464],
-                zoom: 9
+                zoom: 7
             }, {
                 searchControlProvider: 'yandex#search'
             }),
@@ -182,8 +182,8 @@
 
             var gh = createHotel('Golden Hills', 38.754200, 44.267045, 'krab.png', 'Снорклинг');
             myMap.geoObjects
-                .add(myPlacemark)
-                .add(myPlacemarkWithContent)
+           //     .add(myPlacemark)
+           //     .add(myPlacemarkWithContent)
                 .add(gh);
         });
 
@@ -195,7 +195,7 @@
             );
 
 
-            var result = myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            var result = myPlacemarkWithContent = new ymaps.Placemark([lat, lon], {
                 hintContent: name,
                 balloonContent: desc,
                 iconContent: '12'
