@@ -185,12 +185,78 @@
                     iconContentLayout: MyIconContentLayout
                 });
 
-            var gh = createHotel('Golden Hills', 38.789931,44.282330, 'krab.png', 'Снорклинг');
+            var gh = createHotel('Golden Hills', 38.789931, 44.282330, 'krab.png', 'Снорклинг');
+            var atrium = createHotel('Атриум', 38.126323, 44.504822, 'pool.png', '');
+            var gosteevPriboy = createHotel('Гостеев на прибое', 38.712021, 44.302412, 'coveredpool.png', '');
+            var greenvalley = createHotel('Зеленая долина', 38.907152, 44.189080, 'coveredpool.png', '');
+            var radell = createHotel('Radell', 37.989079, 44.574448, 'mejnkun.png', 'Хорошие кровати');
+            var crystal = createHotel('Кристалл', 38.810855, 44.277853 , 'raccoon.png', '');
+            var gosteev = createHotel('Гостеев', 38.706919, 44.315616, 'djacusi.png', '');
+            var oxana = createHotel('Оксана', 39.003709, 44.165438, 'oxana.png', '');
+            var mirogen = createHotel('Мироген', 38.794226                , 44.279777 , 'sandbeach.png', '');
+           /* var gh = createHotel('', , , '.png', '');
+            var gh = createHotel('', , , '.png', '');
+            var gh = createHotel('', , , '.png', '');
+            var gh = createHotel('', , , '.png', '');
+            var gh = createHotel('', , , '.png', '');
+            var gh = createHotel('', , , '.png', '');
+            
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');
+            var  = createWater('', , 'krab.png', '');*/
+
             myMap.geoObjects
            //     .add(myPlacemark)
-           //     .add(myPlacemarkWithContent)
-                .add(gh);
+                //     .add(myPlacemarkWithContent)
+                .add(radell)
+                .add(crystal)
+                .add(gosteev)
+                .add(oxana)
+                .add(gh)
+                .add(gosteevPriboy)
+                .add(atrium)
+                .add(greenvalley)
+                .add(mirogen);
         });
+
+        function createWater(name, lat, lon, image, desc) {
+
+            // Создаём макет содержимого.
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+            );
+
+
+            var result = myPlacemarkWithContent = new ymaps.Placemark([lon, lat], {
+                hintContent: name,
+                balloonContent: desc,
+                iconContent: ''
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#imageWithContent',
+                // Своё изображение иконки метки.
+                iconImageHref: 'http://tagancoding.github.io/img/' + image,
+                // Размеры метки.
+                iconImageSize: [48, 48],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-24, -24],
+                // Смещение слоя с содержимым относительно слоя с картинкой.
+                iconContentOffset: [15, 15],
+                // Макет содержимого.
+                iconContentLayout: MyIconContentLayout
+            });
+
+            return result;
+        }
 
         function createHotel(name, lat, lon, image, desc) {
 
@@ -226,6 +292,24 @@
     </script>
 </head> 
 <body>
+    <div style="        height: 20px;        margin-bottom: 10px;">
+        <select name="month">
+            <option value="">Июнь</option>
+            <option value="">Сезон(Июль, Август)</option>
+            <option value="">Сентябрь</option>
+            <option value="">Ноябрь</option>
+            <option value="">Зима</option>
+            <option value="">Новый год</option>
+        </select>
+        <label><input type="checkbox" />Все отели</label>
+        <label><input type="checkbox" />Хорошие отели</label>
+        <label><input type="checkbox" />Тип отеля</label>
+        <label><input type="checkbox" />Родники</label>
+        <label><input type="checkbox" />PoI</label>
+        <label><input type="checkbox" />Рестораны</label>
+        <label><input type="checkbox" />Кафе</label>
+        <label><input type="checkbox" />Столовые</label>
+    </div>
     <div id="plan" style="margin-bottom:10px;"></div>
     <div id="map"></div>
 </body> 
