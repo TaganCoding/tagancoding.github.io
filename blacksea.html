@@ -200,16 +200,16 @@
             var gh = createHotel('', , , '.png', '');
             var gh = createHotel('', , , '.png', '');
             var gh = createHotel('', , , '.png', '');
-            
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');
+            */
+            var chvizhepse = createWater('Чвижепсе', 40.07797, 43.638816, 'gazvoda.jpg', '');
+            var plastunka = createWater('Пластунка', 39.759695, 43.678745, 'gazvoda.jpg', '');
+            var semenovka = createWater('Семеновка', 39.848762, 43.642440, 'rodnik.jpg', '');
+            var izmailovka = createWater('Измайловка', 39.831561, 43.633792, 'rodnik.jpg', '');
+            //var agoy = createWater('', , 'rodnik.png', '');
+            var olginka = createWater('Источник под Ольгинкой', 38.894676, 44.223054, 'rodnik.jpg', '');
+            var pokrov = createWater('Источник Покрова Божьей матери', 39.638726, 43.794004, 'rodnik.jpg', '');
+            var teahouse = createWater('Чайные домики', 39.641222, 43.675652, 'teahouse.png', '');
+           /* var  = createWater('', , 'krab.png', '');
             var  = createWater('', , 'krab.png', '');*/
 
             myMap.geoObjects
@@ -223,7 +223,14 @@
                 .add(gosteevPriboy)
                 .add(atrium)
                 .add(greenvalley)
-                .add(mirogen);
+                .add(mirogen)
+                .add(chvizhepse)
+                .add(plastunka)
+                .add(semenovka)
+                .add(izmailovka)
+                .add(olginka)
+                .add(pokrov)
+                .add(teahouse);
         });
 
         function createWater(name, lat, lon, image, desc) {
@@ -245,12 +252,12 @@
                 // Своё изображение иконки метки.
                 iconImageHref: 'http://tagancoding.github.io/img/' + image,
                 // Размеры метки.
-                iconImageSize: [48, 48],
+                iconImageSize: [24, 24],
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
-                iconImageOffset: [-24, -24],
+                iconImageOffset: [-12, -12],
                 // Смещение слоя с содержимым относительно слоя с картинкой.
-                iconContentOffset: [15, 15],
+                iconContentOffset: [7, 7],
                 // Макет содержимого.
                 iconContentLayout: MyIconContentLayout
             });
