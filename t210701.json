@@ -1,0 +1,94 @@
+{
+  "Id": "cca6c8b7-d4ef-4164-bbb9-bd83a1cda1b5",
+  "Day": "2021-07-01T16:49:46.490035+03:00",
+  "StartDay": "210701",
+  "Items": [
+    {
+      "Days": 2,
+      "Cost": 1500,
+      "Start": 18,
+      "Road": 6,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [
+        {
+          "Days": 2,
+          "Cost": 2100,
+          "Start": 12,
+          "Road": 3,
+          "Link": null,
+          "Info": "",
+          "TravelDays": null,
+          "NextParts": [
+            {
+              "Days": 1,
+              "Cost": 4800,
+              "Start": 12,
+              "Road": 3,
+              "Link": null,
+              "Info": "",
+              "TravelDays": null,
+              "NextParts": [],
+              "Previous": "2*Кристалл.2*Отель пляж.",
+              "LocationName": "Лермонтово",
+              "HotelName": "Golden hills",
+              "RoomName": "Вид на горы с балконом"
+            }
+          ],
+          "Previous": "2*Кристалл.",
+          "LocationName": "Лоо",
+          "HotelName": "Отель пляж",
+          "RoomName": "Семейный"
+        },
+        {
+          "Days": 2,
+          "Cost": 4200,
+          "Start": 12,
+          "Road": 3,
+          "Link": null,
+          "Info": "",
+          "TravelDays": null,
+          "NextParts": [
+            {
+              "Days": 1,
+              "Cost": 3500,
+              "Start": 12,
+              "Road": 3,
+              "Link": null,
+              "Info": "",
+              "TravelDays": null,
+              "NextParts": [],
+              "Previous": "2*Кристалл.2*Место под Солнцем.",
+              "LocationName": "Лермонтово",
+              "HotelName": "Золотая корона",
+              "RoomName": "Трехместный с балконом"
+            }
+          ],
+          "Previous": "2*Кристалл.",
+          "LocationName": "Лоо",
+          "HotelName": "Место под Солнцем",
+          "RoomName": "Комфорт"
+        }
+      ],
+      "Previous": null,
+      "LocationName": "Лермонтово",
+      "HotelName": "Кристалл",
+      "RoomName": "Роскошный"
+    },
+    {
+      "Days": 2,
+      "Cost": 3000,
+      "Start": 18,
+      "Road": 6,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [],
+      "Previous": null,
+      "LocationName": "Дивноморск",
+      "HotelName": "Атриум",
+      "RoomName": "С балконом"
+    }
+  ]
+}
