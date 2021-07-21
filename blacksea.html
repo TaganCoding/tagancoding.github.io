@@ -17,65 +17,71 @@
 
     <script type="text/javascript">
 
-        function showTravel(days, firstDay) {
+        function showTravel(variants, firstDay) {
             var pixelInHour = 5;
-            var travel = "<div style='width: max-content;height:20px;'>";
+            var travels = "<div style='height:" + 20 * variants.length +  "px;float:left;'>";
             var maxDays = 0;
-            var totalCost = 0;
-            for (var i = 0; i < days.length;) {
-                var day = days[i];
-                if (i == 0 && day.road !== undefined) {
-                    travel += "<div style='width:" + pixelInHour * day.start + "px;height:20px;float:left;'></div>";
-                }
-
-                if (day.road !== undefined) {
-                    travel += "<div style='width:" + pixelInHour * day.road + "px;height:20px;float:left;background:lightgrey;'></div>";
-                }
-
-                var hoursInLocation = 0;
-                var locationName = day.location;
-                if (day.start + day.road < 24)
-                    hoursInLocation = 24 - day.road - day.start;
-
-                totalCost += days[i].cost;
-                i++;
-                var finish = "";
-                while (i < days.length) {
-                    if (i == days.length - 1)
-                        finish = "<div style='width:" + pixelInHour * (24 - /*days[i].start*/ 6) + "px;height:20px;float:left;'></div>";
-
-                    if (days[i].road === undefined)
-                        hoursInLocation += 24;
-                    else {
-                        hoursInLocation += days[i].start;
-                        break;
+            for (var j = 0; j < variants.length; j++) {
+                var totalCost = 0;
+                var days = variants[j];
+                var travel = "<div style='clear: both;'>\n";
+                for (var i = 0; i < days.length;) {
+                    var day = days[i];
+                    if (i == 0 && day.road !== undefined) {
+                        travel += "<div style='width:" + pixelInHour * day.start + "px;height:20px;float:left;'></div>\n";
                     }
+
+                    if (day.road !== undefined) {
+                        travel += "<div style='width:" + pixelInHour * day.road + "px;height:20px;float:left;background:lightgrey;'></div>\n";
+                    }
+
+                    var hoursInLocation = 0;
+                    var locationName = day.hotel;
+                    if (day.start + day.road < 24)
+                        hoursInLocation = 24 - day.road - day.start;
 
                     totalCost += days[i].cost;
                     i++;
+                    var finish = "";
+                    while (i < days.length) {
+                        if (i == days.length - 1)
+                            finish = "<div style='width:" + pixelInHour * (24 - /*days[i].start*/ 6) + "px;height:20px;float:left;'></div>\n";
+
+                        if (days[i].road === undefined)
+                            hoursInLocation += 24;
+                        else {
+                            hoursInLocation += days[i].start;
+                            break;
+                        }
+
+                        totalCost += days[i].cost;
+                        i++;
+                    }
+                    /* if (i < days.length && days[i].road !== undefined) {
+                         hoursInLocation += days[i].start;
+                     }*/
+
+                    travel += "<div style='width:" + pixelInHour * hoursInLocation + "px;height:20px;float:left;color:black;text-align:center'>" + locationName + "</div>\n";
+                    //travel += finish;
+
+                    /*var day = days[i];
+                    travel += "<div style='width:120px;height:20px;float:left;'>";
+                    if (day.road === undefined)
+                        travel += day.location;
+                        */
+                    //if ()
+                    if (maxDays < i)
+                        maxDays = i;
                 }
-                /* if (i < days.length && days[i].road !== undefined) {
-                     hoursInLocation += days[i].start;
-                 }*/
 
-                travel += "<div style='width:" + pixelInHour * hoursInLocation + "px;height:20px;float:left;color:lightgrey;text-align:center'>" + locationName + "</div>";
-                //travel += finish;
-
-                /*var day = days[i];
-                travel += "<div style='width:120px;height:20px;float:left;'>";
-                if (day.road === undefined)
-                    travel += day.location;
-                    */
-                //if ()
-                if (maxDays < i)
-                    maxDays = i;
+                travel += "<div style='float:left;width:100px'>" + totalCost + "</div >\n</div > ";
+                travels += travel;
             }
-
-            travel += "<div style='float:left;width:100px'>" + totalCost + "</div ></div > ";
-            travel += "</div> ";
+            travels += "</div>";
 
             var daysHead = "<div style='height:20px;width: max-content;'>";
             var timeHead = "<div style='height:20px;width: max-content;'>";
+            firstDay.add(-1, 'days')
             for (var i = 0; i < maxDays; i++) {
                 daysHead += "<div style='width:" + pixelInHour * 24 + "px;height:20px;float:left;font-size:14px;'>" + firstDay.add(1, 'days').format('DD MMMM dddd') + "</div>";
                 timeHead += "<div style='width:" + pixelInHour * 6 + "px;height:20px;float:left;font-size:14px;'>0</div>";
@@ -86,43 +92,106 @@
             timeHead += "</div>";
             daysHead += "<div style='float:left;width:100px'>Бюджет</div></div>";
 
-            $("#plan").html(daysHead + timeHead + travel);
+            $("#plan").html(daysHead + timeHead + travels);
         }
 
-        function transformToDays(data) {
+        function createDaysOfPart(travelPart) {
             var days = [];
-            for (var i = 0; i < data.Items.length; i++) {
-                var travelPart = data.Items[i];
-                var day = {};
-                day.start = travelPart.Start;
-                day.road = travelPart.Road;
-                day.location = travelPart.LocationName;
-                day.hotel = travelPart.HotelName;
-                day.room = travelPart.RoomName;
-                day.cost = travelPart.Cost;
-                days.push(day);
+            var day = {};
+            day.start = travelPart.Start;
+            day.road = travelPart.Road;
+            day.location = travelPart.LocationName;
+            day.hotel = travelPart.HotelName;
+            day.room = travelPart.RoomName;
+            day.cost = travelPart.Cost;
+            days.push(day);
 
-                for (var j = 1; j < travelPart.Days; j++) {
-                    var nextDay = {};
-                    nextDay.location = travelPart.LocationName;
-                    nextDay.hotel = travelPart.HotelName;
-                    nextDay.room = travelPart.RoomName;
-                    nextDay.cost = travelPart.Cost;
-                    days.push(nextDay);
-                }
+            for (var j = 1; j < travelPart.Days; j++) {
+                var nextDay = {};
+                nextDay.location = travelPart.LocationName;
+                nextDay.hotel = travelPart.HotelName;
+                nextDay.room = travelPart.RoomName;
+                nextDay.cost = travelPart.Cost;
+                days.push(nextDay);
             }
 
             return days;
         }
+
+        function transformToDays(travelPart) {            
+            function iter(travelPart, p) {
+                if (travelPart.NextParts.length) {
+                    return travelPart.NextParts.forEach(function (k) {
+                        var days = createDaysOfPart(k);
+                        var newp = p.concat(...days);
+                        iter(k, newp);
+                    });
+                }
+
+
+                var lastDay = {};
+                lastDay.location = "";
+                lastDay.hotel = "";
+                lastDay.room = "";
+                lastDay.cost = 0;
+
+                p.push(lastDay);
+
+                result.push(p);
+            }
+
+            var result = [];
+            var days = createDaysOfPart(travelPart);
+            iter(travelPart, days);
+            return result;
+        }
+
+        function transformToVariants(data) {
+            var allVariants = [];
+            for (var i = 0; i < data.Items.length; i++) {
+                var travelPart = data.Items[i];
+
+                var variants = transformToDays(travelPart);
+                allVariants.push(...variants);
+            }
+
+            return allVariants;
+        }
+
         $(document).ready(function () {
-            $.getJSON("http://tagancoding.github.io/t210621.json", function (data) {
+
+            function getPath(object) {
+                function iter(o, p) {
+                    var keys = Object.keys(o);
+                    if (keys.length) {
+                        return keys.forEach(function (k) {
+                            iter(o[k], p.concat(k));
+                        });
+                    }
+                    result.push(p);
+                }
+
+                var result = [];
+                iter(object, []);
+                return result;
+            }
+
+            var object = { 1: { 2: { 4: { 7: {} } }, 3: { 6: {}, 5: {} } } };
+
+            console.log(getPath(object));
+
+
+
+
+
+            $.getJSON("http://tagancoding.github.io/t210701.json", function (data) {
 
                 //alert(data);
-                var days = transformToDays(data);
+                var variants = transformToVariants(data);
                 var date1 = data.StartDay;
                 var date = moment([2000 + date1[0] * 10 + (1 * date1[1]), (date1[2] * 10 + (1 * date1[3])) - 1, date1[4] * 10 + (1 * date1[5])]);
                 date.locale('ru');
-                showTravel(days, date);
+                showTravel(variants, date);
                 /* var items = [];
                  $.each(data, function (key, val) {
                      items.push("<li id='" + key + "'>" + val + "</li>");
@@ -205,12 +274,9 @@
             var plastunka = createWater('Пластунка', 39.759695, 43.678745, 'gazvoda.jpg', '');
             var semenovka = createWater('Семеновка', 39.848762, 43.642440, 'rodnik.jpg', '');
             var izmailovka = createWater('Измайловка', 39.831561, 43.633792, 'rodnik.jpg', '');
-            //var agoy = createWater('', , 'rodnik.png', '');
             var olginka = createWater('Источник под Ольгинкой', 38.894676, 44.223054, 'rodnik.jpg', '');
             var pokrov = createWater('Источник Покрова Божьей матери', 39.638726, 43.794004, 'rodnik.jpg', '');
             var teahouse = createWater('Чайные домики', 39.641222, 43.675652, 'teahouse.png', '');
-           /* var  = createWater('', , 'krab.png', '');
-            var  = createWater('', , 'krab.png', '');*/
 
             myMap.geoObjects
            //     .add(myPlacemark)
@@ -316,8 +382,10 @@
         <label><input type="checkbox" />Рестораны</label>
         <label><input type="checkbox" />Кафе</label>
         <label><input type="checkbox" />Столовые</label>
+        <label><input type="checkbox" />Фастфуд</label>
+        <label><input type="checkbox" />АЗС</label>
     </div>
-    <div id="plan" style="margin-bottom:10px;"></div>
+    <div id="plan" style="margin-bottom:100px;"></div>
     <div id="map"></div>
 </body> 
 </html> 
