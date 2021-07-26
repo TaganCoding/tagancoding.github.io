@@ -88,20 +88,6 @@
       "LocationName": "Лермонтово",
       "HotelName": "Кристалл",
       "RoomName": "Роскошный"
-    },
-    {
-      "Days": 2,
-      "Cost": 3000,
-      "Start": 18,
-      "Road": 6,
-      "Link": null,
-      "Info": "",
-      "TravelDays": null,
-      "NextParts": [],
-      "Previous": null,
-      "LocationName": "Дивноморск",
-      "HotelName": "Атриум",
-      "RoomName": "С балконом"
     }
   ]
 }
