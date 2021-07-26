@@ -34,6 +34,19 @@
               "LocationName": "Лермонтово",
               "HotelName": "Golden hills",
               "RoomName": "Вид на горы с балконом"
+            },{
+              "Days": 2,
+              "Cost": 4500,
+              "Start": 12,
+              "Road": 3,
+              "Link": null,
+              "Info": "",
+              "TravelDays": null,
+              "NextParts": [],
+              "Previous": "2*Кристалл.2*Отель пляж.",
+              "LocationName": "Лермонтово",
+              "HotelName": "Solo",
+              "RoomName": "Вид на горы с балконом"
             }
           ],
           "Previous": "2*Кристалл.",
