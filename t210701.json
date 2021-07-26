@@ -5,7 +5,7 @@
   "Items": [
     {
       "Days": 2,
-      "Cost": 1500,
+      "Cost": 2000,
       "Start": 18,
       "Road": 6,
       "Link": null,
@@ -14,7 +14,7 @@
       "NextParts": [
         {
           "Days": 2,
-          "Cost": 2100,
+          "Cost": 2400,
           "Start": 12,
           "Road": 3,
           "Link": null,
