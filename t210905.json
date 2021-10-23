@@ -1,0 +1,96 @@
+{
+  "Id": "a976b2d5-a647-4090-924c-7ced55809a56",
+  "Day": "2021-09-05T21:40:33",
+  "StartDay": "210905",
+  "Items": [
+    {
+      "Days": 3,
+      "Cost": 1800,
+      "Start": 18,
+      "Road": 6,
+      "Link": null,
+      "Info": "",
+      "TravelDays": null,
+      "NextParts": [
+        {
+          "Days": 2,
+          "Cost": 1800,
+          "Start": 12,
+          "Road": 5,
+          "Link": null,
+          "Info": "",
+          "TravelDays": null,
+          "NextParts": [
+            {
+              "Days": 2,
+              "Cost": 1800,
+              "Start": 12,
+              "Road": 5,
+              "Link": null,
+              "Info": "",
+              "TravelDays": null,
+              "NextParts": [
+                {
+                  "Days": 1,
+                  "Cost": 6200,
+                  "Start": 12,
+                  "Road": 3,
+                  "Link": null,
+                  "Info": "",
+                  "TravelDays": null,
+                  "NextParts": [
+                    {
+                      "Days": 1,
+                      "Cost": 2500,
+                      "Start": 12,
+                      "Road": 3,
+                      "Link": null,
+                      "Info": "",
+                      "TravelDays": null,
+                      "NextParts": [
+                        {
+                          "Days": 2,
+                          "Cost": 4050,
+                          "Start": 12,
+                          "Road": 3,
+                          "Link": null,
+                          "Info": "",
+                          "TravelDays": null,
+                          "NextParts": [],
+                          "Previous": "3*Кристалл.2*Золотой дельфин.2*Олимп.1*Grace Imperial.1*Место под Солнцем.",
+                          "LocationName": "Лермонтово",
+                          "HotelName": "Solo",
+                          "RoomName": "Боковой вид на море"
+                        }
+                      ],
+                      "Previous": "3*Кристалл.2*Золотой дельфин.2*Олимп.1*Grace Imperial.",
+                      "LocationName": "Лоо",
+                      "HotelName": "Место под Солнцем",
+                      "RoomName": "Комфорт"
+                    }
+                  ],
+                  "Previous": "3*Кристалл.2*Золотой дельфин.2*Олимп.",
+                  "LocationName": "Эсто-садок",
+                  "HotelName": "Grace Imperial",
+                  "RoomName": "С балконом"
+                }
+              ],
+              "Previous": "3*Кристалл.2*Золотой дельфин.",
+              "LocationName": "Эсто-садок",
+              "HotelName": "Олимп",
+              "RoomName": "С балконом"
+            }
+          ],
+          "Previous": "3*Кристалл.",
+          "LocationName": "Адлер",
+          "HotelName": "Золотой дельфин",
+          "RoomName": "С балконом"
+        }
+      ],
+      "Previous": null,
+      "LocationName": "Лермонтово",
+      "HotelName": "Кристалл",
+      "RoomName": "Роскошный"
+    }
+  ]
+}
