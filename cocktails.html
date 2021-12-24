@@ -1,0 +1,268 @@
+﻿<html>
+  <head>
+    <title>Коктейли</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <link type="text/css" rel="stylesheet" href="cocktailsstyle.css"/>
+    <link type="text/css" rel="stylesheet" href="themes/sorter/blue/style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script> 
+    <script type="text/javascript" src="cocktails.js"></script>
+    <script type="text/javascript" src="cocktailsCode.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42850927-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+	<link rel="stylesheet" href="reveal.css">	
+	<script type="text/javascript" src="jquery.reveal.js"></script>
+  </head>
+  <body>
+    <div class="adder">
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_vk"></a>
+            <a class="addthis_button_odnoklassniki_ru"></a>
+            <a class="addthis_button_google_plusone_share"></a>
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+            <a class="addthis_button_livejournal"></a>
+            <a class="addthis_button_digg"></a>
+            <a class="addthis_button_mymailru"></a>
+        </div>
+    </div>
+    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51f8f00354e29ca4"></script>
+<br/>
+<br/>
+
+    <div id="filterContainer">
+        <div id="ABVFilter" class="filter">
+            <label>Крепость</label>
+            <select id="ABV" onchange="showCocktailsList();">
+                <option value="all" selected="selected">любая</option>
+                <option value="Unknown">Неизвестно</option>
+                <option value="NonAlcoholic">Безалкогольный</option>
+                <option value="VeryLow">0-10</option>
+                <option value="Low">10-20</option>
+                <option value="Middle">20-30</option>
+                <option value="Strong">30-40</option>
+                <option value="VeryStrong">40-50</option>
+                <option value="PICETS">50+</option>
+            </select>
+        </div>
+        <div id="constructionTypeFilter" class="filter" style="width:200px">
+            <label>Способ приготовления</label>
+            <select id="constructionType" onchange="showCocktailsList();">
+                <option value="all" selected="selected">любой</option>
+                <option value="Build">Билд</option>
+                <option value="Shake">Шейк</option>
+                <option value="Layer">Слоистый</option>
+                <option value="Blend">Бленд</option>
+            </select>
+        </div>
+        <div id="bokalFilter" class="filter">
+            <label>Бокал</label>
+            <select id="bokal" onchange="showCocktailsList();">
+                <option value="all" selected="selected">любой</option>
+                <option value="Shooter">Shooter</option>
+                <option value="OldFashioned">OldFashioned</option>
+                <option value="Hurricane">Hurricane</option>
+                <option value="Highball">Highball</option>
+                <option value="Martini">Martini</option>
+                <option value="ChampagneFlute">ChampagneFlute</option>
+                <option value="Margarita">Margarita</option>
+                <option value="Fruit">Fruit</option>
+                <option value="Multiple">Несколько</option> 
+            </select>
+        </div>
+        <div id="costFilter" class="filter">
+            <label>Стоимость(р)</label>
+            <select id="cost" onchange="showCocktailsList();">
+                <option value="all" selected="selected">любая</option>
+                <option value="cost1">0-20</option>
+                <option value="cost2">20-50</option>
+                <option value="cost3">50-100</option>
+                <option value="cost4">100-150</option>
+                <option value="cost5">150-200</option>
+                <option value="cost6">200+</option>
+            </select>
+        </div>
+        <div id="timeFilter" class="filter">
+            <label>Время</label>
+            <select id="time" onchange="showCocktailsList();">
+                <option value="all" selected="selected">любое</option>
+                <option value="time1">меньше минуты</option>
+                <option value="time2">1-2 минуты</option>
+                <option value="time3">3-5 минут</option>
+                <option value="time4">5-10 минут</option>
+                <option value="time5">10+ минут</option>
+            </select>
+        </div>
+        <div id="burnFilter" class="filter">
+            <label>горящий</label>
+            <input type="checkbox" onchange="showCocktailsList();" id="burn" />
+        </div>
+        <div id="originalFilter" class="filter">
+            <label>оригинальная подача</label>
+            <input type="checkbox" onchange="showCocktailsList();" id="original" />
+        </div>
+        <div id="visualeffectFilter" class="filter">
+            <label>с визуальным эффектами</label>
+            <input type="checkbox" onchange="showCocktailsList();" id="visualeffect" />
+        </div>
+    </div>
+    <br />
+    <div style="clear: both"></div>
+    <br /> 
+    <div id="topPanel">
+        <div class="clear"></div>
+        <table>
+            <tr>
+                <td style="vertical-align:top;width:180px;">
+                    <div id="alcoholicFilter" class="filter">
+                        <label onchange="showCocktailsList();">Алкогольные</label><br />
+                        <div id="alcoholicFilterTypeDiv">
+                            <select id="alcoholicFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align:top;width:180px;">
+                    <div id="sauceFilter" class="filter">
+                        <label onchange="showCocktailsList();">Соус</label><br />
+                        <div id="sauceFilterTypeDiv">
+                            <select id="sauceFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="milkFilter" class="filter">
+                        <label onchange="showCocktailsList();">Молочка</label><br />
+                        <div id="milkFilterTypeDiv">
+                            <select id="milkFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="fruitFilter" class="filter">
+                        <label onchange="showCocktailsList();">Фрукты</label><br />
+                        <div id="fruitFilterTypeDiv">
+                            <select id="fruitFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align:top;width:180px;">
+                    <div id="nonalcoholicFilter" class="filter">
+                        <label onchange="showCocktailsList();">Безалкогольные</label><br />
+                        <div id="nonalcoholicFilterTypeDiv">
+                            <select id="nonalcoholicFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="juiceFilter" class="filter">
+                        <label onchange="showCocktailsList();">Сок</label><br />
+                        <div id="juiceFilterTypeDiv">
+                            <select id="juiceFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="syrupFilter" class="filter">
+                        <label onchange="showCocktailsList();">Сироп</label><br />
+                        <div id="syrupFilterTypeDiv">
+                            <select id="syrupFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align:top;width:180px;">
+                    <div id="iceFilter" class="filter">
+                        <label onchange="showCocktailsList();">Лёд</label><br />
+                        <div id="iceFilterTypeDiv">
+                            <select id="iceFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="otherFilter" class="filter">
+                        <label onchange="showCocktailsList();">Остальное</label><br />
+                        <div id="otherFilterTypeDiv">
+                            <select id="otherFilterType" onchange="showCocktailsList();" class="FilterTypeDiv">
+                                <option value="all">Не важно</option>
+                                <option value="contains">В составе только выбранное</option>
+                                <option value="include">Имеет в составе все выбранные</option>
+                                <option value="includeatleastone">Имеет в составе любой из выбранных</option>
+                                <option value="notinclude">Без выбранных</option>
+                                <option value="containswithout1">В составе только выбранное, кроме одного</option>
+                                <option value="containswithout2">В составе только выбранное, кроме двух</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td style="vertical-align:top;">
+                    <div id="dataListContainer" style="overflow:scroll;height: 1200px;">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear"></div>
+  </body>
+</html>

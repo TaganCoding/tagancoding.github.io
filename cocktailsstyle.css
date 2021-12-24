@@ -1,0 +1,268 @@
+.maintitle {
+    font: 24px Tahoma;
+}
+.imageLink{
+    max-height:16px;
+    max-width:50px;
+}
+.imageLogoLink{
+    height: 16px;
+}
+
+.officeImg
+{
+    max-width:600px;
+    max-height:500px;
+}
+
+#dataListContainer {
+	height: auto;
+	border: solid 1px gray;
+	border-radius:6px;
+    width: auto;
+}
+
+#filterContainer 
+{
+	height: 15px;
+}
+
+.filter
+{
+	float:left;	
+	border: 1px solid grey;
+    border-radius: 6px;
+    float: left;
+    margin: 0 1px;
+    padding: 4px;
+	background-color: #FFF;
+	width:175px;
+}
+
+.clear
+{
+	height:0px;
+	width:0px;
+	clear:both;
+}
+
+/*
+#bottomPanel {
+	float:left;
+}
+
+#bottomLeft {
+	float:left;
+	width: 300px;
+	margin:0px 10px;
+}
+
+#bottomMiddle {
+	float:left;
+	width: 400px;
+	margin:0px 10px;
+}
+
+#bottomRight {
+	float:left;
+	margin:0px 10px;
+}
+*/
+*
+{
+	font: normal 11px Tahoma;
+}
+
+body
+{
+	background: #EEE url(modal-gloss.png) no-repeat -200px -80px;
+}
+
+UL
+{
+	margin-bottom: 0;
+	padding-left: 20px;
+}
+
+
+
+.even 
+{
+	background-color:#f5f5f5;
+}
+.odd 
+{
+	background-color:#F0F0F0;
+}
+
+
+td
+{
+	padding: 4px 4px;
+}
+td.firstColumn
+{
+	padding: 4px 8px;
+}
+table#cocktails th.firstColumn
+{
+	padding: 4px 8px;
+}
+
+table#cocktails th
+{
+	text-align: left;
+}
+th
+{
+	padding: 4px 4px;
+}
+th.firstColumn
+{
+	padding: 4px 8px;
+}
+
+table#cocktails1 thead.fixedheader tr 
+{
+	display:block;
+	position: relative;
+}
+
+table#cocktails tr.datarow
+{
+	cursor: pointer;
+}
+
+table#cocktails tr.datarow:hover
+{
+	background-color: #cccccc;
+}
+
+table#cocktails1
+{
+    width: 100%;
+}
+
+table#vacancies td
+{
+	padding: 4px 8px;
+}
+table#vacancies th
+{
+	padding: 4px 8px;
+}
+
+.datarow{
+}
+
+.sizePhotoColumn
+{
+	max-width: 150px;
+	max-height: 100px;
+	
+}
+.sizeVideoColumn
+{
+	max-width: 40px;
+	max-height: 40px;
+	
+}
+
+.largeSizeColumn{
+	width: 150px;
+   
+}
+.middleSizeColumn{
+}
+.bigSizeColumn{
+
+}
+.smallSizeColumn{
+	width: 15px;
+	height: 15px;
+}
+
+.largeSizeIconColumn{
+
+}
+.middleSizeIconColumn{
+
+}
+.bigSizeIconColumn{
+
+}
+.smallSizeIconColumn{
+
+}
+.lastHeaderColumn{
+
+}
+    
+.addressColumn{
+
+}
+
+.firstColumn a{
+	margin-right: 10px;
+}
+
+.reveal-modal #vacancies li
+{
+	width: 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#educationCenter
+{
+	float: right;
+}
+.logo
+{
+	overflow: hidden;
+}
+
+.logo h1, .logo h2
+{
+	font-weight: bold;
+	margin: 10px 0 0 0;
+	padding: 0;
+	height: 50px;
+	color: #666;
+}
+
+.logo h1
+{
+	font-size: 16px;
+	float: left;
+}
+
+.logo h2
+{
+	font-size: 12px;
+	float: right;
+}
+
+image
+{
+	border: none;
+}
+
+.adder
+{
+	position: fixed;
+	z-index: 10000;
+	left: 50%;
+	margin-left: -145px;
+}
+
+table.tablesorter
+{
+	margin-top: 0px !important;
+}
+
+.FilterTypeDiv
+{
+	width:150px;
+}
