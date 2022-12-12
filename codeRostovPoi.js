@@ -233,8 +233,8 @@ IsCinemasLoaded = false;
 function doFilter(items) {
     var result = [];
 
-    var typeDosug = document.getElementById('typeDosug').value;
-    var district = document.getElementById('district').value;
+    var typeDosug = $("#typeDosug").val();
+    var district = $("#district").val();
     var opening = document.getElementById('opening').value;
     var food = document.getElementById('food').value;
     var typeKafe = document.getElementById('typeKafe').value;
@@ -274,7 +274,12 @@ function doFilter(items) {
         $('#deliveryFilter').hide();
     }
 
-    if (typeDosug == "Кафе" || typeDosug == "Ресторан") {
+    var showFood = false;
+    $('#typeDosug option:selected').each(function () {
+        for (var dt = 0; dt < typeDosug.length - 1; dt++)
+            showFood = showFood || (this.value == "Кафе") || (this.value == "Ресторан");
+    });
+    if (showFood) {
         $('#kafeFilter').show();
         $('#foodFilter').show();
     }
@@ -286,8 +291,18 @@ function doFilter(items) {
     for (var i = 0; i < items.length; i++) {
         var place = items[i];
 
-        var isTypeDosugEquals = isTypeDosugNotMeans;
-        var isDistrictEquals = isDistrictNotMeans || district == place.District;
+        var typeDosugMulty = false;
+        $('#typeDosug option:selected').each(function () {
+            for (var dt = 0; dt < place.DosugType.length - 1; dt++)
+                typeDosugMulty = typeDosugMulty || (this.value == place.DosugType[dt]);
+        });
+        var isTypeDosugEquals = typeDosugMulty || isTypeDosugNotMeans;
+
+        var districtMulty = false;
+        $('#district option:selected').each(function () {
+            districtMulty = districtMulty || (this.value == place.District);
+        });
+        var isDistrictEquals = isDistrictNotMeans || district == place.District || districtMulty;
         var isOpeningEquals = isOpeningNotMeans;
         var isFoodEquals = isFoodNotMeans;
         var isTypeKafeEquals = isTypeKafeNotMeans;
@@ -296,9 +311,9 @@ function doFilter(items) {
         var isNightEquals = isNightNotMeans;
 
 
-        if (!isTypeDosugEquals) {
-            isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
-        }
+        //if (!isTypeDosugEquals) {
+        //    isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
+        //}
 
         if ((typeDosug == "Кафе" || typeDosug == "Ресторан") && (!isFoodEquals || !isTypeKafeEquals)) {
             if (!isFoodEquals)
@@ -318,8 +333,14 @@ function doFilter(items) {
             isOpeningEquals = opening == "0" && place.OpeningDate > filterDate;
             if (opening == "3")
                 filterDate.setMonth(filterDate.getMonth() - 3);
+            if (opening == "6")
+                filterDate.setMonth(filterDate.getMonth() - 6);
             if (opening == "12")
                 filterDate.setMonth(filterDate.getMonth() - 12);
+            if (opening == "24")
+                filterDate.setMonth(filterDate.getMonth() - 24);
+            if (opening == "36")
+                filterDate.setMonth(filterDate.getMonth() - 36);
             if (place.OpeningDate >= filterDate && new Date() > place.OpeningDate)
                 isOpeningEquals = true;
         }
