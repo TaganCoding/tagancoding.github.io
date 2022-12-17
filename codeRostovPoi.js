@@ -236,7 +236,7 @@ function doFilter(items) {
     var typeDosug = $("#typeDosug").val();
     var district = $("#district").val();
     var opening = document.getElementById('opening').value;
-    var food = document.getElementById('food').value;
+    var food = $("#food").val();
     var typeKafe = document.getElementById('typeKafe').value;
     var typeDelivery = document.getElementById('typeDelivery').value;
 
@@ -276,7 +276,7 @@ function doFilter(items) {
 
     var showFood = false;
     $('#typeDosug option:selected').each(function () {
-        for (var dt = 0; dt < typeDosug.length - 1; dt++)
+        for (var dt = 0; dt < typeDosug.length; dt++)
             showFood = showFood || (this.value == "Кафе") || (this.value == "Ресторан");
     });
     if (showFood) {
@@ -316,8 +316,12 @@ function doFilter(items) {
         //}
 
         if ((typeDosug == "Кафе" || typeDosug == "Ресторан") && (!isFoodEquals || !isTypeKafeEquals)) {
-            if (!isFoodEquals)
-                isFoodEquals = checkValues(food, place.FoodType);
+            var typeFoodMulty = false;
+            $('#food option:selected').each(function () {
+                for (var dt = 0; dt < place.FoodType.length; dt++)
+                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
+            });
+            var isFoodEquals = typeFoodMulty || isFoodNotMeans;
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
