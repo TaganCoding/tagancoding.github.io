@@ -293,7 +293,7 @@ function doFilter(items) {
 
         var typeDosugMulty = false;
         $('#typeDosug option:selected').each(function () {
-            for (var dt = 0; dt < place.DosugType.length - 1; dt++)
+            for (var dt = 0; dt < place.DosugType.length; dt++)
                 typeDosugMulty = typeDosugMulty || (this.value == place.DosugType[dt]);
         });
         var isTypeDosugEquals = typeDosugMulty || isTypeDosugNotMeans;
