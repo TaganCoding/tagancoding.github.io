@@ -447,6 +447,7 @@ PlacesList.prototype.fill = function () {
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
         /*content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
