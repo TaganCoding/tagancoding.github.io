@@ -388,7 +388,7 @@ PlacesList.prototype.fill = function () {
     content += '<tr class="even">';
     content += '<th class="" style="max-width:15px"></th>';
     content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-    content += '<th class="bigSizeIconColumn" colspan="21">Ссылки</th>';
+    content += '<th class="bigSizeIconColumn" colspan="7">Ссылки</th>';
     content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
     content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
@@ -446,8 +446,8 @@ PlacesList.prototype.fill = function () {
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.RestaurantguruLink, "https://ru.restaurantguru.com/favicon.ico");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
+        /*content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
@@ -457,7 +457,7 @@ PlacesList.prototype.fill = function () {
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.LocalwayLink, "https://www.google.com/s2/favicons?domain=http://localway.ru");
 
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.Video, "http://www.russia-on.ru/wp-content/uploads/2012/11/YouTube.jpg");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");
+        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.UniquePhotoLink, "http://iconizer.net/files/Mnml/orig/camera.png");*/
 
 		/*if (baza.Photos == '')
 		    content += '<td class="lastHeaderColumn"></td>'; 
@@ -465,11 +465,11 @@ PlacesList.prototype.fill = function () {
 			content += '<td class="lastHeaderColumn"> <img class="imageLinkWidth" src="http://iconizer.net/files/Mnml/orig/camera.png"></td>';
 			*/
 
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.WineLink, "https://avatanplus.com/files/resources/small/57377ac05ab2b154b0b77f74.png");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.BeerLink, "https://data.ac-illust.com/data/thumbnails/0b/0bc3ba31ac50a6bc912dfb118ade6405_t.jpeg");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CocktailsLink, "https://image.flaticon.com/icons/png/512/281/281638.png");
+        /*content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.WineLink, "https://avatanplus.com/files/resources/small/57377ac05ab2b154b0b77f74.png");
+        */content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.BeerLink, "https://data.ac-illust.com/data/thumbnails/0b/0bc3ba31ac50a6bc912dfb118ade6405_t.jpeg");
+        /*content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CocktailsLink, "https://image.flaticon.com/icons/png/512/281/281638.png");
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TeeLink, "https://i.dlpng.com/static/png/297050_thumb.png");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CoffeeLink, "https://image.freepik.com/free-icon/no-translate-detected_318-114790.jpg");
+        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CoffeeLink, "https://image.freepik.com/free-icon/no-translate-detected_318-114790.jpg");*/
         content += '<td>';
         if (place.MenuLink)
             content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
