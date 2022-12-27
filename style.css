@@ -30,13 +30,8 @@
 
 #filterContainer 
 {
-	height: 40px;
+	height: 50px;
 }
-#discountContainer 
-{
-	height: 40px;
-}
-
 
 .filter
 {
@@ -88,9 +83,16 @@
 body
 {
 	background: #EEE url(modal-gloss.png) no-repeat -200px -80px;
-	margin: 10px 50px;
+	margin: 10px 20px;
 }
-
+@media	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 18/10),
+	only screen and (min-resolution: 170dpi)
+{
+	* {
+		font-size: 16px !important;
+	}
+}
 UL
 {
 	margin-bottom: 0;
