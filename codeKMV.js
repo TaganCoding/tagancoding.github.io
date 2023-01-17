@@ -1,4 +1,4 @@
-﻿function addCustomSorters() {
+function addCustomSorters() {
     //helper for sorter
     $.tablesorter.addParser({
         // set a unique id 
@@ -388,14 +388,14 @@ PlacesList.prototype.fill = function () {
     content += '<tr class="even">';
     content += '<th class="" style="max-width:15px"></th>';
     content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-    content += '<th class="bigSizeIconColumn" colspan="7">Ссылки</th>';
+    content += '<th class="bigSizeIconColumn" colspan="8">Ссылки</th>';
     content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
-    content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
+    //content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
     content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
     content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
+    //content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
     if (isKafe) {
         content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
         content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
@@ -481,7 +481,7 @@ PlacesList.prototype.fill = function () {
         //content += '<td class="lastHeaderColumn">' + place.Photos.length + " фото" +'</td>'; 		
 
         content += '<td class="middleSizeColumn">' + place.Address + '</td>';
-        content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
+        //content += '<td class="middleSizeColumn">' + place.Phones + '</td>';
         content += '<td class="middleSizeColumn">' + getValues(place.DosugType) + '</td>';
 
         content += '<td class="middleSizeColumn">' + place.WorkTime + '</td>';
@@ -489,7 +489,7 @@ PlacesList.prototype.fill = function () {
             content += '<td class="lastHeaderColumn">' + getValues(place.Capacity) + '</td>';
         }
 
-        content += '<td class="middleSizeColumn">' + place.Services + '</td>';
+        //content += '<td class="middleSizeColumn">' + place.Services + '</td>';
         if (isKafe) {
             content += '<td class="middleSizeColumn">' + getValues(place.FoodType) + '</td>';
             content += '<td class="middleSizeColumn">' + place.AverageBill + '</td>';
