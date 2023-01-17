@@ -1,0 +1,235 @@
+<html>
+  <head>
+      <title>Досуг\Рестораны\Кафе\Спорт\Развлечения в Ростове-на-Дону и окрестностях</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="themes/sorter/blue/style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script> 
+    <script type="text/javascript" src="dataKMV.js"></script>
+    <script type="text/javascript" src="codeKMV.js"></script>
+    <script type="text/javascript" src="galleria-1.2.2.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+	<link rel="stylesheet" href="reveal.css" />	
+	<script type="text/javascript" src="jquery.reveal.js"></script>
+  </head>
+  <body>
+        <div class="logo">
+            <h1>Рестораны\Кафе\Столовые\Развлечения и прочие интересные места в Пятигорске\Кисловодске\Железноводске\Нальчике</h1>
+        </div>
+        <div id="filterContainer">  
+            <div id="openingFilter" class="filter" style="display: none">
+                <label>Открытие</label>
+                <select id="opening" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любое</option>
+                    <option value="3">последние 3 месяца </option>
+                    <option value="6">последние 6 месяцев </option>
+                    <option value="12">последний год </option>
+                    <option value="24">2 года </option>
+                    <option value="36">3 года </option>
+                    <option value="0">скоро открытие</option>
+                </select>
+            </div>
+            <div id="districtFilter" class="filter">
+                <label>Район</label>
+                <select id="district" onchange="showPlacesList();" multiple>
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Пятигорск">Пятигорск</option>
+                </select>
+            </div>
+            <div id="typeFilter" class="filter">
+                <label>Тип</label>
+                <select id="typeDosug" onchange="showPlacesList();" multiple>
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Кафе">Кафе</option>
+                    <option value="Ресторан">Ресторан</option>
+                    <option value="Стейкхаус">Стейкхаус</option>
+                    <option value="Кинотеатр">Кинотеатр</option>
+                    <option value="Доставка">Доставка</option>
+                    <option value="Столовая">Столовая\Бизнесланч\ФастФуд</option>
+                    <option value="Для детей">Для детей</option>
+                    <option value="Банкетный зал">Банкетный зал</option>
+                    <option value="Кондитерская">Кондитерская</option>
+                    <option value="Кофейня">Кофейня</option>
+                    <option value="Кальянбар">Кальян-бар</option>
+                    <option value="Бар">Бар</option>
+                    <option value="Паб">Паб</option>
+                    <option value="Пивбар">Пивбар</option>
+                    <option value="Драфтбар">Драфтбар</option>
+                    <option value="Крафтбар">Крафтбар</option>
+                    <option value="Крафт">Крафт</option>
+                    <option value="Пивоварня">Пивоварня</option>
+                    <option value="Спортбар">Спортбар</option>
+                    <option value="Спорт">Спорт</option>
+                    <option value="Бильярд">Бильярд</option>
+                    <option value="Боулинг">Боулинг</option>
+                    <option value="Пейнтбол">Пейнтбол</option>
+                    <option value="Лазертаг">Лазертаг</option>
+                    <option value="Картинг">Картинг</option>
+                    <option value="Бассейн">Бассейн</option>
+                    <option value="Баня">Баня</option>
+                    <option value="Антикафе">Антикафе</option>
+                    <option value="Клуб">Клуб</option>
+                    <option value="Теннис">Теннис</option>
+                    <option value="Настольный теннис">Настольный теннис</option>
+                    <option value="Футбол">Футбол</option>
+                    <option value="Кикер">Кикер</option>
+                    <option value="Чайная">Чайная</option>
+                    <option value="Барная викторина">Барная викторина</option>
+                    <option value="Остальное">Остальное</option>
+                </select>
+            </div>
+            <div id="foodFilter" class="filter" style="display: none">
+                <label>Кухня</label>
+                <select id="food" onchange="showPlacesList();" multiple>
+                    <option value="all" selected="selected">любая</option>
+                    <option value="Европейская">Европейская</option>
+                    <option value="Русская">Русская</option>
+                    <option value="Итальянская">Итальянская</option>
+                    <option value="Пицца">Пицца</option>
+                    <option value="Роллы">Роллы</option>
+                    <option value="Паназиатская">Паназиатская</option>
+                    <option value="Японская">Японская</option>
+                    <option value="Китайская">Китайская</option>
+                    <option value="Корейская">Корейская</option>
+                    <option value="Вьетнамская">Вьетнамская</option>
+                    <option value="Авторская">Авторская</option>
+                    <option value="Вегетарианская">Вегетарианская</option>
+                    <option value="Восточная">Восточная</option>
+                    <option value="Средиземноморская">Средиземноморская</option>
+                    <option value="Финская">Финская</option>
+                    <option value="Бельгийская">Бельгийская</option>
+                    <option value="Французская">Французская</option>
+                    <option value="Немецкая">Немецкая</option>
+                    <option value="Стейкхаус">Стейкхаус</option>
+                    <option value="Мексиканская">Мексиканская</option>
+                    <option value="Английская">Английская</option>
+                    <option value="Шотландская">Шотландская</option>
+                    <option value="Испанская">Испанская</option>
+                    <option value="Индийская">Индийская</option>
+                    <option value="Турецкая">Турецкая</option>
+                    <option value="Черноморская">Черноморская</option>
+                    <option value="Балканская">Балканская</option>
+                    <option value="Сербская">Сербская</option>
+                    <option value="Американская">Американская</option>
+                    <option value="Кавказская">Кавказская</option>
+                    <option value="Грузинская">Грузинская</option>
+                    <option value="Украинская">Украинская</option>
+                    <option value="Узбекская">Узбекская</option>
+                    <option value="Армянская">Армянская</option>
+                    <option value="Кондитерская">Кондитерская</option>
+                    <option value="Домашняя">Домашняя</option>
+                    <option value="Экзотическая">Экзотическая</option>
+                    <option value="Фаст Фуд">Фаст Фуд</option>
+                </select>
+            </div>
+            <div id="kafeFilter" class="filter" style="display: none;" >
+                <label>Тип</label>
+                <select id="typeKafe" onchange="showPlacesList();" disabled>
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Караоке">Караоке</option>
+                    <option value="Летняя веранда">Летняя веранда</option>
+                    <option value="Детская комната">Детская комната</option>
+                    <option value="VIP комната">VIP комната</option>
+                    <option value="Живая музыка">Живая музыка</option>
+                </select>
+            </div>
+            <div id="deliveryFilter" class="filter" style="display: none">
+                <label>Тип</label>
+                <select id="typeDelivery" onchange="showPlacesList();">
+                    <option value="all" selected="selected">любой</option>
+                    <option value="Роллы">Роллы</option>
+                    <option value="Пицца">Пицца</option>
+                    <option value="Шашлык">Шашлык</option>
+                    <option value="Обед">Обед</option>
+                    <option value="Ресторанная еда">Ресторанная еда</option>
+                    <option value="Закуски к пиву">Закуски к пиву</option>
+                </select>
+            </div>
+            <div id="withAlcoholFilter" class="filter" style="display: none">
+                <label>Со своим</label>
+                <input id="withAlcoholInput" type="checkbox" onchange="showPlacesList();" />
+            </div>
+            <div id="nightFilter" class="filter" style="display: none">
+                <label>Допоздна</label>
+                <input id="nightInput" type="checkbox" onchange="showPlacesList();" />
+            </div>
+        </div>
+    <div style="clear: both"></div>
+    <div style="text-align:center;padding:10px 0px;">
+        <a href="http://tagancoding.github.io/Dosug.html" style="float:left;padding-left:10px" target=_blank>Таганрог</a>
+        <a href="http://tagancoding.github.io/Rostov.html" style="float:left;padding-left:10px" target=_blank>Ростов</a>
+        <a href="http://tagancoding.github.io/Krasnodar.html" style="float:left;padding-left:10px" target=_blank>Краснодар</a>
+        <a href="http://tagancoding.github.io/Sochi.html" style="float:left;padding-left:10px" target=_blank>Сочи\Роза Хутор</a>
+        <a href="http://tagancoding.github.io/DjubgaNorth.html" style="float:left;padding-left:10px" target=_blank>Дивноморск</a>
+    </div>
+    <br /> 
+    <div id="deliveryPanel" style="display:none">
+        <div id="deliveryRollsPanel" style="display:">
+            <div id="rollFilterPanel" style="float:left">
+                <div>
+                    <input id="rollCheckAllInput" onchange="rollCheckAllInput();" type="checkbox"/>
+                    <label>Выбрать все</label>
+                </div>
+                <div>
+                    <input id="simpleRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Классические</label>
+                </div>
+                <div>
+                    <input id="standartRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Стандартные</label>
+                </div>
+                <div>
+                    <input id="crispyRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Жареные</label>
+                </div>
+                <div>
+                    <input id="bakedRollInput" onchange="refreshRollDelivery();" type="checkbox"/>
+                    <label>Запеченные</label>
+                </div>
+            </div>
+            <div id="rollIngredientPanel" style="float:left">
+            
+            </div>
+            <div id="rollIngredientDenyPanel" style="float:left">
+            
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="topPanel">
+        <div class="clear"></div>
+        <div id="dataListContainer">
+        </div>
+        <iframe id="kinocharly" style="display: none; width:100%; min-height:900px; max-width:1100px;">
+        </iframe>
+    <div class="clear"></div>
+        <iframe id="kinoneo" style="display: none; width:100%; min-height:1200px; max-width:1100px;">
+        </iframe>
+    </div>
+    <div class="clear"></div>
+    <div id="bottomPanel">
+        <div id="dataDetailsContainer" class="reveal-modal">
+            <div id="bottomLeft">
+                <h1 id="placename"></h1>
+            </div>
+            <div id="bottomMiddle">
+                <div id="advantages"></div>
+                <div id="cost"></div>
+                <div id="videos"></div>
+            </div>
+            <div id="bottomRight">
+            </div>
+            <div id="gallery"></div>
+        </div>
+        <div class="clear"></div>
+        <br />
+        
+    </div>
+    <div class="clear"></div>
+    <br />
+    Пожелания, замечания, предложения и уточнения присылайте на <a href="mailto:TaganCoding@yandex.ru">TaganCoding@yandex.ru</a>
+    <br />
+    Обновлено 17 января 2023 23:00.
+    <br />  
+  </body>
+</html>
