@@ -239,7 +239,7 @@ this.Items = [
 		Cost : '',
 		FoodType : [],
 		TypeDelivery : [],
-		DosugType : ["Ресторан"],
+		DosugType : ["Баня", "Ресторан"],
 		TypeKafe : [],
 		BathType : [],
 		Capacity : [],
@@ -1180,7 +1180,7 @@ this.Items = [
 	},	{
 		Name : 'Форест ',
 		OfSiteLink : '',
-		MenuLink : '',
+		MenuLink : 'https://vk.com/forest26rest',
 		LunchLink : '',
 		WineLink : '',
 		BeerLink : '',
