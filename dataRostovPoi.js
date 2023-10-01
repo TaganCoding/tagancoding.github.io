@@ -8752,8 +8752,7 @@ this.Items = [
 		Name : 'Можно Пасту!',
 		OfSiteLink : '',
 		MenuLink : '',
-		LunchLink : 'Итальянская
-Пицца',
+		LunchLink : '',
 		WineLink : '',
 		BeerLink : '',
 		CocktailsLink : '',
@@ -8789,7 +8788,7 @@ this.Items = [
 		Services : '',
 		AdditionalInfo : '',
 		Cost : '',
-		FoodType : [],
+		FoodType : ["Итальянская", "Пицца"],
 		TypeDelivery : [],
 		DosugType : ["Кафе"],
 		TypeKafe : [],
