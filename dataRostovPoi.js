@@ -401,7 +401,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : 'poke 'n damping bar',
+		Name : 'poke n damping bar',
 		OfSiteLink : 'https://foodmallrostov.ru/corner/poke',
 		MenuLink : 'https://foodmallrostov.ru/corner/poke',
 		LunchLink : '',
