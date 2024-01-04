@@ -321,7 +321,7 @@ function doFilter(items) {
                 for (var dt = 0; dt < place.FoodType.length; dt++)
                     typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
             });
-            var isFoodEquals = typeFoodMulty || isFoodNotMeans;
+            var isFoodEquals = typeFoodMulty && isFoodNotMeans;
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
@@ -387,36 +387,36 @@ PlacesList.prototype.fill = function () {
     content += '<thead>';
     content += '<tr class="even">';
     content += '<th class="" style="max-width:15px"></th>';
-    content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-    content += '<th class="bigSizeIconColumn" colspan="7">Ссылки</th>';
-    content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
-    content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
+    content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Название' + '</th>';
+    content += '<th class="bigSizeIconColumn" colspan="8" style="text-align: left;">Ссылки</th>';
+    content += '<th class="middleSizeColumn " style="text-align: left;">' + 'Адрес' + '</th>';
+    content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Контакты' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Тип' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Время работы' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Услуги' + '</th>';
     if (isKafe) {
-        content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
-        content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Кухня' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Средний чек' + '</th>';
     }
     if (isDelivery) {
-        content += '<th class="lastHeaderColumn">' + 'Доставка' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Доставка' + '</th>';
     }
     if (isDetailed) {
         content += '<th class="lastHeaderColumn">' + '' + '</th>';
     }
     if (isBilliard) {
-        content += '<th class="lastHeaderColumn">' + 'Бильярд' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Бильярд' + '</th>';
     }
     if (isBath) {
-        content += '<th class="lastHeaderColumn">' + 'Баня' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Баня' + '</th>';
     }
     if (isBanket) {
-        content += '<th class="lastHeaderColumn">' + 'Зал' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Зал' + '</th>';
     }
     if (isWithAlcohol) {
-        content += '<th class="lastHeaderColumn">' + 'Со своим' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Со своим' + '</th>';
     }
     content += '</tr>';
     content += '</thead>';
