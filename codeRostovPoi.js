@@ -321,7 +321,7 @@ function doFilter(items) {
                 for (var dt = 0; dt < place.FoodType.length; dt++)
                     typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
             });
-            var isFoodEquals = typeFoodMulty && isFoodNotMeans;
+            var isFoodEquals = typeFoodMulty; // && isFoodNotMeans; ??????????
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
