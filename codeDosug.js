@@ -261,8 +261,8 @@ function doFilter(items)
     {
         if (!IsCinemasLoaded)
         {
-            $('#kinocharly').attr('src', "http://www.kinocharly.ru/cinemas/60/");
-            $('#kinoneo').attr('src', "http://www.kinoneo.ru/schedule#all");
+            $('#kinocharly').attr('src', "https://kinocharly.ru/51");
+            $('#kinoneo').attr('src', "https://www.kinoneo.ru/schedule");
             IsCinemasLoaded = true;
         }
         
