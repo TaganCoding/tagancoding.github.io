@@ -71,6 +71,8 @@ $(document).ready(function () {
         $('#typeDosug').val('Бассейн');
     if (hash == "bath")
         $('#typeDosug').val('Баня');
+    if (hash == "SPA")
+        $('#typeDosug').val('SPA');
     if (hash == "timeclub")
         $('#typeDosug').val('Антикафе');
     if (hash == "nightclub")
