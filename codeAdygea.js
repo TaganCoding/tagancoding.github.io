@@ -391,7 +391,7 @@ PlacesList.prototype.fill = function () {
     content += '<tr class="even">';
     content += '<th class="" style="max-width:15px"></th>';
     content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Название' + '</th>';
-    content += '<th class="bigSizeIconColumn" colspan="8" style="text-align: left;">Ссылки</th>';
+    content += '<th class="bigSizeIconColumn" colspan="10" style="text-align: left;">Ссылки</th>';
     content += '<th class="middleSizeColumn " style="text-align: left;">' + 'Адрес' + '</th>';
     content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Контакты' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
@@ -453,8 +453,9 @@ PlacesList.prototype.fill = function () {
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TGLink, "https://avatars.mds.yandex.net/i?id=dc5a299b4d5f09075f405607018c0cf1_sr-12420972-images-thumbs&n=13");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", "https://untappd.com/" + place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
         /*content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
@@ -481,6 +482,8 @@ PlacesList.prototype.fill = function () {
         content += '<td>';
         if (place.MenuLink)
             content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
+
+        content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTourLink, "http://mediasett.ru/uploads/posts/2020-12/thumbs/1606820553_81845335045764017483.jpg");
 
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
         content += '</td>';
