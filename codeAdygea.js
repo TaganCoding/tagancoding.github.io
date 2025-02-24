@@ -483,7 +483,7 @@ PlacesList.prototype.fill = function () {
         if (place.MenuLink)
             content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
 
-        content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTourLink, "http://mediasett.ru/uploads/posts/2020-12/thumbs/1606820553_81845335045764017483.jpg");
+        content += addImageLink("middleSizeColumn", "imageLinkWidth", place.VirtualTourLink, "https://resident-house.ru/images/virtual-tour.png");
 
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
         content += '</td>';
