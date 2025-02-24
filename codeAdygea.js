@@ -330,7 +330,7 @@ function doFilter(items) {
             var typeFoodMulty = false;
             $('#food option:selected').each(function () {
                 for (var dt = 0; dt < place.FoodType.length; dt++)
-                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
+                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]) || (this.value == "all");
             });
             isFoodEquals = typeFoodMulty;// || isFoodNotMeans;// ??????????
            /* if (!isTypeKafeEquals)
