@@ -7091,7 +7091,7 @@ this.Items = [
 		Photos : [],
 
 	},	{
-		Name : '"Жень-Шень"<br>Термальные Источники',
+		Name : 'Жень-Шень<br>Термальные Источники',
 		OfSiteLink : '',
 		MenuLink : '',
 		LunchLink : '',
