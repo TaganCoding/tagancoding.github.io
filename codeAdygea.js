@@ -45,6 +45,15 @@ $(document).ready(function () {
         $('#typeDosug').val('Для детей');
     if (hash == "cafe")
         $('#typeDosug').val('Кафе');
+    if (hash == "restoran")
+        $('#typeDosug').val('Ресторан');
+    if (hash == "caferestoran" || hash == "khychiny") {
+        $("#typeDosug").val(["Ресторан", "Кафе"]);
+        if (hash == "khychiny")
+            $('#food').val('Хычины');
+        if (hash == "tomyam")
+            $('#food').val('Томям');
+    }
     if (hash == "delivery")
         $('#typeDosug').val('Доставка');
     if (hash == "banket")
@@ -317,13 +326,13 @@ function doFilter(items) {
         //    isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
         //}
 
-        if ((typeDosug == "Кафе" || typeDosug == "Ресторан") && (!isFoodEquals || !isTypeKafeEquals)) {
+        if ((typeDosug == "Кафе" || typeDosug == "Ресторан" || typeDosug[0] == "Кафе" && typeDosug[1] == "Ресторан")) {
             var typeFoodMulty = false;
             $('#food option:selected').each(function () {
                 for (var dt = 0; dt < place.FoodType.length; dt++)
                     typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
             });
-            var isFoodEquals = typeFoodMulty; // && isFoodNotMeans; ??????????
+            isFoodEquals = typeFoodMulty;// || isFoodNotMeans;// ??????????
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
