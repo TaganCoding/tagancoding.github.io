@@ -47,7 +47,7 @@ $(document).ready(function () {
         $('#typeDosug').val('Кафе');
     if (hash == "restoran")
         $('#typeDosug').val('Ресторан');
-    if (hash == "caferestoran" || hash == "khychiny") {
+    if (hash == "caferestoran" || hash == "khychiny" || hash == "tomyam") {
         $("#typeDosug").val(["Ресторан", "Кафе"]);
         if (hash == "khychiny")
             $('#food').val('Хычины');
