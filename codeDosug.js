@@ -520,7 +520,8 @@ PlacesList.prototype.fill = function ()
 
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://img2.freepng.ru/20180713/lxp/kisspng-logo-computer-icons-social-media-advertising-instagram-neon-5b4907bde7b0e6.349129711531512765949.jpg");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
 		content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/"); 
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.SpravkerLink, "http://www.google.com/s2/favicons?domain=taganrog.spravker.ru/");
@@ -546,7 +547,7 @@ PlacesList.prototype.fill = function ()
 		    
 		content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CameraLink, "https://2.bp.blogspot.com/-AcRzGZLTxJc/W7I0KWRgJFI/AAAAAAAAALo/IFVr-v1Gq1cPxed8mxmAkNC1PCYxvaCTQCK4BGAYYCw/s1600/camera_web.png");
 		content += '</td>';
-		content += addImageLinks("middleSizeIconColumn", "imageLinkWidth", place.Geometry, "https://geometria.ru/favicon.ico");
+		//content += addImageLinks("middleSizeIconColumn", "imageLinkWidth", place.Geometry, "https://geometria.ru/favicon.ico");
 		
 		
 		/*if (place.Photos.length > 0)
