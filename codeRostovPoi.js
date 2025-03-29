@@ -45,6 +45,15 @@ $(document).ready(function () {
         $('#typeDosug').val('Для детей');
     if (hash == "cafe")
         $('#typeDosug').val('Кафе');
+    if (hash == "restoran")
+        $('#typeDosug').val('Ресторан');
+    if (hash == "caferestoran" || hash == "khychiny" || hash == "tomyam") {
+        $("#typeDosug").val(["Ресторан", "Кафе"]);
+        if (hash == "khychiny")
+            $('#food').val('Хычины');
+        if (hash == "tomyam")
+            $('#food').val('Томям');
+    }
     if (hash == "delivery")
         $('#typeDosug').val('Доставка');
     if (hash == "banket")
@@ -71,6 +80,8 @@ $(document).ready(function () {
         $('#typeDosug').val('Бассейн');
     if (hash == "bath")
         $('#typeDosug').val('Баня');
+    if (hash == "SPA")
+        $('#typeDosug').val('SPA');
     if (hash == "timeclub")
         $('#typeDosug').val('Антикафе');
     if (hash == "nightclub")
@@ -381,6 +392,7 @@ PlacesList.prototype.fill = function () {
     var isDetailed = document.getElementById('typeDosug').value != "all" && !isKafe && !isDelivery;
     var isBilliard = document.getElementById('typeDosug').value == "Бильярд";
     var isBath = document.getElementById('typeDosug').value == "Баня";
+    var isSPA = document.getElementById('typeDosug').value == "Баня" || document.getElementById('typeDosug').value == "SPA";
     var isBanket = document.getElementById('typeDosug').value == "Банкетный зал";
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
 
@@ -447,7 +459,7 @@ PlacesList.prototype.fill = function () {
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", "https://untappd.com/" + place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
         /*content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
@@ -505,6 +517,10 @@ PlacesList.prototype.fill = function () {
         }
         if (isBath) {
             content += '<td class="lastHeaderColumn">' + getValues(place.BathType) + '</td>';
+        }
+        if (isSPA) {
+            content += '<td class="middleSizeColumn">' + getValues(place.BathType) + '</td>';
+            content += '<td class="lastHeaderColumn">' + getValues(place.SPAType) + '</td>';
         }
         if (isWithAlcohol) {
             content += '<th class="lastHeaderColumn">' + place.WithAlcohol + '</th>';
