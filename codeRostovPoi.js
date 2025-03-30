@@ -326,13 +326,13 @@ function doFilter(items) {
         //    isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
         //}
 
-        if ((typeDosug == "Кафе" || typeDosug == "Ресторан") && (!isFoodEquals || !isTypeKafeEquals)) {
+        if ((typeDosug == "Кафе" || typeDosug == "Ресторан" || typeDosug[0] == "Кафе" && typeDosug[1] == "Ресторан")) {
             var typeFoodMulty = false;
             $('#food option:selected').each(function () {
                 for (var dt = 0; dt < place.FoodType.length; dt++)
-                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]);
+                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]) || (this.value == "all");
             });
-            var isFoodEquals = typeFoodMulty; // && isFoodNotMeans; ??????????
+            isFoodEquals = typeFoodMulty;// || isFoodNotMeans;// ??????????
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
