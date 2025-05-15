@@ -9,70 +9,47 @@
     <script type="text/javascript" src="codeSochi.js"></script>
     <script type="text/javascript" src="galleria-1.2.2.js"></script>
     <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-42850927-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
 	<link rel="stylesheet" href="reveal.css" />	
 	<script type="text/javascript" src="jquery.reveal.js"></script>
   </head>
   <body>
-    <div class="adder">
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_vk"></a>
-            <a class="addthis_button_odnoklassniki_ru"></a>
-            <a class="addthis_button_google_plusone_share"></a>
-            <a class="addthis_button_facebook"></a>
-            <a class="addthis_button_twitter"></a>
-            <a class="addthis_button_livejournal"></a>
-            <a class="addthis_button_digg"></a>
-            <a class="addthis_button_mymailru"></a>
-        </div>
-    </div>
-    <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51f8f00354e29ca4"></script>
-<br/>
-<br/>
         <div class="logo">
             <h1>Рестораны\Кафе\Столовые\Развлечения и прочие интересные места в Сочи</h1>
         </div>
         <div id="filterContainer">  
-            <div id="openingFilter" class="filter" style="display: none">
+            <div id="openingFilter" class="filter">
                 <label>Открытие</label>
                 <select id="opening" onchange="showPlacesList();">
                     <option value="all" selected="selected">любое</option>
                     <option value="3">последние 3 месяца </option>
+                    <option value="6">последние 6 месяцев </option>
                     <option value="12">последний год </option>
+                    <option value="24">2 года </option>
+                    <option value="36">3 года </option>
                     <option value="0">скоро открытие</option>
                 </select>
             </div>
             <div id="districtFilter" class="filter">
                 <label>Район</label>
-                <select id="district" onchange="showPlacesList();">
+                <select id="district" onchange="showPlacesList();" multiple>
                     <option value="all" selected="selected">любой</option>
                     <option value="Сочи">Сочи</option>
                     <option value="Адлер">Адлер</option>
                     <option value="Парк">Парк</option>
                     <option value="Красная поляна">Красная поляна</option>
-                    <option value="Эстосадок"">Эстосадок</option>
+                    <option value="Эстосадок" ">Эстосадок</option>
                     <option value="Роза Плато">Роза Плато</option>
                     <option value="Роза Пик">Роза Пик</option>
                     <option value="Роза Хутор">Роза Хутор</option>
                     <option value="Горная карусель">Горная карусель</option>
+                    <option value="Альпика">Альпика</option>
                     <option value="Медовеевка">Медовеевка</option>
                     <option value="Вершина 2200">Вершина 2200</option>
                 </select>
             </div>
             <div id="typeFilter" class="filter">
                 <label>Тип</label>
-                <select id="typeDosug" onchange="showPlacesList();">
+                <select id="typeDosug" onchange="showPlacesList();" multiple>
                     <option value="all" selected="selected">любой</option>
                     <option value="Кафе">Кафе</option>
                     <option value="Ресторан">Ресторан</option>
@@ -104,6 +81,7 @@
                     <option value="Картинг">Картинг</option>
                     <option value="Бассейн">Бассейн</option>
                     <option value="Баня">Баня</option>
+                    <option value="SPA">SPA</option>
                     <option value="Антикафе">Антикафе</option>
                     <option value="Клуб">Клуб</option>
                     <option value="Теннис">Теннис</option>
@@ -117,7 +95,7 @@
             </div>
             <div id="foodFilter" class="filter" style="display: none">
                 <label>Кухня</label>
-                <select id="food" onchange="showPlacesList();">
+                <select id="food" onchange="showPlacesList();" multiple>
                     <option value="all" selected="selected">любая</option>
                     <option value="Европейская">Европейская</option>
                     <option value="Итальянская">Итальянская</option>
@@ -183,6 +161,10 @@
         <a href="http://tagancoding.github.io/ABO.html" style="float:left;padding-left:10px" target=_blank>Базы отдыха</a>
         <a href="http://it.verych.ru/cocktails.html" style="float:left;padding-left:10px" target=_blank>Коктейли</a>
         <a href="http://tagancoding.github.io/Dosug.html" style="float:left;padding-left:10px" target=_blank>Таганрог</a>
+        <a href="http://tagancoding.github.io/Krasnodar.html" style="float:left;padding-left:10px" target=_blank>Краснодар</a>
+        <a href="http://tagancoding.github.io/KMV.html" style="float:left;padding-left:10px" target=_blank>КМВ</a>
+        <a href="http://tagancoding.github.io/RostovPoi.html" style="float:left;padding-left:10px" target=_blank>Ростов-на-Дону</a>
+        <a href="http://tagancoding.github.io/DjubgaNorth.html" style="float:left;padding-left:10px" target=_blank>Дивноморск\Геленджик\Новороссийск\Анапа</a>
     </div>
     <br /> 
     <div id="deliveryPanel" style="display:none">
