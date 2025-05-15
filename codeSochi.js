@@ -1,4 +1,4 @@
-﻿function addCustomSorters() {
+function addCustomSorters() {
     //helper for sorter
     $.tablesorter.addParser({
         // set a unique id 
@@ -45,6 +45,15 @@ $(document).ready(function () {
         $('#typeDosug').val('Для детей');
     if (hash == "cafe")
         $('#typeDosug').val('Кафе');
+    if (hash == "restoran")
+        $('#typeDosug').val('Ресторан');
+    if (hash == "caferestoran" || hash == "khychiny" || hash == "tomyam") {
+        $("#typeDosug").val(["Ресторан", "Кафе"]);
+        if (hash == "khychiny")
+            $('#food').val('Хычины');
+        if (hash == "tomyam")
+            $('#food').val('Томям');
+    }
     if (hash == "delivery")
         $('#typeDosug').val('Доставка');
     if (hash == "banket")
@@ -71,6 +80,8 @@ $(document).ready(function () {
         $('#typeDosug').val('Бассейн');
     if (hash == "bath")
         $('#typeDosug').val('Баня');
+    if (hash == "SPA")
+        $('#typeDosug').val('SPA');
     if (hash == "timeclub")
         $('#typeDosug').val('Антикафе');
     if (hash == "nightclub")
@@ -233,10 +244,10 @@ IsCinemasLoaded = false;
 function doFilter(items) {
     var result = [];
 
-    var typeDosug = document.getElementById('typeDosug').value;
-    var district = document.getElementById('district').value;
+    var typeDosug = $("#typeDosug").val();
+    var district = $("#district").val();
     var opening = document.getElementById('opening').value;
-    var food = document.getElementById('food').value;
+    var food = $("#food").val();
     var typeKafe = document.getElementById('typeKafe').value;
     var typeDelivery = document.getElementById('typeDelivery').value;
 
@@ -274,7 +285,12 @@ function doFilter(items) {
         $('#deliveryFilter').hide();
     }
 
-    if (typeDosug == "Кафе" || typeDosug == "Ресторан") {
+    var showFood = false;
+    $('#typeDosug option:selected').each(function () {
+        for (var dt = 0; dt < typeDosug.length; dt++)
+            showFood = showFood || (this.value == "Кафе") || (this.value == "Ресторан");
+    });
+    if (showFood) {
         $('#kafeFilter').show();
         $('#foodFilter').show();
     }
@@ -286,8 +302,18 @@ function doFilter(items) {
     for (var i = 0; i < items.length; i++) {
         var place = items[i];
 
-        var isTypeDosugEquals = isTypeDosugNotMeans;
-        var isDistrictEquals = isDistrictNotMeans || district == place.District;
+        var typeDosugMulty = false;
+        $('#typeDosug option:selected').each(function () {
+            for (var dt = 0; dt < place.DosugType.length; dt++)
+                typeDosugMulty = typeDosugMulty || (this.value == place.DosugType[dt]);
+        });
+        var isTypeDosugEquals = typeDosugMulty || isTypeDosugNotMeans;
+
+        var districtMulty = false;
+        $('#district option:selected').each(function () {
+            districtMulty = districtMulty || (this.value == place.District);
+        });
+        var isDistrictEquals = isDistrictNotMeans || district == place.District || districtMulty;
         var isOpeningEquals = isOpeningNotMeans;
         var isFoodEquals = isFoodNotMeans;
         var isTypeKafeEquals = isTypeKafeNotMeans;
@@ -296,13 +322,17 @@ function doFilter(items) {
         var isNightEquals = isNightNotMeans;
 
 
-        if (!isTypeDosugEquals) {
-            isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
-        }
+        //if (!isTypeDosugEquals) {
+        //    isTypeDosugEquals = checkValues(typeDosug, place.DosugType);
+        //}
 
-        if ((typeDosug == "Кафе" || typeDosug == "Ресторан") && (!isFoodEquals || !isTypeKafeEquals)) {
-            if (!isFoodEquals)
-                isFoodEquals = checkValues(food, place.FoodType);
+        if ((typeDosug == "Кафе" || typeDosug == "Ресторан" || typeDosug[0] == "Кафе" && typeDosug[1] == "Ресторан")) {
+            var typeFoodMulty = false;
+            $('#food option:selected').each(function () {
+                for (var dt = 0; dt < place.FoodType.length; dt++)
+                    typeFoodMulty = typeFoodMulty || (this.value == place.FoodType[dt]) || (this.value == "all");
+            });
+            isFoodEquals = typeFoodMulty;// || isFoodNotMeans;// ??????????
            /* if (!isTypeKafeEquals)
                 isTypeKafeEquals = checkValues(typeKafe, place.TypeKafe);*/
         }
@@ -318,8 +348,14 @@ function doFilter(items) {
             isOpeningEquals = opening == "0" && place.OpeningDate > filterDate;
             if (opening == "3")
                 filterDate.setMonth(filterDate.getMonth() - 3);
+            if (opening == "6")
+                filterDate.setMonth(filterDate.getMonth() - 6);
             if (opening == "12")
                 filterDate.setMonth(filterDate.getMonth() - 12);
+            if (opening == "24")
+                filterDate.setMonth(filterDate.getMonth() - 24);
+            if (opening == "36")
+                filterDate.setMonth(filterDate.getMonth() - 36);
             if (place.OpeningDate >= filterDate && new Date() > place.OpeningDate)
                 isOpeningEquals = true;
         }
@@ -356,42 +392,43 @@ PlacesList.prototype.fill = function () {
     var isDetailed = document.getElementById('typeDosug').value != "all" && !isKafe && !isDelivery;
     var isBilliard = document.getElementById('typeDosug').value == "Бильярд";
     var isBath = document.getElementById('typeDosug').value == "Баня";
+    var isSPA = document.getElementById('typeDosug').value == "Баня" || document.getElementById('typeDosug').value == "SPA";
     var isBanket = document.getElementById('typeDosug').value == "Банкетный зал";
     var isWithAlcohol = document.getElementById('withAlcoholInput').checked;
 
     content += '<thead>';
     content += '<tr class="even">';
     content += '<th class="" style="max-width:15px"></th>';
-    content += '<th class="middleSizeColumn">' + 'Название' + '</th>';
-    content += '<th class="bigSizeIconColumn" colspan="21">Ссылки</th>';
-    content += '<th class="middleSizeColumn ">' + 'Адрес' + '</th>';
-    content += '<th class="middleSizeColumn">' + 'Контакты' + '</th>';
+    content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Название' + '</th>';
+    content += '<th class="bigSizeIconColumn" colspan="10" style="text-align: left;">Ссылки</th>';
+    content += '<th class="middleSizeColumn " style="text-align: left;">' + 'Адрес' + '</th>';
+    content += '<th class="middleSizeColumn" style="text-align: left;">' + 'Контакты' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Категория' + '</th>';
     //content += '<th class="middleSizeColumn">' + 'Стоимость' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Тип' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Время работы' + '</th>';
-    content += '<th class="lastHeaderColumn">' + 'Услуги' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Тип' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Время работы' + '</th>';
+    content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Услуги' + '</th>';
     if (isKafe) {
-        content += '<th class="lastHeaderColumn">' + 'Кухня' + '</th>';
-        content += '<th class="lastHeaderColumn">' + 'Средний чек' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Кухня' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Средний чек' + '</th>';
     }
     if (isDelivery) {
-        content += '<th class="lastHeaderColumn">' + 'Доставка' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Доставка' + '</th>';
     }
     if (isDetailed) {
         content += '<th class="lastHeaderColumn">' + '' + '</th>';
     }
     if (isBilliard) {
-        content += '<th class="lastHeaderColumn">' + 'Бильярд' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Бильярд' + '</th>';
     }
     if (isBath) {
-        content += '<th class="lastHeaderColumn">' + 'Баня' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Баня' + '</th>';
     }
     if (isBanket) {
-        content += '<th class="lastHeaderColumn">' + 'Зал' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Зал' + '</th>';
     }
     if (isWithAlcohol) {
-        content += '<th class="lastHeaderColumn">' + 'Со своим' + '</th>';
+        content += '<th class="lastHeaderColumn" style="text-align: left;">' + 'Со своим' + '</th>';
     }
     content += '</tr>';
     content += '</thead>';
@@ -420,9 +457,13 @@ PlacesList.prototype.fill = function () {
 
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.VkontakteLink, "https://bobr.by/data/internet95.gif");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TripadvisorLink, "https://www.clipartmax.com/png/middle/109-1095841_testimonial-avatar-tripadvisor-icon.png");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TGLink, "https://avatars.mds.yandex.net/i?id=dc5a299b4d5f09075f405607018c0cf1_sr-12420972-images-thumbs&n=13");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.InstaLink, "https://bikeparkatuitsig.co.za/wp-content/uploads/2016/03/instagram-logo.png");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.RestaurantguruLink, "https://ru.restaurantguru.com/favicon.ico");
-        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.ZoonLink, "https://rostov.zoon.ru/images/logo.svg");
+
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UntappdLink, "https://avatars.mds.yandex.net/get-entity_search/26124/197671017/S122x122Fit_2x");
+        content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.AndroidLink, "https://avatars.mds.yandex.net/i?id=17fd0c25c610e5f314857d24d091e77b_sr-9056011-images-thumbs&n=13");
+        /*content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.UgostiLink, "https://lh6.ggpht.com/TYwsfAVYqlG8QRvTUDS2S3oFH-eK5t6UR5u4ixSbwupjk97IbSSq0fFkwnUAfGxM-GwA=w300");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.FoursquareLink, "http://www.google.com/s2/favicons?domain=https://ru.foursquare.com/");
         content += addImageLink("smallSizeIconColumn", "imageLinkWidth", place.TraveltipzLink, "http://www.google.com/s2/favicons?domain=http://traveltipz.ru/");
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.KafeTaganrogLink, "https://www.google.com/s2/favicons?domain=http://kafe-taganrog.ru");
@@ -440,11 +481,11 @@ PlacesList.prototype.fill = function () {
 			content += '<td class="lastHeaderColumn"> <img class="imageLinkWidth" src="http://iconizer.net/files/Mnml/orig/camera.png"></td>';
 			*/
 
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.WineLink, "https://avatanplus.com/files/resources/small/57377ac05ab2b154b0b77f74.png");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.BeerLink, "https://data.ac-illust.com/data/thumbnails/0b/0bc3ba31ac50a6bc912dfb118ade6405_t.jpeg");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CocktailsLink, "https://image.flaticon.com/icons/png/512/281/281638.png");
+        /*content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.WineLink, "https://avatanplus.com/files/resources/small/57377ac05ab2b154b0b77f74.png");
+        */content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.BeerLink, "https://data.ac-illust.com/data/thumbnails/0b/0bc3ba31ac50a6bc912dfb118ade6405_t.jpeg");
+        /*content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CocktailsLink, "https://image.flaticon.com/icons/png/512/281/281638.png");
         content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.TeeLink, "https://i.dlpng.com/static/png/297050_thumb.png");
-        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CoffeeLink, "https://image.freepik.com/free-icon/no-translate-detected_318-114790.jpg");
+        content += addImageLink("middleSizeIconColumn", "imageLinkWidth", place.CoffeeLink, "https://image.freepik.com/free-icon/no-translate-detected_318-114790.jpg");*/
         content += '<td>';
         if (place.MenuLink)
             content += '<a target="blank" href="' + place.MenuLink + '">Меню</a>';
@@ -479,6 +520,10 @@ PlacesList.prototype.fill = function () {
         }
         if (isBath) {
             content += '<td class="lastHeaderColumn">' + getValues(place.BathType) + '</td>';
+        }
+        if (isSPA) {
+            content += '<td class="middleSizeColumn">' + getValues(place.BathType) + '</td>';
+            content += '<td class="lastHeaderColumn">' + getValues(place.SPAType) + '</td>';
         }
         if (isWithAlcohol) {
             content += '<th class="lastHeaderColumn">' + place.WithAlcohol + '</th>';
