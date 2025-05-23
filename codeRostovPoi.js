@@ -52,7 +52,7 @@ $(document).ready(function () {
         if (hash == "khychiny")
             $('#food').val('Хычины');
         if (hash == "panasian")
-            $('#food').val('Хычины');
+            $('#food').val('Паназиатская');
         if (hash == "tomyam")
             $('#food').val('Томям');
     }
