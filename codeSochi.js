@@ -311,9 +311,9 @@ function doFilter(items) {
 
         var districtMulty = false;
         $('#district option:selected').each(function () {
-            districtMulty = districtMulty || (this.value == place.District);
+            districtMulty = districtMulty || (place.District.startsWith(this.value));
         });
-        var isDistrictEquals = isDistrictNotMeans || district == place.District || districtMulty;
+        var isDistrictEquals = isDistrictNotMeans || place.District.startsWith(district) || districtMulty;
         var isOpeningEquals = isOpeningNotMeans;
         var isFoodEquals = isFoodNotMeans;
         var isTypeKafeEquals = isTypeKafeNotMeans;
